@@ -1,0 +1,17 @@
+---
+title: Build Better Prototypes with Veams
+sitemap: "docs"
+docs: "Getting Started"
+displayName: "Introduction"
+---
+
+{{#extend "lyt-default"}}
+	{{#content "main"}}
+
+		{{! WrapWith START: Section One }}
+		{{#wrapWith "section" headline="Introduction" media="" githubLink=""}}
+			{{{markdown "src/external/core/README.md"}}}
+		{{/wrapWith}}
+		{{! WrapWith END: Section One }}
+	{{/content}}
+{{/extend}}

@@ -6,19 +6,20 @@ If you do not want to use collections, just delete this `sitemap` partial
 
 <nav class="c-sitemap--default" data-css="c-sitemap">
 	<!--<h2 class="sitemap__header">Sitemap</h2>-->
-	{{#each collections.sitemap}}
+	{{#each collections.docs}}
 		<div class="sitemap__overview">
 			<h3 class="sitemap__headline">{{uppercase name}}</h3>
 			<ol class="sitemap__list">
 				{{#each ../pages}}
-					{{#is parsed.data.type ../name}}
+					{{#is parsed.data.docs ../name}}
 						{{#isnt parsed.data.publish false}}
 							<li class="sitemap__list-item">
 								<a href="/{{destFile}}"
 								   class="sitemap__list-item-link">
 									{{#if parsed.data.displayName}}
 										{{parsed.data.displayName}}
-									{{else}}{{this.filename}}
+									{{else}}
+										{{this.filename}}
 									{{/if}}
 								</a>
 							</li>

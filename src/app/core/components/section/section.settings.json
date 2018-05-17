@@ -1,0 +1,10 @@
+
+{
+    "paths": {
+        "styles": "src/app/core/components/section/styles/section"
+    },
+    "type": "component",
+    "contextData": "section",
+    "layout": "lyt-docs",
+    "publish": true
+}

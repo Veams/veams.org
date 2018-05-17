@@ -9,55 +9,54 @@ module.exports = {
 			YFMLayout: true
 		},
 		collections: [
+			'docs',
+			'examples',
+			'tutorial',
 			'sitemap',
 			'type'
 		],
-		cwd: config.paths.src,
+		cwd: config.paths.app,
 		dest: config.paths.dest,
 		exportData: false,
-		flatten: true,
+		flatten: false,
 		types: {
 			data: {
 				dir: '',
 				files: [
-					'app/core/**/*.hjson',
-					'app/core/**/*.json',
+					'core/**/*.hjson',
+					'core/**/*.json',
 					// 'app/features/**/*.hjson',
 					// 'app/features/**/*.json',
-					'app/shared/components/**/*.hjson',
-					'app/shared/components/**/*.json',
-					'app/shared/utilities/**/*.hjson',
-					'app/shared/utilities/**/*.json'
+					'shared/components/**/*.hjson',
+					'shared/components/**/*.json',
+					'shared/utilities/**/*.hjson',
+					'shared/utilities/**/*.json'
 				]
 			},
 			partials: {
 				dir: '',
 				files: [
-					'app/shared/components/**/*.hbs',
-					'app/core/components/**/*.hbs',
+					'shared/components/**/*.hbs',
+					'core/components/**/*.hbs',
 					// 'app/features/**/*.hbs',
-					'app/shared/utilities/**/*.hbs'
+					'shared/utilities/**/*.hbs'
 				]
 			},
 			pages: {
-				dir: '',
+				dir: 'pages',
 				files: [
-					'app/pages/**/*.hbs',
-					'app/shared/components/**/*.hbs',
-					// 'app/features/**/*.hbs',
-					'app/shared/utilities/**/*.hbs'
+					'**/*.hbs'
 				]
 			},
 			layouts: {
 				dir: '',
 				files: [
-					'app/core/layouts/**/*.hbs',
-					'docs/layouts/**/*.hbs'
+					'core/layouts/**/*.hbs'
 				]
 			}
 		},
 		helpers: [
-			'app/shared/utilities/template-helpers/*.js'
+			'shared/utilities/template-helpers/*.js'
 		]
 	},
 	dev: {

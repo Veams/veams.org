@@ -1,0 +1,15 @@
+
+{
+	"variations": {
+		"default": {
+			"docs": {
+				"variationName": "Default"
+			},
+			"settings": {
+				"sectionContextClass": "default",
+				"sectionClasses": false
+			},
+			"content": {}
+		}
+	}
+}

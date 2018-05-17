@@ -31,6 +31,11 @@ Header
 .r-header-left {
 }
 
+.r-header-right {
+	width: 100%;
+	margin-right: $margin-base * 4;
+}
+
 /* ---------------------------------------------------
 Sidebar
 --------------------------------------------------- */
@@ -45,7 +50,7 @@ Sidebar
 	z-index: map-get($lyt-index-map, sidebar);
 	overflow-x: auto;
 	top: $lyt-sidebar-offset;
-	background-image: url(../img/bg-pattern.png);
+	background-image: $bg-pattern;
 	padding: $lyt-container-margin-top $margin-base * 2;
 
 	a {
