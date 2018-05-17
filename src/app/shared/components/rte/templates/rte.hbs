@@ -1,0 +1,18 @@
+<div class="c-rte{{#if settings.rteContextClass}}--{{settings.rteContextClass}}{{else}}--default{{/if}}{{#if settings.rteClasses}} {{settings.rteClasses}}{{/if}}"
+     data-css="c-rte">
+	{{! Error handling }}
+	{{#unless content.rteMd}}
+		<h2 style="color: red">Please provide a path to your markdown file!</h2>
+	{{/unless}}
+
+	{{#if settings.rteCWD}}
+		{{! Error handling }}
+		{{#unless settings.rteCWDLevelUp}}
+			<h2 style="color: red">You have to provide a level - default should be 0!</h2>
+		{{/unless}}
+
+		{{{markdown (buildPath @root.currentPage.dirname content.rteMd goUp=settings.rteCWDLevelUp)}}}
+	{{else}}
+		{{{markdown content.rteMd}}}
+	{{/if}}
+</div>

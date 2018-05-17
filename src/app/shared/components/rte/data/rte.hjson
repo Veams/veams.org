@@ -1,0 +1,18 @@
+{
+	"variations": {
+		"default": {
+			"docs": {
+				"variationName": "Markdown file in current working directory"
+			},
+			"settings": {
+				"rteContextClass": "content",
+				"rteClasses": false,
+				"rteCWD": true,
+				"rteCWDLevelUp": "1"
+			},
+			"content": {
+				"rteMd": "markdown/text.md"
+			}
+		}
+	}
+}

@@ -1,0 +1,220 @@
+/* ===================================================
+RTE COMPONENT
+=================================================== */
+
+/* ---------------------------------------------------
+Global Styles
+--------------------------------------------------- */
+
+[data-css="c-rte"] {
+	/*
+	Headlines
+	----------------------------- */
+	h1 {
+	}
+
+	h2 {
+		font-size: 2.2rem;
+		font-weight: $font-bold;
+		line-height: 1.5;
+		margin: 2rem 0;
+		color: lighten($color-grey-dark, 35);
+	}
+
+	h3 {
+		border-top: 1px solid lighten($color-grey-dark, 60);
+		font-size: 2rem;
+		font-weight: $font-light;
+		line-height: 1.5;
+		margin: 2.75rem 0;
+		padding-top: 2rem;
+		text-transform: uppercase;
+		color: lighten($color-grey-dark, 35);
+	}
+
+	h4 {
+		font-size: 1.9rem;
+		font-weight: $font-light;
+		line-height: 1.35;
+
+		margin: 2rem 0;
+		padding: 1rem;
+
+		color: #000;
+		background: lighten($color-primary-lighter, 20);
+	}
+
+	h5 {
+		font-size: 1.75rem;
+		font-weight: $font-light;
+		line-height: 1.35;
+
+		margin: 2rem 0;
+		padding: .5rem;
+
+		color: #000;
+		background: color(white);
+	}
+
+	strong,
+	b {
+		font-weight: 700;
+		color: lighten($color-grey-dark, 25);
+	}
+
+	em {
+		font-style: italic;
+	}
+
+	ol {
+		margin-top: 1rem;
+		margin-bottom: 1rem;
+		list-style: decimal;
+		counter-reset: listCounter;
+		margin-left: 3rem;
+
+		li {
+			counter-increment: listCounter;
+			list-style: none;
+			margin: 2.3rem 0;
+			position: relative;
+			padding-left: 3.5rem;
+			font-size: 1.8rem;
+
+			&::before {
+				@extend %pseudo;
+
+				content: counter(listCounter) '.';
+				font-weight: 500;
+				z-index: 1;
+				color: color(white);
+				top: 0;
+				left: 0;
+
+			}
+
+			&::after {
+				@extend %pseudo;
+
+				top: -8px;
+				left: -18px;
+				z-index: 0;
+				opacity: .9;
+			}
+		}
+
+	}
+
+	ul {
+		list-style: none;
+		margin-left: 3rem;
+		margin-bottom: 1rem;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		li {
+			position: relative;
+			padding: .5rem 2.5rem;
+
+			&::before {
+				@extend %pseudo;
+
+				left: 0;
+				top: 12px;
+				width: 8px;
+				height: 8px;
+				background-color: $color-primary-lighter;
+			}
+		}
+	}
+
+	img {
+		display: block;
+
+		max-width: 100%;
+		height: auto;
+		margin: 1rem auto;
+	}
+
+	/*
+	Paragraph
+	----------------------------- */
+	p {
+		font-family: $font-family;
+		font-weight: $font-light;
+		margin-bottom: 1rem;
+
+		&:last-child {
+			margin: 0;
+		}
+	}
+
+	code {
+		transitiona: all 500ms ease;
+
+		font-family: Courier, Monospace, "Courier New", sans-serif;
+	}
+
+	pre {
+		position: relative;
+	}
+
+	/*
+	Table
+	----------------------- */
+	table {
+		overflow-x: auto;
+		overflow-y: hidden;
+		width: 100%;
+
+		/*
+		Sub Elements
+		----------------------- */
+		tbody {
+			margin-bottom: 0;
+			width: 100%;
+			border-collapse: collapse;
+			border-spacing: 0;
+		}
+
+		th {
+			padding: 15px;
+			font-weight: normal;
+			text-align: left;
+		}
+
+		td {
+			padding: 15px 20px;
+			text-align: left;
+		}
+	}
+
+	/*
+	Sub Elements
+	----------------------- */
+	tbody tr {
+		&:nth-child(n+1) {
+			background-color: transparent;
+		}
+
+		&:nth-child(2n+2) {
+			background-color: color(white);
+		}
+	}
+
+	/*
+	States
+	----------------------- */
+	th {
+		background-color: $color-primary-light;
+		color: #FFFFFF;
+	}
+}
+
+/* ---------------------------------------------------
+Context: Default
+--------------------------------------------------- */
+.c-rte--default {
+}

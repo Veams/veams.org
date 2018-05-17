@@ -124,6 +124,10 @@
   version "0.0.1"
   resolved "https://registry.yarnpkg.com/@veams/bp-mock-api/-/bp-mock-api-0.0.1.tgz#e32987c7d2f04e310bedeae9e3a1cf4197b146e2"
 
+"@veams/component-rte@^1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@veams/component-rte/-/component-rte-1.0.1.tgz#d9c02211cff83420aa44adf415971cdfa604fa7f"
+
 "@veams/component@^1.2.2":
   version "1.2.3"
   resolved "https://registry.yarnpkg.com/@veams/component/-/component-1.2.3.tgz#e3462d34ef9ebad3dc5d7b14b375a8c2721a9036"
@@ -1967,7 +1971,7 @@ commander@^2.2.0, commander@^2.9.0:
   version "2.15.1"
   resolved "https://registry.yarnpkg.com/commander/-/commander-2.15.1.tgz#df46e867d0fc2aec66a34662b406a9ccafff5b0f"
 
-"commander@github:mateodelnorte/commander.js":
+commander@mateodelnorte/commander.js:
   version "2.15.1"
   resolved "https://codeload.github.com/mateodelnorte/commander.js/tar.gz/fc217f4bf1a4cc4728af169f4ea60659dd7a94ea"
   dependencies:
