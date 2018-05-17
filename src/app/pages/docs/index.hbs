@@ -1,5 +1,5 @@
 ---
-title: Build Better Prototypes with Veams
+title: Introduction to Veams
 sitemap: "docs"
 docs: "Getting Started"
 displayName: "Introduction"
@@ -9,9 +9,14 @@ displayName: "Introduction"
 	{{#content "main"}}
 
 		{{! WrapWith START: Section One }}
-		{{#wrapWith "section" headline="Introduction" media="" githubLink=""}}
-			{{{markdown "src/external/core/README.md"}}}
+		{{#wrapWith "section"
+		            headline="Introduction"
+		            media=""
+		            githubLink="https://github.com/Veams/core/issues/new"
+		}}
+
+			{{> rte md="src/external/veams/README.md"}}
 		{{/wrapWith}}
-		{{! WrapWith END: Section One }}
+	{{! WrapWith END: Section One }}
 	{{/content}}
 {{/extend}}

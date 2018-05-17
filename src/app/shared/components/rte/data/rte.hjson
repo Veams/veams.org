@@ -11,7 +11,7 @@
 				"rteCWDLevelUp": "1"
 			},
 			"content": {
-				"rteMd": "markdown/text.md"
+				"rteMd": "../../external/core/README.md"
 			}
 		}
 	}

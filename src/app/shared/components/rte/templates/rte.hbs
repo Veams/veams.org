@@ -13,6 +13,12 @@
 
 		{{{markdown (buildPath @root.currentPage.dirname content.rteMd goUp=settings.rteCWDLevelUp)}}}
 	{{else}}
-		{{{markdown content.rteMd}}}
+
+		{{#if md}}
+			{{{markdown md}}}
+		{{else}}
+			{{{markdown content.rteMd}}}
+
+		{{/if}}
 	{{/if}}
 </div>
