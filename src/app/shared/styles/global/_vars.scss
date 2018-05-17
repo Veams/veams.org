@@ -1,0 +1,45 @@
+/* ===================================================
+VEAMS SETTINGS
+=================================================== */
+// $min-width defines the general behaviour of the bp mixin and
+// handles the project as mobile-first project when set to `true`
+$min-width: true;
+
+/* ===================================================
+BREAKPOINT SETTINGS
+=================================================== */
+// Breakpoints
+$bp-mobile-s: 0;
+$bp-mobile-p: 480px;
+$bp-mobile-l: 600px;
+$bp-mobile-xl: 657px;
+$bp-tablet-p: 768px;
+$bp-tablet-l: 1024px;
+$bp-desktop-m: 1230px;
+$bp-desktop-l: 1404px;
+
+// BREAKPOINTS MAP
+// If you want to work with the desktop-first approach
+// turn the values upside down and set $min-width to false
+$breakpoints: (
+	'mobile-s': $bp-mobile-s,
+	'mobile-p': $bp-mobile-p,
+	'mobile-l': $bp-mobile-l,
+	'mobile-xl': $bp-mobile-xl,
+	'tablet-p': $bp-tablet-p,
+	'tablet-l': $bp-tablet-l,
+	'desktop-m': $bp-desktop-m,
+	'desktop-l': $bp-desktop-l
+); 
+
+/* ===================================================
+COLORS
+=================================================== */
+$color-primary-light: #4a9ea3;
+$color-grey-dark: #23241f;
+$color-grey-light: #f5f5f5;
+
+/* ===================================================
+LAYOUT
+=================================================== */
+$margin-base: 1rem;

@@ -1,0 +1,26 @@
+{
+  "projects": {
+    "src/external/veams": "git@github.com:Veams/documentation.git",
+    "src/external/core": "git@github.com:Veams/core.git",
+    "src/external/base": "git@github.com:Veams/base.git",
+    "src/external/cli": "git@github.com:Veams/cli.git",
+    "src/external/component": "git@github.com:Veams/component.git",
+    "src/external/generator-veams": "git@github.com:Veams/generator-veams.git",
+    "src/external/generator-mock-api": "git@github.com:Veams/generator-mock-api.git",
+    "src/external/generator-react-app": "git@github.com:Veams/generator-react-app.git",
+    "src/external/generator-config-js-libraries": "git@github.com:Veams/generator-config-js-libraries.git",
+    "src/external/generator-config-css-frameworks": "git@github.com:Veams/generator-config-css-frameworks.git",
+    "src/external/generator-config-postcss": "git@github.com:Veams/generator-config-postcss.git",
+    "src/external/generator-config-icons": "git@github.com:Veams/generator-config-icons.git",
+    "src/external/generator-config-generics": "git@github.com:Veams/generator-config-generics.git",
+    "src/external/plugin-modules": "git@github.com:Veams/plugin-modules.git",
+    "src/external/plugin-vent": "git@github.com:Veams/plugin-vent.git",
+    "src/external/plugin-store": "git@github.com:Veams/plugin-store.git",
+    "src/external/plugin-templater": "git@github.com:Veams/plugin-templater.git",
+    "src/external/plugin-media-query-handler": "git@github.com:Veams/plugin-media-query-handler.git",
+    "src/external/plugin-media-logger": "git@github.com:Veams/plugin-logger.git",
+    "src/external/plugin-dom": "git@github.com:Veams/plugin-dom.git",
+    "src/external/helpers": "git@github.com:Veams/helpers.git",
+    "src/external/http-service": "git@github.com:Veams/http-service.git"
+  }
+}

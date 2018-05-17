@@ -1,0 +1,78 @@
+/* ===================================================
+Layout Styles
+=================================================== */
+
+/* ---------------------------------------------------
+Variables
+--------------------------------------------------- */
+$lyt-sidebar-width: 280px;
+$lyt-sidebar-offset: 69px;
+$lyt-container-margin-top: 4rem;
+$lyt-index-map: (
+	header: 10,
+	sidebar: 5
+);
+
+/* ---------------------------------------------------
+Header
+--------------------------------------------------- */
+.r-header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	padding: $margin-base;
+	background-color: $color-grey-dark;
+	z-index: map-get($lyt-index-map, header);
+}
+
+.r-header-left {
+}
+
+/* ---------------------------------------------------
+Sidebar
+--------------------------------------------------- */
+.r-sidebar {
+	width: $lyt-sidebar-width;
+	float: left;
+	background-color: $color-grey-light;
+	height: 100%;
+	box-sizing: border-box;
+	color: $color-grey-dark;
+	position: fixed;
+	z-index: map-get($lyt-index-map, sidebar);
+	overflow-x: auto;
+	top: $lyt-sidebar-offset;
+	background-image: url(../img/bg-pattern.png);
+	padding: $lyt-container-margin-top $margin-base * 2;
+
+	a {
+		color: darken($color-primary-light, 10);
+		text-decoration: none;
+
+		&:hover {
+			color: darken($color-primary-light, 30);
+		}
+	}
+
+	.sidebar__header {
+		background-color: darken($color-grey-dark, 5);
+	}
+
+	.sidebar__list {
+	}
+}
+
+/* ---------------------------------------------------
+Main
+--------------------------------------------------- */
+.r-main {
+	margin-top: $lyt-sidebar-offset;
+	float: right;
+	width: calc(100% - #{$lyt-sidebar-width});
+	overflow-x: hidden;
+	padding: $lyt-container-margin-top $margin-base * 3;
+	box-sizing: border-box;
+}

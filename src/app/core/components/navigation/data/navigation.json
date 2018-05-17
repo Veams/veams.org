@@ -1,0 +1,16 @@
+
+{
+	"variations": {
+		"default": {
+			"docs": {
+				"variationName": "Default"
+			},
+			"settings": {
+				"navigationContextClass": "default",
+				"navigationClasses": false,
+				"navigationJsOptions": {}
+			},
+			"content": {}
+		}
+	}
+}

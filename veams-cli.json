@@ -1,0 +1,42 @@
+{
+    "projectType": "static-page-app",
+    "blueprints": {
+        "api": {
+            "skipImports": true,
+            "path": "node_modules/@veams/bp-mock-api"
+        }
+    },
+    "config": {
+        "src": "configs/tasks/_grunt/*.js"
+    },
+    "entries": {
+        "style": "src/app/app.scss",
+        "script": "src/app/app.js"
+    },
+    "insertpoints": [
+        "src/app/app.js",
+        "src/app/core/layouts",
+        "src/app/pages",
+        "src/app/features",
+        "src/app/app.events.js"
+    ],
+    "paths": {
+        "api": "src/server/api",
+        "app": "src/app",
+        "dest": "app",
+        "assets": "src/app/assets",
+        "env": "environments",
+        "component": "src/app/shared/components",
+        "config": "configs",
+        "docs": "src/docs",
+        "mocks": "src/server/mocks",
+        "server": "src/server",
+        "src": "src",
+        "utility": "src/app/shared/utilities"
+    },
+    "ports": {
+        "app": 3000,
+        "server": 2999
+    },
+    "startPath": "index.html"
+}

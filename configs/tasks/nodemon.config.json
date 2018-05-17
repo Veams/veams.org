@@ -1,0 +1,18 @@
+{
+	"restartable": "rs",
+	"ignore": [
+		".git",
+		"node_modules/**/node_modules",
+		"src/server/mocks/**/*.json"
+	],
+	"verbose": true,
+	"execMap": {
+		"js": "node --harmony"
+	},
+	"events": {
+	},
+	"watch": [
+		"src/server/"
+	],
+	"ext": "js json"
+}

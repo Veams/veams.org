@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="en" class="no-js"> <!--<![endif]-->
+
+<head>
+	{{#block "metadata"}}
+		{{> _metadata }}
+	{{/block}}
+	{{#block "styles"}}
+		{{> _styles }}
+	{{/block}}
+</head>
+
+<body class="{{bodyclass}}">
+
+<div class="page-wrapper">
+	<header class="r-header">
+		<div class="r-header-left">
+			<img src="https://www.veams.org/img/svg/icons/veams-std-invert.svg" width="148px">
+		</div>
+		<div class="r-header-right">
+			{{#with navigation.variations.default}}
+				{{> navigation}}
+			{{/with}}
+		</div>
+	</header>
+	<aside class="r-sidebar">
+		<div class="sidebar__list">
+			{{> sitemap }}
+		</div>
+	</aside>
+	<main class="r-main">
+		{{#block "main"}}{{/block}}
+	</main>
+</div>
+<!-- Scripts
+================================================== -->
+{{#block "scripts"}}
+	{{> _scripts }}
+{{/block}}
+</body>
+</html>
