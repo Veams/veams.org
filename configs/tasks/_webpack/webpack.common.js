@@ -78,7 +78,7 @@ module.exports = [
 		}
 	}, {
 		context,
-		devtool: 'cheap-module-source-map',
+		devtool: env === 'local' ? 'cheap-module-source-map' : false,
 		// Entry point for webpack
 		entry: {
 			'app': `${context}/app.scss`,
@@ -98,7 +98,7 @@ module.exports = [
 		// splitting or minification in interest of speed. These warnings become
 		// cumbersome.
 		performance: {
-			hints: false
+			hints: env === 'production' ? 'warning' : false
 		}
 	}
 ];

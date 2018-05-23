@@ -24,7 +24,7 @@ module.exports = function () {
 	const prod = process.env.NODE_ENV === 'production';
 	let defaultPlugins = [];
 
-	if (prod) {
+	if (prod === true) {
 		defaultPlugins.push(require('cssnano')(nanoOptions));
 	}
 
@@ -37,13 +37,13 @@ module.exports = function () {
 					loader: 'css-loader',
 					options: {
 					    url: false,
-						sourceMap: !prod
+						sourceMap: prod === false
 					}
 				},
 				{
 					loader: 'postcss-loader',
 					options: {
-						sourceMap: !prod,
+						sourceMap: prod === false,
 						ident: 'postcss',
 						plugins: (loader) => defaultPlugins
 					}
@@ -52,7 +52,7 @@ module.exports = function () {
 					loader: 'sass-loader',
 					options: {
 						importer: magicImporter(),
-						sourceMap: !prod
+						sourceMap: prod === false
 					}
 				}
 			],
