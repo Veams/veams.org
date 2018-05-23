@@ -1290,7 +1290,7 @@ block-stream@*:
   dependencies:
     inherits "~2.0.0"
 
-bluebird@^3.0.5, bluebird@^3.4.6, bluebird@^3.5.1:
+bluebird@^3.0.5, bluebird@^3.5.1:
   version "3.5.1"
   resolved "https://registry.yarnpkg.com/bluebird/-/bluebird-3.5.1.tgz#d9551f9de98f1fcda1e683d17ee91a0602ee2eb9"
 
@@ -1904,7 +1904,7 @@ color-string@^0.3.0:
   dependencies:
     color-name "^1.0.0"
 
-color@^0.11.0, color@^0.11.3:
+color@^0.11.0:
   version "0.11.4"
   resolved "https://registry.yarnpkg.com/color/-/color-0.11.4.tgz#6d7b5c74fb65e841cd48792ad1ed5e07b904d764"
   dependencies:
@@ -2406,7 +2406,7 @@ debug@2.6.8:
   dependencies:
     ms "2.0.0"
 
-debug@2.6.9, debug@^2.0.0, debug@^2.1.2, debug@^2.2.0, debug@^2.3.3, debug@^2.4.4, debug@^2.5.2, debug@^2.6.0, debug@^2.6.3, debug@^2.6.6, debug@^2.6.8, debug@^2.6.9, debug@~2.6.4, debug@~2.6.6:
+debug@2.6.9, debug@^2.0.0, debug@^2.1.2, debug@^2.2.0, debug@^2.3.3, debug@^2.4.4, debug@^2.6.0, debug@^2.6.3, debug@^2.6.6, debug@^2.6.8, debug@^2.6.9, debug@~2.6.4, debug@~2.6.6:
   version "2.6.9"
   resolved "https://registry.yarnpkg.com/debug/-/debug-2.6.9.tgz#5d128515df134ff327e90a4c93f4e077a536341f"
   dependencies:
@@ -5826,7 +5826,7 @@ mute-stream@0.0.7:
   version "0.0.7"
   resolved "https://registry.yarnpkg.com/mute-stream/-/mute-stream-0.0.7.tgz#3075ce93bc21b8fab43e1bc4da7e8115ed1e7bab"
 
-nan@^2.10.0, nan@^2.4.0, nan@^2.9.2:
+nan@^2.10.0, nan@^2.9.2:
   version "2.10.0"
   resolved "https://registry.yarnpkg.com/nan/-/nan-2.10.0.tgz#96d0cd610ebd58d4b4de9cc0c6828cda99c7548f"
 
@@ -7365,12 +7365,6 @@ remove-trailing-separator@^1.0.1:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/remove-trailing-separator/-/remove-trailing-separator-1.1.0.tgz#c24bce2a283adad5bc3f58e0d48249b92379d8ef"
 
-rename@^1.0.3:
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/rename/-/rename-1.0.4.tgz#a0f25078fa4195e650f73050c7c12ccf689f430b"
-  dependencies:
-    debug "^2.5.2"
-
 repeat-element@^1.1.2:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/repeat-element/-/repeat-element-1.1.2.tgz#ef089a178d1483baae4d93eb98b4f9e4e11d990a"
@@ -7399,7 +7393,7 @@ request-progress@^2.0.1:
   dependencies:
     throttleit "^1.0.0"
 
-request@2, request@^2.75.0, request@^2.81.0:
+request@2, request@^2.81.0:
   version "2.85.0"
   resolved "https://registry.yarnpkg.com/request/-/request-2.85.0.tgz#5a03615a47c61420b3eb99b7dba204f83603e1fa"
   dependencies:
@@ -7505,14 +7499,6 @@ resp-modifier@6.0.2:
   dependencies:
     debug "^2.2.0"
     minimatch "^3.0.2"
-
-responsive-images-generator@^0.2.2:
-  version "0.2.2"
-  resolved "https://registry.yarnpkg.com/responsive-images-generator/-/responsive-images-generator-0.2.2.tgz#6a0a2e408970509aa4fa53c1a32fde2e56cbf3b0"
-  dependencies:
-    debug "^2.3.3"
-    rename "^1.0.3"
-    sharp "^0.16.2"
 
 restore-cursor@^1.0.1:
   version "1.0.1"
@@ -7799,17 +7785,6 @@ shallow-clone@^1.0.0:
     is-extendable "^0.1.1"
     kind-of "^5.0.0"
     mixin-object "^2.0.1"
-
-sharp@^0.16.2:
-  version "0.16.2"
-  resolved "https://registry.yarnpkg.com/sharp/-/sharp-0.16.2.tgz#99381fb9dfbeaa89aa6d13ac77c5756b1e56e9e1"
-  dependencies:
-    bluebird "^3.4.6"
-    color "^0.11.3"
-    nan "^2.4.0"
-    request "^2.75.0"
-    semver "^5.3.0"
-    tar "^2.2.1"
 
 shebang-command@^1.2.0:
   version "1.2.0"
@@ -8461,7 +8436,7 @@ tapable@^0.2.7:
   version "0.2.8"
   resolved "https://registry.yarnpkg.com/tapable/-/tapable-0.2.8.tgz#99372a5c999bf2df160afc0d74bed4f47948cd22"
 
-tar@^2.0.0, tar@^2.2.1:
+tar@^2.0.0:
   version "2.2.1"
   resolved "https://registry.yarnpkg.com/tar/-/tar-2.2.1.tgz#8e4d2a256c0e2185c6b18ad694aec968b83cb1d1"
   dependencies:

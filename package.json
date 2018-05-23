@@ -88,7 +88,6 @@
         "postcss-loader": "^2.0.9",
         "react-dev-utils": "^5.0.0",
         "request": "^2.81.0",
-        "responsive-images-generator": "^0.2.2",
         "rimraf": "^2.6.2",
         "sass-loader": "^6.0.6",
         "style-loader": "^0.20.1",
