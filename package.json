@@ -3,7 +3,7 @@
     "description": "Custom project description",
     "version": "0.0.1",
     "engines": {
-        "node": ">=6.0.0"
+        "node": ">=8.0.0"
     },
     "scripts": {
         "clear:app": "rimraf app/**",
@@ -16,7 +16,6 @@
         "local:start": "webpack --watch --hide-modules",
         "build": "npm run clear:app && cross-env BABEL_ENV=client webpack && npm run html:generate",
         "sprite:generate": "node configs/tasks/icons/sprite.js",
-        "webfont:generate": "node configs/tasks/icons/webfont.js",
         "images:generate": "node configs/tasks/images/images-resizer.js",
         "images:export": "node configs/tasks/images/images-export.js",
         "html:generate": "node configs/tasks/mangony/mangony-build.js"
@@ -95,7 +94,6 @@
         "style-loader": "^0.20.1",
         "stylelint": "^9.2.0",
         "stylelint-webpack-plugin": "^0.10.1",
-        "webfonts-generator": "^0.4.0",
         "webpack": "^3.10.0",
         "winston": "^2.3.1"
     },
