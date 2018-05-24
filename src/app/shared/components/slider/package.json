@@ -1,0 +1,23 @@
+{
+	"name": "@veams/component-slider",
+	"version": "1.0.1",
+	"description": "The component represents a simple but powerful slider.",
+	"repository": {
+		"type": "git",
+		"url": "git://github.com/Veams/component-slider.git"
+	},
+	"keywords": [
+		"veams"
+	],
+	"author": "Sebastian Fitzner",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/Veams/component-slider/issues"
+	},
+	"dependencies": {
+		"@veams/component": "^1.2.0",
+		"@veams/helpers": "^1.2.0",
+		"@veams/query": "^2.2.1"
+	},
+	"homepage": "https://github.com/Veams/component-slider#readme"
+}

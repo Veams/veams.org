@@ -1,8 +1,17 @@
-
-<div class="c-section{{#if settings.sectionContextClass}}--{{settings.sectionContextClass}}{{else}}--default{{/if}}{{#if settings.sectionClasses}} {{settings.sectionClasses}}{{/if}}"
+<div class="c-section{{#if settings.sectionContextClass}}--{{settings.sectionContextClass}}{{else}}--default{{/if}}{{#if
+		settings.sectionClasses}} {{settings.sectionClasses}}{{/if}}"
      data-css="c-section">
-     section
-     
-     {{{yield}}}
-     
+
+	{{#if props.headline}}
+		<header class="section__header is-container">
+			<h2 class="section__headline">
+				{{props.headline}}
+			</h2>
+		</header>
+	{{/if}}
+
+	<div class="section__content is-container">
+		{{{yield}}}
+	</div>
+
 </div>

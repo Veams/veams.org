@@ -1,0 +1,161 @@
+/* ===================================================
+Slider Module
+=================================================== */
+
+/* ---------------------------------------------------
+Global Variables
+--------------------------------------------------- */
+// General
+$slider-darken: 10 !default;
+$slider-unresolved-height: 300px !default;
+// Animation Variables
+$slider-duration: 600ms !default;
+$slider-ease-method: ease !default;
+// Controls
+$slider-control-bg-color: #a5cfd1 !default;
+// Pagination
+$slider-pagination-color: #555 !default;
+$slider-pagination-color-active: $slider-control-bg-color !default;
+$slider-pagination-size: 15px !default;
+$slider-pagination-border-radius: 25% !default;
+
+/* ---------------------------------------------------
+Global Styles
+--------------------------------------------------- */
+
+[data-js-module~="slider"] {
+	clear: both;
+	display: inline-block;
+	position: relative;
+	width: 100%;
+
+	/*
+	Unresolved state
+	----------------------- */
+	&.is-unresolved {
+		.slider__list {
+			height: $slider-unresolved-height;
+			overflow: hidden;
+		}
+
+		.slider__item {
+			opacity: 0;
+		}
+	}
+
+	/*
+	List
+	----------------------- */
+	.slider__list-wrapper {
+		display: block;
+		position: relative;
+		overflow: hidden;
+
+		&.is-overflow {
+			overflow: visible;
+		}
+	}
+
+	.slider__list {
+		left: 0;
+		position: relative;
+		transform: translate3d(0, 0, 0);
+		transition: left $slider-duration $slider-ease-method;
+	}
+
+	.slider__item {
+		@include float();
+
+		position: relative;
+		opacity: .3;
+		transition: opacity $slider-duration $slider-ease-method;
+		vertical-align: top;
+		line-height: 0;
+
+		&.is-active {
+			opacity: 1;
+		}
+
+		&:first-child {
+			margin-left: 0;
+		}
+	}
+
+	/*
+	Actions
+	----------------------- */
+	.slider__controls-wrapper {
+		@include centering(v);
+
+		width: 100%;
+		z-index: 100;
+	}
+
+	.slider__control {
+		@include reset-btn();
+		@include centering(v);
+
+		background-color: $slider-control-bg-color;
+		position: absolute;
+		padding: 1rem;
+		transition: background-color $slider-duration/4 $slider-ease-method;
+
+		&:hover {
+			cursor: pointer;
+			background-color: darken($slider-control-bg-color, $slider-darken);
+		}
+
+		&.is-previous {
+			left: 0;
+		}
+
+		&.is-next {
+			right: 0;
+		}
+	}
+
+	/*
+	Pagination
+	----------------------- */
+	.slider__pagination-wrapper {
+		@include centering(h);
+
+		bottom: $slider-pagination-size;
+	}
+
+	.slider__pagination-list {
+		margin: 0;
+		padding: 0;
+	}
+
+	.slider__pagination-list-item {
+		@extend %hidden-text;
+
+		background-color: $slider-pagination-color;
+		border-radius: $slider-pagination-border-radius;
+		display: inline-block;
+		height: $slider-pagination-size;
+		margin: 0 $slider-pagination-size/3;
+		width: $slider-pagination-size;
+		transition: background-color $slider-duration/4 $slider-ease-method;
+
+		&:hover {
+			cursor: pointer;
+			background-color: darken($slider-pagination-color, $slider-darken);
+		}
+
+		&.is-active {
+			background-color: $slider-pagination-color-active;
+		}
+
+		&.is-hidden {
+			display: none;
+		}
+	}
+}
+
+/* ---------------------------------------------------
+Context: Default
+--------------------------------------------------- */
+.c-slider--default {
+}

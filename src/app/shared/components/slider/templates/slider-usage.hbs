@@ -1,0 +1,13 @@
+{{! wrapWith START: Slider }}
+{{#wrapWith "slider" settings=this.settings content=this.content}}
+	{{! WrapWith START: Slider List }}
+	{{#wrapWith "slider__list" settings=this.settings}}
+		{{#times 8}}
+			{{#wrapWith "slider__item"}}
+				<img src="https://placehold.it/1920x800" alt="test">
+			{{/wrapWith}}
+		{{/times}}
+	{{/wrapWith}}
+	{{! WrapWith END: Slider List }}
+{{/wrapWith}}
+{{! wrapWith END: Slider}}

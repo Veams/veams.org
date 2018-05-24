@@ -15,6 +15,14 @@ EVENTS.navigation = {
 	eventName: 'navigation:eventName'
 };
 
+
+/**
+ * Events for Slider
+ */
+EVENTS.slider = {
+	slideStart: 'slide:start'
+};
+
 // @INSERTPOINT :: @ref: js-events
 
 export default EVENTS;

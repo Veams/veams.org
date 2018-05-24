@@ -2,9 +2,7 @@
 		settings.videoClasses}} {{settings.videoClasses}}{{/if}}"
        data-css="c-video"
        poster="{{getUrl content.videoPoster}}" {{settings.videoOptions}}
-       tabindex="0"
-       autoplay
-       loop>
+       tabindex="0">
 	{{#if content.videoMp4}}
 		<source src="{{getUrl content.videoMp4}}" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'/>
 	{{/if}}

@@ -6,6 +6,18 @@ component: section
 Global Styles
 --------------------------------------------------- */
 [data-css="c-section"] {
+	padding: $margin-base * 4 0 $margin-base * 6;
+	border-bottom: 1px dotted $color-grey-dark;
+
+	.section__headline {
+		text-align: center;
+		font-size: 2.7rem;
+		margin-top: 0;
+		margin-bottom: $margin-base * 3;
+	}
+
+	.section__content {
+	}
 }
 
 /* ---------------------------------------------------

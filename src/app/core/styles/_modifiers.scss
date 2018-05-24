@@ -2,6 +2,6 @@
 Modifiers
 =================================================== */
 .is-container {
-	max-width: $bp-desktop-l;
-	margin: 0 auto;
+	max-width: $bp-desktop-l !important;
+	margin: 0 auto !important;
 }

@@ -24,7 +24,7 @@ Header
 	display: flex;
 	align-items: center;
 	padding: $margin-base;
-	background-color: $color-grey-dark;
+	background-color: darken($color-grey-dark, 8);
 	z-index: map-get($lyt-index-map, header);
 }
 
@@ -86,4 +86,9 @@ Main
 	overflow-x: hidden;
 	padding: $lyt-container-margin-top $margin-base * 3;
 	box-sizing: border-box;
+
+	.is-front & {
+		float: none;
+		width: 100%;
+	}
 }
