@@ -70,7 +70,6 @@ Global Styles
 		opacity: .3;
 		transition: opacity $slider-duration $slider-ease-method;
 		vertical-align: top;
-		line-height: 0;
 
 		&.is-active {
 			opacity: 1;

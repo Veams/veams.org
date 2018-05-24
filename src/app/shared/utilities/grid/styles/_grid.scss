@@ -5,6 +5,7 @@ UTILITY: GRID
 /* ---------------------------------------------------
 Global Variables
 --------------------------------------------------- */
+$grid-visual: true !default;
 $grid-defaults: (
 	columns: 12,
 	gutter: 52px
@@ -12,27 +13,27 @@ $grid-defaults: (
 $grid-breakpoints-defaults: (
 	'mobile-s': (
 		columns: 12,
-		gutter: 20px,
+		gutter: 30px,
 		media: 320px
 	),
 	'mobile-l': (
 		columns: 12,
-		gutter: 20px,
+		gutter: 30px,
 		media: 657px
 	),
 	'tablet-s': (
 		columns: 12,
-		gutter: 20px,
+		gutter: 30px,
 		media: 768px
 	),
 	'desktop-l': (
 		columns: 12,
-		gutter: 20px,
+		gutter: 30px,
 		media: 1024px
 	),
 	'desktop': (
 		columns: 12,
-		gutter: 20px,
+		gutter: 30px,
 		media: 1440px
 	)
 ) !default;
@@ -87,6 +88,11 @@ Grid Row
 
 			@include grid-media($bp-map) {
 				$gutter: map-get($bp-map, gutter);
+
+				@if ($grid-visual) { // visualizing layout internal
+					border: 1px dotted deepskyblue;;
+					@include grid-visual();
+				}
 
 				margin-left: -($gutter);
 				margin-right: -($gutter);

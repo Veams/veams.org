@@ -11,9 +11,11 @@ Global Styles
 
 	.section__headline {
 		text-align: center;
-		font-size: 2.7rem;
+		font-size: 3.4rem;
 		margin-top: 0;
 		margin-bottom: $margin-base * 3;
+		font-family: $font-family;
+		font-weight: $font-thin;
 	}
 
 	.section__content {
