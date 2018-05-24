@@ -92,16 +92,16 @@ bodyclass: "is-front"
 			{{! WrapWith START: Grid Col }}
 				{{#wrapWith "grid-col" colClasses="is-col-mobile-s-12"}}
 
-					{{#with @root.slider.variations.simple}}
+					{{#with @root.slider.variations.overflow}}
 					{{! WrapWith START: Slider }}
 						{{#wrapWith "slider" settings=this.settings content=this.content}}
 						{{! WrapWith START: Slider List }}
-							{{#wrapWith "slider__list"}}
+							{{#wrapWith "slider__list" settings=this.settings}}
 							{{! WrapWith START: Slider Item }}
 								{{#wrapWith "slider__item"}}
 
 								{{! WrapWith START: Grid Row }}
-									{{#wrapWith "grid-row"}}
+									{{#wrapWith "grid-row" gridPadding=true}}
 
 									{{! WrapWith START:  }}
 										{{#wrapWith "grid-col" colClasses="is-col-mobile-s-7"}}
@@ -137,7 +137,7 @@ bodyclass: "is-front"
 								{{#wrapWith "slider__item"}}
 
 								{{! WrapWith START: Grid Row }}
-									{{#wrapWith "grid-row"}}
+									{{#wrapWith "grid-row" gridPadding=true}}
 
 									{{! WrapWith START:  }}
 										{{#wrapWith "grid-col" colClasses="is-col-mobile-s-7"}}
@@ -173,7 +173,7 @@ bodyclass: "is-front"
 								{{#wrapWith "slider__item"}}
 
 								{{! WrapWith START: Grid Row }}
-									{{#wrapWith "grid-row"}}
+									{{#wrapWith "grid-row" gridPadding=true}}
 
 									{{! WrapWith START:  }}
 										{{#wrapWith "grid-col" colClasses="is-col-mobile-s-7"}}

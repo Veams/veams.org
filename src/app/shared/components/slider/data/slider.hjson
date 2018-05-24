@@ -97,7 +97,7 @@
 				"sliderContextClass": "default",
 				"sliderOverflow": true,
 				"sliderJsOptions": {
-					"infinite": true
+					"infinite": false
 				}
 			},
 			"content": {
