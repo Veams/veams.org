@@ -31,13 +31,19 @@ module.exports = function () {
 	return {
 		test: /\.(s*)css$/,
 		use: ExtractTextPlugin.extract({
-			fallback: 'style-loader',
+			fallback: {
+				loader: 'style-loader',
+				options: {
+					hmr: prod === true
+				}
+			},
 			use: [
 				{
 					loader: 'css-loader',
 					options: {
-					    url: false,
-						sourceMap: prod === false
+						url: false,
+						sourceMap: prod === false,
+						importLoaders: 1
 					}
 				},
 				{
