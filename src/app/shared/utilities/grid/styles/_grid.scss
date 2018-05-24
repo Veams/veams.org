@@ -90,8 +90,9 @@ Grid Row
 				$gutter: map-get($bp-map, gutter);
 
 				@if ($grid-visual) { // visualizing layout internal
-					border: 1px dotted deepskyblue;;
 					@include grid-visual();
+
+					border: 1px dotted deepskyblue;
 				}
 
 				margin-left: -($gutter);
