@@ -4,6 +4,10 @@
         "api": {
             "skipImports": true,
             "path": "node_modules/@veams/bp-mock-api"
+        },
+        "page": {
+            "skipImports": true,
+            "path": "configs/blueprints/page"
         }
     },
     "config": {
@@ -30,6 +34,7 @@
         "config": "configs",
         "docs": "src/docs",
         "mocks": "src/server/mocks",
+        "page": "src/app/pages",
         "server": "src/server",
         "src": "src",
         "utility": "src/app/shared/utilities"

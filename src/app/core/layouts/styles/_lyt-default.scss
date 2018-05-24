@@ -6,7 +6,7 @@ Layout Styles
 Variables
 --------------------------------------------------- */
 $lyt-sidebar-width: 280px;
-$lyt-sidebar-offset: 69px;
+$lyt-sidebar-offset: 65px;
 $lyt-container-margin-top: 4rem;
 $lyt-index-map: (
 	header: 10,
@@ -37,6 +37,14 @@ Header
 }
 
 /* ---------------------------------------------------
+Content Wrapper
+--------------------------------------------------- */
+.page-content-wrapper {
+	margin-top: $lyt-sidebar-offset;
+	position: relative;
+}
+
+/* ---------------------------------------------------
 Sidebar
 --------------------------------------------------- */
 .r-sidebar {
@@ -49,7 +57,6 @@ Sidebar
 	position: fixed;
 	z-index: map-get($lyt-index-map, sidebar);
 	overflow-x: auto;
-	top: $lyt-sidebar-offset;
 	background-image: $bg-pattern;
 	padding: $lyt-container-margin-top $margin-base * 2;
 
@@ -74,7 +81,6 @@ Sidebar
 Main
 --------------------------------------------------- */
 .r-main {
-	margin-top: $lyt-sidebar-offset;
 	float: right;
 	width: calc(100% - #{$lyt-sidebar-width});
 	overflow-x: hidden;

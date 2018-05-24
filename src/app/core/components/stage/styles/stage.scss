@@ -1,0 +1,50 @@
+/* ===================================================
+component: stage
+=================================================== */
+
+/* ---------------------------------------------------
+Global Styles
+--------------------------------------------------- */
+[data-css="c-stage"] {
+	background-color: darken($color-primary-light, 10);
+	padding: $margin-base * 4 $margin-base $margin-base * 22 $margin-base;
+	color: $color-white;
+	text-align: center;
+	position: relative;
+
+	.stage__headline {
+		font-family: $font-family;
+		font-weight: $font-bold;
+		font-size: 5.3rem;
+		letter-spacing: 8px;
+		margin-bottom: 0;
+
+		span {
+			display: block;
+			font-size: 3rem;
+			letter-spacing: normal;
+			font-weight: $font-light;
+		}
+	}
+
+	.stage__subline {
+		font-size: 2.5rem;
+		font-weight: $font-normal;
+	}
+
+	.stage__teaser {
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		transform: translate3d(-50%, 50%, 0);
+
+		min-width: 300px;
+		max-width: 600px;
+	}
+}
+
+/* ---------------------------------------------------
+Context: Default
+--------------------------------------------------- */
+.c-stage--default {
+}

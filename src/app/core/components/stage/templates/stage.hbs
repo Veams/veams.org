@@ -1,0 +1,18 @@
+<div class="c-stage{{#if settings.stageContextClass}}--{{settings.stageContextClass}}{{else}}--default{{/if}}{{#if
+		settings.stageClasses}} {{settings.stageClasses}}{{/if}}"
+     data-css="c-stage">
+	<div class="stage__content is-container">
+		<h1 class="stage__headline">
+			VEAMS
+			<span>One tool to build fast, scalable, flexible & best practices driven web apps.</span>
+		</h1>
+
+		<div class="stage__teaser">
+			{{#parseJSON '{"content": {
+				"videoMp4": "http://assets.veams.org/movies/veams--new-project.mp4"
+			}}'}}
+				{{> video }}
+			{{/parseJSON}}
+		</div>
+	</div>
+</div>
