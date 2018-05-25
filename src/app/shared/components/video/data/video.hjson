@@ -1,0 +1,25 @@
+{
+	"variations": {
+		"default": {
+			"docs": {
+				"variationName": "Default video",
+				"sectionCenter": true
+			},
+			"settings": {
+				"videoContextClass": false,
+				"videoClasses": false,
+				"videoOptions": "controls buffer"
+			},
+			"content": {
+				"videoPoster": "http://sandbox.thewikies.com/vfe-generator/images/big-buck-bunny_poster.jpg",
+				"videoMp4": "http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4",
+				"videoWebm": "http://clips.vorwaerts-gmbh.de/big_buck_bunny.webm",
+				"videoTrack": {
+					"trackSubtitle": false,
+					"trackLang": false,
+					"trackLabel": false
+				}
+			}
+		}
+	}
+}

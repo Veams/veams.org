@@ -1,0 +1,131 @@
+{
+	"variations": {
+		// My simple version
+		"simple": {
+			"docs": {
+				"variationName": "Default Slider" // Is shown in documentation
+			},
+			"settings": {
+				"sliderContextClass": "default"
+			},
+			"content": {
+				"sliderButtons": {
+					"next": "Next",
+					"prev": "Previous"
+				}
+			}
+		},
+		"multiple": {
+			"docs": {
+				"variationName": "Multiple items defined by breakpoints",
+				"variationDescription": "By providing 'visibleItems' you can define the visible active slides per breakpoint."
+			},
+			"settings": {
+				"sliderContextClass": "default",
+				"sliderJsOptions": { // Just provide to options as simple object, it gets stringified by a helper automatically
+					"visibleItems": {
+						"mobile-s": 1,
+						"mobile-m": 1,
+						"mobile-l": 2,
+						"tablet-s": 2,
+						"tablet-l": 2,
+						"desktop-s": 3,
+						"desktop-m": 3,
+						"desktop-l": 3
+					}
+				}
+			},
+			"content": {
+				"sliderButtons": {
+					"next": "Next",
+					"prev": "Previous"
+				}
+			}
+		},"multipleWithGroupedPagination": {
+			"docs": {
+				"variationName": "Multiple items, grouped pagination and custom slide number",
+				"variationDescription": "By providing 'groupPaginationItems' you can group the pagination items. Furthermore you can modify the number of elements you want to slide to the left or right by using 'slideByItemNumber'."
+			},
+			"settings": {
+				"sliderContextClass": "default",
+				"sliderJsOptions": {
+					"groupPaginationItems": true,
+					"slideByItemNumber": 1,
+					"visibleItems": {
+						"mobile-s": 1,
+						"mobile-m": 1,
+						"mobile-l": 2,
+						"tablet-s": 2,
+						"tablet-l": 2,
+						"desktop-s": 3,
+						"desktop-m": 3,
+						"desktop-l": 3
+					}
+				}
+			},
+			"content": {
+				"sliderButtons": {
+					"next": "Next",
+					"prev": "Previous"
+				}
+			}
+		},
+		"infinite": {
+			"docs": {
+				"variationName": "Slider with enabled infinite option",
+				"variationDescription": "This means that the first and last elements get cloned and appended to the slide items. Please be aware of that you can not use this option in combination with multiple active slide elements."
+			},
+			"settings": {
+				"sliderContextClass": "default",
+				"sliderJsOptions": {
+					"infinite": true
+				}
+			},
+			"content": {
+				"sliderButtons": {
+					"next": "Next",
+					"prev": "Previous"
+				}
+			}
+		},
+		"overflow": {
+			"docs": {
+				"variationName": "Slider with overflow area",
+				"variationDescription": "By providing 'sliderOverflow' you can display all other items next to the active slide(s) as well."
+			},
+			"settings": {
+				"sliderContextClass": "default",
+				"sliderOverflow": true,
+				"sliderJsOptions": {
+					"infinite": false
+				}
+			},
+			"content": {
+				"sliderButtons": {
+					"next": "Next",
+					"prev": "Previous"
+				}
+			}
+		},
+		"autoplay": {
+			"docs": {
+				"variationName": "Slider with AutoPlay option",
+				"variationDescription": "The autoPlay option gives you the possibility to cycle through your slides automatically by a defined interval. You need to make sure to enable the infinite option. On hover the sliding stops."
+			},
+			"settings": {
+				"sliderContextClass": "default",
+				"sliderJsOptions": {
+					"infinite": true,
+					"autoPlay": true,
+					"autoPlayInterval": 3500
+				}
+			},
+			"content": {
+				"sliderButtons": {
+					"next": "Next",
+					"prev": "Previous"
+				}
+			}
+		}
+	}
+}

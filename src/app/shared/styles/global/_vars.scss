@@ -34,7 +34,12 @@ $breakpoints: (
 	'tablet-l': $bp-tablet-l,
 	'desktop-m': $bp-desktop-m,
 	'desktop-l': $bp-desktop-l
-); 
+);
+
+/* ---------------------------------------------------
+Grid
+--------------------------------------------------- */
+$grid-visual: false;
 
 /* ---------------------------------------------------
 Colors
@@ -54,11 +59,17 @@ $margin-base: 1rem;
 Backgrounds
 --------------------------------------------------- */
 $bg-pattern: url('../img/bg-pattern.png');
+$bg-pattern-dark-triangles: url('../img/dark-triangles.png');
+$bg-pattern-play: url('../img/gplaypattern.png');
+$bg-pattern-litte-triangles: url('../img/little_triangles.png');
+$bg-pattern-triangles: url('../img/triangles.png');
 
 /* ---------------------------------------------------
 Fonts
 --------------------------------------------------- */
 $font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+$font-thin: 100;
 $font-light: 300;
 $font-normal: 400;
+$font-medium: 500;
 $font-bold: 900;

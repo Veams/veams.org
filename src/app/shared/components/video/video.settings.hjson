@@ -1,0 +1,8 @@
+{
+	"type": "component",
+	"contextData": "video",
+	"layout": "lyt-docs",
+	"scssFiles": [
+		"_video.scss"
+	]
+}

@@ -1,0 +1,15 @@
+
+{
+	"variations": {
+		"default": {
+			"docs": {
+				"variationName": "Default"
+			},
+			"settings": {
+				"stageContextClass": "default",
+				"stageClasses": false
+			},
+			"content": {}
+		}
+	}
+}

@@ -81,8 +81,7 @@ module.exports = [
 		devtool: env === 'local' ? 'cheap-module-source-map' : false,
 		// Entry point for webpack
 		entry: {
-			'app': `${context}/app.scss`,
-			'docs': `${docsContext}/layouts/lyt-docs.scss`,
+			'app': `${context}/app.scss`
 		},
 		output: {
 			filename: 'css/[name].bundle.css',

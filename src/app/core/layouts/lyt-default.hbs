@@ -29,14 +29,27 @@
 			{{/with}}
 		</div>
 	</header>
-	<aside class="r-sidebar">
-		<div class="sidebar__list">
-			{{> sitemap }}
-		</div>
-	</aside>
-	<main class="r-main">
-		{{#block "main"}}{{/block}}
-	</main>
+	<div class="page-content-wrapper">
+		<section class="r-stage">
+			<div class="stage__content">
+				{{#block "stage"}}
+					{{#with stage.variations.default}}
+						{{> stage}}
+					{{/with}}
+				{{/block}}
+			</div>
+		</section>
+		{{#block "sidebar"}}
+			<aside class="r-sidebar">
+				<div class="sidebar__list">
+					{{> sitemap }}
+				</div>
+			</aside>
+		{{/block}}
+		<main class="r-main">
+			{{#block "main"}}{{/block}}
+		</main>
+	</div>
 </div>
 <!-- Scripts
 ================================================== -->

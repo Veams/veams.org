@@ -1,0 +1,10 @@
+
+{
+    "paths": {
+        "styles": "src/app/core/components/stage/styles/stage"
+    },
+    "type": "component",
+    "contextData": "stage",
+    "layout": "lyt-docs",
+    "publish": true
+}

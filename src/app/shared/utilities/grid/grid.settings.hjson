@@ -1,0 +1,12 @@
+{
+	"type": "utility",
+	"contextData": "grid",
+	"layout": "lyt-docs",
+	"subTemplates": [
+		"grid-col.hbs",
+		"grid-row.hbs"
+	],
+	"scssFiles": [
+		"_grid.scss"
+	]
+}

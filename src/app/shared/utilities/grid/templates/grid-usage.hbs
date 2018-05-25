@@ -1,0 +1,11 @@
+{{! WrapWith START: Grid Row }}
+{{#wrapWith "grid-row" settings=this.settings}}
+	{{#times content.repeats}}
+		{{! WrapWith START: Col }}
+		{{#wrapWith "grid-col" colClasses=../settings.colClasses }}
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam consectetur corporis cum, deleniti dignissimos ducimus ea eligendi, fugiat fugit illum molestias natus necessitatibus perferendis quasi quidem reiciendis similique ullam voluptatum!
+		{{/wrapWith}}
+	{{! WrapWith END: Col }}
+	{{/times}}
+{{/wrapWith}}
+{{! WrapWith END: Grid Row }}

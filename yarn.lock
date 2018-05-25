@@ -128,7 +128,19 @@
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/@veams/component-rte/-/component-rte-1.0.1.tgz#d9c02211cff83420aa44adf415971cdfa604fa7f"
 
-"@veams/component@^1.2.2":
+"@veams/component-slider@^1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@veams/component-slider/-/component-slider-1.0.1.tgz#874feed463ac7e4ed9a8c08e662e6ec20d562c3e"
+  dependencies:
+    "@veams/component" "^1.2.0"
+    "@veams/helpers" "^1.2.0"
+    "@veams/query" "^2.2.1"
+
+"@veams/component-video@^1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@veams/component-video/-/component-video-1.0.1.tgz#1006a59163b976b06afee0d49c59cab4db358345"
+
+"@veams/component@^1.2.0", "@veams/component@^1.2.2":
   version "1.2.3"
   resolved "https://registry.yarnpkg.com/@veams/component/-/component-1.2.3.tgz#e3462d34ef9ebad3dc5d7b14b375a8c2721a9036"
   dependencies:
@@ -191,9 +203,13 @@
   dependencies:
     "@veams/helpers" "^1.2.5"
 
-"@veams/query@^2.2.19":
+"@veams/query@^2.2.1", "@veams/query@^2.2.19":
   version "2.2.23"
   resolved "https://registry.yarnpkg.com/@veams/query/-/query-2.2.23.tgz#28154e09a35bdeb2d1d3cab1f421a279d4828e25"
+
+"@veams/utility-grid@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@veams/utility-grid/-/utility-grid-1.0.0.tgz#ccc8a0a2699b869a2f227febdfdd1dc9c300e1be"
 
 abbrev@1:
   version "1.1.1"

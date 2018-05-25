@@ -41,6 +41,9 @@
     "devDependencies": {
         "@veams/bp-mock-api": "^0.0.1",
         "@veams/component-rte": "^1.0.1",
+        "@veams/component-slider": "^1.0.1",
+        "@veams/component-video": "^1.0.1",
+        "@veams/utility-grid": "^1.0.0",
         "babel-core": "^6.26.0",
         "babel-loader": "^7.1.2",
         "babel-plugin-transform-class-properties": "^6.24.1",

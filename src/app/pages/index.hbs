@@ -1,10 +1,281 @@
 ---
 title: Veams
+bodyclass: "is-front"
 ---
 
 {{#extend "lyt-default"}}
+	{{#content "sidebar"}}{{/content}}
 	{{#content "main"}}
 
-	Veams to rule them all!
+
+	{{! WrapWith START: Section }}
+		{{#wrapWith "section" headline="Build your customized web application in 3 minutes."}}
+
+		{{! WrapWith START: Grid Row }}
+			{{#wrapWith "grid-row"}}
+
+			{{! WrapWith START: Grid Col }}
+				{{#wrapWith "grid-col" colClasses="is-col-mobile-s-7"}}
+
+					{{#with @root.slider.variations.simple}}
+					{{! WrapWith START: Slider }}
+						{{#wrapWith "slider" settings=this.settings content=this.content}}
+						{{! WrapWith START: Slider List }}
+							{{#wrapWith "slider__list"}}
+							{{! WrapWith START: Slider Item }}
+								{{#wrapWith "slider__item"}}
+									{{#parseJSON '{
+							"content": {
+								"videoMp4": "http://assets.veams.org/movies/veams--new-project.mp4"
+							}
+						}'}}
+										{{> video }}
+									{{/parseJSON}}
+								{{/wrapWith}}
+								{{! WrapWith END: Slider Item }}
+
+								{{! WrapWith START: Slider Item }}
+								{{#wrapWith "slider__item"}}
+									{{#parseJSON '{
+							"content": {
+								"videoMp4": "http://assets.veams.org/movies/veams--new-project.mp4"
+							}
+						}'}}
+										{{> video }}
+									{{/parseJSON}}
+								{{/wrapWith}}
+								{{! WrapWith END: Slider Item }}
+
+								{{! WrapWith START: Slider Item }}
+								{{#wrapWith "slider__item"}}
+									{{#parseJSON '{
+							"content": {
+								"videoMp4": "http://assets.veams.org/movies/veams--new-project.mp4"
+							}
+						}'}}
+										{{> video }}
+									{{/parseJSON}}
+								{{/wrapWith}}
+							{{! WrapWith END: Slider Item }}
+							{{/wrapWith}}
+						{{! WrapWith END: Slider List }}
+
+						{{/wrapWith}}
+					{{! WrapWith END: Slider }}
+					{{/with}}
+
+				{{/wrapWith}}
+				{{! WrapWith END: Grid Col }}
+				{{! WrapWith START: Grid Col }}
+				{{#wrapWith "grid-col" colClasses="is-col-mobile-s-5"}}
+					<h3>3 simple steps to build your first web application.</h3>
+
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad alias aperiam consectetur
+						consequatur dicta, dolorem, hic necessitatibus non, numquam optio possimus quae reprehenderit
+						voluptates. Dolor eveniet magni repellendus reprehenderit sint.</p>
+
+				{{/wrapWith}}
+			{{! WrapWith END: Grid Col }}
+
+			{{/wrapWith}}
+		{{! WrapWith END: Grid Row }}
+
+		{{/wrapWith}}
+		{{! WrapWith END: Section }}
+
+		{{! WrapWith START: Section }}
+		{{#wrapWith "section" headline="Build your customized web application in 3 minutes."}}
+
+		{{! WrapWith START: Grid Row }}
+			{{#wrapWith "grid-row"}}
+
+			{{! WrapWith START: Grid Col }}
+				{{#wrapWith "grid-col" colClasses="is-col-mobile-s-12"}}
+
+					{{#with @root.slider.variations.overflow}}
+					{{! WrapWith START: Slider }}
+						{{#wrapWith "slider" settings=this.settings content=this.content}}
+						{{! WrapWith START: Slider List }}
+							{{#wrapWith "slider__list" settings=this.settings}}
+							{{! WrapWith START: Slider Item }}
+								{{#wrapWith "slider__item"}}
+
+								{{! WrapWith START: Grid Row }}
+									{{#wrapWith "grid-row" gridPadding=true}}
+
+									{{! WrapWith START:  }}
+										{{#wrapWith "grid-col" colClasses="is-col-mobile-s-7"}}
+											{{#parseJSON '{
+							"content": {
+								"videoMp4": "http://assets.veams.org/movies/veams--new-project.mp4"
+							}
+						}'}}
+												{{> video }}
+											{{/parseJSON}}
+										{{/wrapWith}}
+										{{! WrapWith END:  }}
+
+										{{! WrapWith START: Grid Col }}
+										{{#wrapWith "grid-col" colClasses="is-col-mobile-s-5"}}
+											<h3>Install the CLI.</h3>
+
+											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad alias
+												aperiam
+												consectetur
+												consequatur dicta, dolorem, hic necessitatibus non, numquam optio
+												possimus
+												quae
+												reprehenderit
+												voluptates. Dolor eveniet magni repellendus reprehenderit sint.</p>
+
+										{{/wrapWith}}
+									{{! WrapWith END: Grid Col }}
+									{{/wrapWith}}
+
+								{{/wrapWith}}
+								{{! WrapWith START: Slider Item }}
+								{{#wrapWith "slider__item"}}
+
+								{{! WrapWith START: Grid Row }}
+									{{#wrapWith "grid-row" gridPadding=true}}
+
+									{{! WrapWith START:  }}
+										{{#wrapWith "grid-col" colClasses="is-col-mobile-s-7"}}
+											{{#parseJSON '{
+							"content": {
+								"videoMp4": "http://assets.veams.org/movies/veams--new-project.mp4"
+							}
+						}'}}
+												{{> video }}
+											{{/parseJSON}}
+										{{/wrapWith}}
+										{{! WrapWith END:  }}
+
+										{{! WrapWith START: Grid Col }}
+										{{#wrapWith "grid-col" colClasses="is-col-mobile-s-5"}}
+											<h3>Create & Start the Project.</h3>
+
+											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad alias
+												aperiam
+												consectetur
+												consequatur dicta, dolorem, hic necessitatibus non, numquam optio
+												possimus
+												quae
+												reprehenderit
+												voluptates. Dolor eveniet magni repellendus reprehenderit sint.</p>
+
+										{{/wrapWith}}
+									{{! WrapWith END: Grid Col }}
+									{{/wrapWith}}
+
+								{{/wrapWith}}
+								{{! WrapWith START: Slider Item }}
+								{{#wrapWith "slider__item"}}
+
+								{{! WrapWith START: Grid Row }}
+									{{#wrapWith "grid-row" gridPadding=true}}
+
+									{{! WrapWith START:  }}
+										{{#wrapWith "grid-col" colClasses="is-col-mobile-s-7"}}
+											{{#parseJSON '{
+							"content": {
+								"videoMp4": "http://assets.veams.org/movies/veams--new-project.mp4"
+							}
+						}'}}
+												{{> video }}
+											{{/parseJSON}}
+										{{/wrapWith}}
+										{{! WrapWith END:  }}
+
+										{{! WrapWith START: Grid Col }}
+										{{#wrapWith "grid-col" colClasses="is-col-mobile-s-5"}}
+											<h3>Install multiple Components.</h3>
+
+											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad alias
+												aperiam
+												consectetur
+												consequatur dicta, dolorem, hic necessitatibus non, numquam optio
+												possimus
+												quae
+												reprehenderit
+												voluptates. Dolor eveniet magni repellendus reprehenderit sint.</p>
+
+										{{/wrapWith}}
+									{{! WrapWith END: Grid Col }}
+									{{/wrapWith}}
+
+								{{/wrapWith}}
+							{{/wrapWith}}
+						{{! WrapWith END: Slider List }}
+
+						{{/wrapWith}}
+					{{! WrapWith END: Slider }}
+					{{/with}}
+
+				{{/wrapWith}}
+			{{! WrapWith END: Grid Col }}
+
+			{{/wrapWith}}
+		{{! WrapWith END: Grid Row }}
+
+
+		{{/wrapWith}}
+		{{! WrapWith END: Section }}
+
+		{{! WrapWith START: Section }}
+		{{#wrapWith "section" headline="Build a customized web application in 3 simple steps."}}
+
+		{{! WrapWith START: Grid }}
+			{{#wrapWith "grid-row"}}
+				{{#wrapWith "grid-col" colClasses="is-col-mobile-s-4"}}
+					<h3>Install Veams CLI</h3>
+					{{#parseJSON '{
+							"content": {
+								"videoMp4": "http://assets.veams.org/movies/veams--new-project.mp4"
+							}
+						}'}}
+						{{> video }}
+					{{/parseJSON}}
+				{{/wrapWith}}
+				{{#wrapWith "grid-col" colClasses="is-col-mobile-s-4"}}
+					<h3>Create & Start a Project</h3>
+					{{#parseJSON '{
+							"content": {
+								"videoMp4": "http://assets.veams.org/movies/veams--new-project.mp4"
+							}
+						}'}}
+						{{> video }}
+					{{/parseJSON}}
+				{{/wrapWith}}
+
+				{{#wrapWith "grid-col" colClasses="is-col-mobile-s-4"}}
+					<h3>Install Components</h3>
+					{{#parseJSON '{
+							"content": {
+								"videoMp4": "http://assets.veams.org/movies/veams--new-project.mp4"
+							}
+						}'}}
+						{{> video }}
+					{{/parseJSON}}
+				{{/wrapWith}}
+
+				{{#wrapWith "grid-col" colClasses="is-col-mobile-s-12"}}
+					<h3>See the Result</h3>
+
+					{{#parseJSON '{
+							"content": {
+								"videoMp4": "http://assets.veams.org/movies/veams--new-project.mp4"
+							}
+						}'}}
+						{{> video }}
+					{{/parseJSON}}
+				{{/wrapWith}}
+
+			{{/wrapWith}}
+		{{! WrapWith END: Grid }}
+
+		{{/wrapWith}}
+	{{! WrapWith END: Section }}
+
 	{{/content}}
 {{/extend}}

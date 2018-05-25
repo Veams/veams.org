@@ -10,6 +10,7 @@ module.exports = function (configContext) {
 			]
 		}),
 		new ExtractTextPlugin({
+			allChunks: true,
 			filename: '/css/[name].bundle.css'
 		})
 	]

@@ -25,9 +25,8 @@ Header
 	display: flex;
 	align-items: center;
 	padding: $margin-base;
-	background-color: $color-grey-dark;
+	background-color: darken($color-grey-dark, 8);
 	z-index: map-get($lyt-index-map, header);
-	box-shadow: -1px 3px 6px 0 lighten($color-grey-dark, 50%), 0 0 6px 0 lighten($color-grey-dark, 45%), -1px 3px 6px 0 lighten($color-grey-dark, 65%);
 }
 
 .r-header-left {
@@ -36,6 +35,14 @@ Header
 .r-header-right {
 	width: 100%;
 	margin-right: $margin-base * 4;
+}
+
+/* ---------------------------------------------------
+Content Wrapper
+--------------------------------------------------- */
+.page-content-wrapper {
+	margin-top: $lyt-sidebar-offset;
+	position: relative;
 }
 
 /* ---------------------------------------------------
@@ -51,7 +58,6 @@ Sidebar
 	position: fixed;
 	z-index: map-get($lyt-index-map, sidebar);
 	overflow-x: auto;
-	top: $lyt-sidebar-offset;
 	background-image: $bg-pattern;
 	padding: $lyt-container-margin-top $margin-base * 2;
 
@@ -76,11 +82,16 @@ Sidebar
 Main
 --------------------------------------------------- */
 .r-main {
-	margin-top: $lyt-sidebar-offset;
 	float: right;
 	width: calc(100% - #{$lyt-sidebar-width});
 	overflow-x: hidden;
 	padding: $lyt-container-margin-top $margin-base * 3;
 	box-sizing: border-box;
 	height: $lyt-main-height;
+
+	.is-front & {
+		float: none;
+		width: 100%;
+	}
+
 }
