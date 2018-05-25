@@ -6,12 +6,13 @@ Layout Styles
 Variables
 --------------------------------------------------- */
 $lyt-sidebar-width: 280px;
-$lyt-sidebar-offset: 69px;
+$lyt-sidebar-offset: 65px;
 $lyt-container-margin-top: 4rem;
 $lyt-index-map: (
 	header: 10,
 	sidebar: 5
 );
+$lyt-main-height: 92vh;
 
 /* ---------------------------------------------------
 Header
@@ -26,6 +27,7 @@ Header
 	padding: $margin-base;
 	background-color: $color-grey-dark;
 	z-index: map-get($lyt-index-map, header);
+	box-shadow: -1px 3px 6px 0 lighten($color-grey-dark, 50%), 0 0 6px 0 lighten($color-grey-dark, 45%), -1px 3px 6px 0 lighten($color-grey-dark, 65%);
 }
 
 .r-header-left {
@@ -80,4 +82,5 @@ Main
 	overflow-x: hidden;
 	padding: $lyt-container-margin-top $margin-base * 3;
 	box-sizing: border-box;
+	height: $lyt-main-height;
 }
