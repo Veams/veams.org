@@ -12,7 +12,6 @@ $lyt-index-map: (
 	header: 10,
 	sidebar: 5
 );
-$lyt-main-height: 92vh;
 
 /* ---------------------------------------------------
 Header
@@ -87,7 +86,6 @@ Main
 	overflow-x: hidden;
 	padding: $lyt-container-margin-top $margin-base * 3;
 	box-sizing: border-box;
-	height: $lyt-main-height;
 
 	.is-front & {
 		float: none;
