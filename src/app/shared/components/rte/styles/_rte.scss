@@ -266,6 +266,8 @@ Context: Default
 		Standard elements for markdown
 		----------------------- */
 	code[class="language-bash"],
+	code[class="language-html"],
+	code[class="language-hbs"],
 	code[class="language-js"],
 	code[class="language-scss"] {
 		display: block;

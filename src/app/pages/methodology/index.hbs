@@ -1,0 +1,25 @@
+---
+title: Methodology
+sitemap: "Docs"
+docs: "Methodology"
+navigationLink: "Overview"
+---
+
+{{#extend "lyt-default"}}
+	{{#content "stage"}}{{/content}}
+	{{#content "main"}}
+
+    {{! WrapWith START: Section One }}
+		{{#wrapWith "section"
+            headline="Overview to Veams-Methodology"
+            media=""
+            githubLink="https://github.com/Veams/documentation/issues/new"
+		}}
+
+			{{> rte md="src/external/veams/methodology/methodology__index.md"}}
+
+		{{/wrapWith}}
+	{{! WrapWith END: Section One }}
+
+	{{/content}}
+{{/extend}}

@@ -1,0 +1,25 @@
+---
+title: Components
+sitemap: "Docs"
+docs: "Methodology"
+navigationLink: "Components"
+---
+
+{{#extend "lyt-default"}}
+	{{#content "stage"}}{{/content}}
+	{{#content "main"}}
+
+    {{! WrapWith START: Section One }}
+		{{#wrapWith "section"
+            headline="Components: Generic elements which can be used all over our application."
+            media=""
+            githubLink="https://github.com/Veams/documentation/issues/new"
+		}}
+
+			{{> rte md="src/external/veams/methodology/instruments/components/methodology__components.md"}}
+
+		{{/wrapWith}}
+	{{! WrapWith END: Section One }}
+
+	{{/content}}
+{{/extend}}

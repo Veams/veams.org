@@ -1,0 +1,25 @@
+---
+title: Context Styling
+sitemap: "Docs"
+docs: "Methodology"
+navigationLink: "Context Styling"
+---
+
+{{#extend "lyt-default"}}
+	{{#content "stage"}}{{/content}}
+	{{#content "main"}}
+
+    {{! WrapWith START: Section One }}
+		{{#wrapWith "section"
+            headline="How to scope styles to a specific HTML element."
+            media=""
+            githubLink="https://github.com/Veams/documentation/issues/new"
+		}}
+
+			{{> rte md="src/external/veams/methodology/css/context/methodology__cssContext.md"}}
+
+		{{/wrapWith}}
+	{{! WrapWith END: Section One }}
+
+	{{/content}}
+{{/extend}}

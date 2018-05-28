@@ -38,6 +38,12 @@ module.exports = function () {
 			name: 'category',
 			message: 'In which category section do you want to save it?',
 			default: 'Getting Started'
+		},
+		{
+			type: 'text',
+			name: 'category',
+			message: 'In which category section do you want to save it?',
+			default: 'Methodology'
 		}
 	]
 };
