@@ -3,6 +3,12 @@ RTE COMPONENT
 =================================================== */
 
 /* ---------------------------------------------------
+Global Imports
+--------------------------------------------------- */
+@import "../docs/layouts/highlight";
+@import "../docs/layouts/monokai";
+
+/* ---------------------------------------------------
 Global Styles
 --------------------------------------------------- */
 
@@ -217,4 +223,115 @@ Global Styles
 Context: Default
 --------------------------------------------------- */
 .c-rte--default {
+	a {
+		color: $color-primary-dark;
+	}
+
+	h2 {
+		font-weight: $font-normal;
+		color: $color-grey-dark;
+	}
+
+	h3 {
+		font-weight: $font-normal;
+		color: $color-grey-dark;
+		border-top: none;
+	}
+
+	h4 {
+		color: $color-grey-dark;
+		padding: 0;
+		background-color: transparent;
+	}
+
+	ul {
+		li {
+			&::before {
+				background-color: $color-grey-dark;
+			}
+		}
+	}
+
+	hr {
+		margin: 3rem 0;
+		border-width: 1px;
+		background-color: transparent;
+		border-top: 1px solid darken(#fff, 20);
+		border-bottom: 2px solid #fff;
+		border-right: none 0;
+		border-left: none 0;
+	}
+
+	/*
+		Standard elements for markdown
+		----------------------- */
+	code[class="language-bash"],
+	code[class="language-html"],
+	code[class="language-hbs"],
+	code[class="language-js"],
+	code[class="language-scss"] {
+		display: block;
+		background: #242420;
+		font-size: 100%;
+		word-wrap: normal;
+		color: lighten(#e7db74, 15);
+		overflow-x: auto;
+	}
+
+	pre {
+		white-space: pre-line;
+		margin-bottom: 4rem;
+
+		code {
+			padding: .9rem 1rem;
+		}
+	}
+
+	table {
+		font-family: $font-family;
+		font-size: 100%;
+		width: 100%;
+		overflow: auto;
+		border-spacing: 0;
+		border-collapse: collapse;
+		margin: .5rem 0 4rem;
+	}
+
+	thead,
+	tbody {
+		box-sizing: border-box;
+
+		tr {
+			border-top: 1px solid #3a3a3a;
+			color: #f8f8f2;
+
+			&:nth-child(n+1) {
+				background-color: rgb(35, 36, 31);
+			}
+
+			&:nth-child(2n+2) {
+				background-color: rgba(35, 36, 31, .9);
+			}
+
+			th,
+			td {
+				padding: .7rem 1rem;
+				border: 1px solid #4e4e4e;
+			}
+
+			th {
+				background-color: #000;
+			}
+		}
+
+		th {
+			font-weight: 600;
+		}
+
+		td {
+			code {
+				color: #e7db74;
+			}
+		}
+	}
 }

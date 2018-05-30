@@ -1,5 +1,4 @@
-<div class="c-rte{{#if settings.rteContextClass}}--{{settings.rteContextClass}}{{else}}--default{{/if}}{{#if
-		settings.rteClasses}} {{settings.rteClasses}}{{/if}}"
+<div class="c-rte{{#if settings.rteContextClass}}--{{settings.rteContextClass}}{{else}}--default{{/if}}{{#if settings.rteClasses}} {{settings.rteClasses}}{{/if}}"
      data-css="c-rte">
 	{{! Error handling }}
 	{{#unless content.rteMd}}
@@ -7,13 +6,18 @@
 	{{/unless}}
 
 	{{#if settings.rteCWD}}
-	{{! Error handling }}
+		{{! Error handling }}
 		{{#unless settings.rteCWDLevelUp}}
 			<h2 style="color: red">You have to provide a level - default should be 0!</h2>
 		{{/unless}}
 
 		{{{markdown (buildPath @root.currentPage.dirname content.rteMd goUp=settings.rteCWDLevelUp)}}}
 	{{else}}
-		{{{markdown content.rteMd}}}
+
+		{{#if md}}
+			{{{markdown md}}}
+		{{else}}
+			{{{markdown content.rteMd}}}
+		{{/if}}
 	{{/if}}
 </div>

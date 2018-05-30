@@ -1,0 +1,25 @@
+---
+title: CSS
+sitemap: "Docs"
+docs: "Methodology"
+navigationLink: "CSS"
+---
+
+{{#extend "lyt-default"}}
+	{{#content "stage"}}{{/content}}
+	{{#content "main"}}
+
+    {{! WrapWith START: Section One }}
+		{{#wrapWith "section"
+            headline="CSS naming convention"
+            media=""
+            githubLink="https://github.com/Veams/documentation/issues/new"
+		}}
+
+			{{> rte md="src/external/veams/methodology/css/introduction/methodology__cssIntro.md"}}
+
+		{{/wrapWith}}
+	{{! WrapWith END: Section One }}
+
+	{{/content}}
+{{/extend}}

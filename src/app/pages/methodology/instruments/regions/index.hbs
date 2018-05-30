@@ -1,0 +1,25 @@
+---
+title: Regions
+sitemap: "Docs"
+docs: "Methodology"
+navigationLink: "Regions"
+---
+
+{{#extend "lyt-default"}}
+	{{#content "stage"}}{{/content}}
+	{{#content "main"}}
+
+    {{! WrapWith START: Section One }}
+		{{#wrapWith "section"
+            headline="Regions: An instrument to divide your layout."
+            media=""
+            githubLink="https://github.com/Veams/documentation/issues/new"
+		}}
+
+			{{> rte md="src/external/veams/methodology/instruments/regions/methodology__regions.md"}}
+
+		{{/wrapWith}}
+	{{! WrapWith END: Section One }}
+
+	{{/content}}
+{{/extend}}
