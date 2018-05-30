@@ -43,5 +43,5 @@
         "app": 3000,
         "server": 2999
     },
-    "startPath": "docs/index.html"
+    "startPath": "home.html"
 }

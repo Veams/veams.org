@@ -84,7 +84,7 @@ Main
 	float: right;
 	width: calc(100% - #{$lyt-sidebar-width});
 	overflow-x: hidden;
-	padding: $lyt-container-margin-top $margin-base * 3;
+	padding: $lyt-container-margin-top 0;
 	box-sizing: border-box;
 
 	.is-front & {

@@ -4,7 +4,8 @@ module.exports = function () {
 			type: 'text',
 			name: 'title',
 			message: 'How is the title of the page?'
-		},{
+		},
+		{
 			type: 'text',
 			name: 'navigationLink',
 			message: 'How is the navigation link text of the page?'

@@ -22,6 +22,8 @@ module.exports = {
 		types: {
 			data: {
 				dir: '',
+				createDeepIds: false,
+				pathDelimiter: '_',
 				files: [
 					'core/**/*.hjson',
 					'core/**/*.json',
@@ -29,6 +31,7 @@ module.exports = {
 					// 'app/features/**/*.json',
 					'shared/components/**/*.hjson',
 					'shared/components/**/*.json',
+					'pages/**/*.hjson',
 					'shared/utilities/**/*.hjson',
 					'shared/utilities/**/*.json'
 				]
