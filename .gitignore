@@ -17,6 +17,7 @@ node_modules
 .sass-cache
 .idea
 /app
+src/app/exported
 src/external/veams
 src/external/core
 src/external/base
