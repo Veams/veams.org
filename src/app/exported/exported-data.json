@@ -1,0 +1,1134 @@
+{
+    "servermode": true,
+    "__repository": {
+        "layouts": [
+            "lyt-default"
+        ],
+        "pages": [
+            "docs/installation/index",
+            "docs/index",
+            "home/index",
+            "methodology/css/context-styling/index",
+            "methodology/css/global-styling/index",
+            "methodology/css/index",
+            "methodology/css/modifier-styling/index",
+            "methodology/index",
+            "methodology/instruments/components/index",
+            "methodology/instruments/regions/index",
+            "methodology/instruments/utilities/index"
+        ],
+        "partials": [
+            "rte",
+            "slider__controls",
+            "slider__item",
+            "slider__list",
+            "slider__pagination",
+            "slider-usage",
+            "video",
+            "slider",
+            "_metadata",
+            "_scripts",
+            "_styles",
+            "section",
+            "navigation",
+            "sitemap",
+            "stage",
+            "grid-row",
+            "grid-col",
+            "grid-usage"
+        ],
+        "panels": [],
+        "data": [
+            "sitemap.settings",
+            "navigation.settings",
+            "navigation",
+            "section",
+            "rte",
+            "rte.settings",
+            "slider",
+            "slider-usage.settings",
+            "video",
+            "video.settings",
+            "stage.settings",
+            "section.settings",
+            "package",
+            "home",
+            "grid",
+            "stage",
+            "grid.settings",
+            "package",
+            "package",
+            "package"
+        ]
+    },
+    "__layouts": {
+        "lyt-default": {
+            "id": "lyt-default",
+            "assets": "../../",
+            "ext": ".html",
+            "srcExt": ".hbs",
+            "basename": "lyt-default.hbs",
+            "filename": "lyt-default",
+            "dirname": "src/app/core/layouts",
+            "destDir": "app/",
+            "destSubDir": "core/layouts",
+            "destFile": "core/layouts/lyt-default.html",
+            "serverFile": "core/layouts/lyt-default",
+            "raw": "<!DOCTYPE html>\n<!--[if lt IE 7]>      <html lang=\"en\" class=\"no-js lt-ie9 lt-ie8 lt-ie7\"> <![endif]-->\n<!--[if IE 7]>         <html lang=\"en\" class=\"no-js lt-ie9 lt-ie8\"> <![endif]-->\n<!--[if IE 8]>         <html lang=\"en\" class=\"no-js lt-ie9\"> <![endif]-->\n<!--[if gt IE 8]><!-->\n<html lang=\"en\" class=\"no-js\"> <!--<![endif]-->\n\n<head>\n\t{{#block \"metadata\"}}\n\t\t{{> _metadata }}\n\t{{/block}}\n\t{{#block \"styles\"}}\n\t\t{{> _styles }}\n\t{{/block}}\n</head>\n\n<body class=\"{{bodyclass}}\">\n\n<div class=\"page-wrapper\">\n\t<header class=\"r-header\">\n\t\t<div class=\"r-header-left\">\n\t\t\t<a href=\"/home/index.html\">\n\t\t\t\t<img src=\"https://www.veams.org/img/svg/icons/veams-std-invert.svg\" width=\"148px\">\n\t\t\t</a>\n\t\t</div>\n\t\t<div class=\"r-header-right\">\n\t\t\t{{#with navigation.variations.default}}\n\t\t\t\t{{> navigation}}\n\t\t\t{{/with}}\n\t\t</div>\n\t</header>\n\t<div class=\"page-content-wrapper\">\n\t\t<section class=\"r-stage\">\n\t\t\t<div class=\"stage__content\">\n\t\t\t\t{{#block \"stage\"}}\n\t\t\t\t\t{{#with @root.stage.variations.default}}\n\t\t\t\t\t\t{{> stage}}\n\t\t\t\t\t{{/with}}\n\t\t\t\t{{/block}}\n\t\t\t</div>\n\t\t</section>\n\t\t{{#block \"sidebar\"}}\n\t\t\t<aside class=\"r-sidebar\">\n\t\t\t\t<div class=\"sidebar__list\">\n\t\t\t\t\t{{> sitemap }}\n\t\t\t\t</div>\n\t\t\t</aside>\n\t\t{{/block}}\n\t\t<main class=\"r-main\">\n\t\t\t{{#block \"main\"}}{{/block}}\n\t\t</main>\n\t</div>\n</div>\n<!-- Scripts\n================================================== -->\n{{#block \"scripts\"}}\n\t{{> _scripts }}\n{{/block}}\n</body>\n</html>",
+            "parsed": {
+                "orig": "<!DOCTYPE html>\n<!--[if lt IE 7]>      <html lang=\"en\" class=\"no-js lt-ie9 lt-ie8 lt-ie7\"> <![endif]-->\n<!--[if IE 7]>         <html lang=\"en\" class=\"no-js lt-ie9 lt-ie8\"> <![endif]-->\n<!--[if IE 8]>         <html lang=\"en\" class=\"no-js lt-ie9\"> <![endif]-->\n<!--[if gt IE 8]><!-->\n<html lang=\"en\" class=\"no-js\"> <!--<![endif]-->\n\n<head>\n\t{{#block \"metadata\"}}\n\t\t{{> _metadata }}\n\t{{/block}}\n\t{{#block \"styles\"}}\n\t\t{{> _styles }}\n\t{{/block}}\n</head>\n\n<body class=\"{{bodyclass}}\">\n\n<div class=\"page-wrapper\">\n\t<header class=\"r-header\">\n\t\t<div class=\"r-header-left\">\n\t\t\t<a href=\"/home/index.html\">\n\t\t\t\t<img src=\"https://www.veams.org/img/svg/icons/veams-std-invert.svg\" width=\"148px\">\n\t\t\t</a>\n\t\t</div>\n\t\t<div class=\"r-header-right\">\n\t\t\t{{#with navigation.variations.default}}\n\t\t\t\t{{> navigation}}\n\t\t\t{{/with}}\n\t\t</div>\n\t</header>\n\t<div class=\"page-content-wrapper\">\n\t\t<section class=\"r-stage\">\n\t\t\t<div class=\"stage__content\">\n\t\t\t\t{{#block \"stage\"}}\n\t\t\t\t\t{{#with @root.stage.variations.default}}\n\t\t\t\t\t\t{{> stage}}\n\t\t\t\t\t{{/with}}\n\t\t\t\t{{/block}}\n\t\t\t</div>\n\t\t</section>\n\t\t{{#block \"sidebar\"}}\n\t\t\t<aside class=\"r-sidebar\">\n\t\t\t\t<div class=\"sidebar__list\">\n\t\t\t\t\t{{> sitemap }}\n\t\t\t\t</div>\n\t\t\t</aside>\n\t\t{{/block}}\n\t\t<main class=\"r-main\">\n\t\t\t{{#block \"main\"}}{{/block}}\n\t\t</main>\n\t</div>\n</div>\n<!-- Scripts\n================================================== -->\n{{#block \"scripts\"}}\n\t{{> _scripts }}\n{{/block}}\n</body>\n</html>",
+                "data": {},
+                "content": "<!DOCTYPE html>\n<!--[if lt IE 7]>      <html lang=\"en\" class=\"no-js lt-ie9 lt-ie8 lt-ie7\"> <![endif]-->\n<!--[if IE 7]>         <html lang=\"en\" class=\"no-js lt-ie9 lt-ie8\"> <![endif]-->\n<!--[if IE 8]>         <html lang=\"en\" class=\"no-js lt-ie9\"> <![endif]-->\n<!--[if gt IE 8]><!-->\n<html lang=\"en\" class=\"no-js\"> <!--<![endif]-->\n\n<head>\n\t{{#block \"metadata\"}}\n\t\t{{> _metadata }}\n\t{{/block}}\n\t{{#block \"styles\"}}\n\t\t{{> _styles }}\n\t{{/block}}\n</head>\n\n<body class=\"{{bodyclass}}\">\n\n<div class=\"page-wrapper\">\n\t<header class=\"r-header\">\n\t\t<div class=\"r-header-left\">\n\t\t\t<a href=\"/home/index.html\">\n\t\t\t\t<img src=\"https://www.veams.org/img/svg/icons/veams-std-invert.svg\" width=\"148px\">\n\t\t\t</a>\n\t\t</div>\n\t\t<div class=\"r-header-right\">\n\t\t\t{{#with navigation.variations.default}}\n\t\t\t\t{{> navigation}}\n\t\t\t{{/with}}\n\t\t</div>\n\t</header>\n\t<div class=\"page-content-wrapper\">\n\t\t<section class=\"r-stage\">\n\t\t\t<div class=\"stage__content\">\n\t\t\t\t{{#block \"stage\"}}\n\t\t\t\t\t{{#with @root.stage.variations.default}}\n\t\t\t\t\t\t{{> stage}}\n\t\t\t\t\t{{/with}}\n\t\t\t\t{{/block}}\n\t\t\t</div>\n\t\t</section>\n\t\t{{#block \"sidebar\"}}\n\t\t\t<aside class=\"r-sidebar\">\n\t\t\t\t<div class=\"sidebar__list\">\n\t\t\t\t\t{{> sitemap }}\n\t\t\t\t</div>\n\t\t\t</aside>\n\t\t{{/block}}\n\t\t<main class=\"r-main\">\n\t\t\t{{#block \"main\"}}{{/block}}\n\t\t</main>\n\t</div>\n</div>\n<!-- Scripts\n================================================== -->\n{{#block \"scripts\"}}\n\t{{> _scripts }}\n{{/block}}\n</body>\n</html>"
+            }
+        }
+    },
+    "__partials": {
+        "rte": {
+            "id": "rte",
+            "assets": "../../../../",
+            "ext": ".html",
+            "srcExt": ".hbs",
+            "basename": "rte.hbs",
+            "filename": "rte",
+            "dirname": "src/app/shared/components/rte/templates",
+            "destDir": "app/",
+            "destSubDir": "shared/components/rte/templates",
+            "destFile": "shared/components/rte/templates/rte.html",
+            "serverFile": "shared/components/rte/templates/rte",
+            "raw": "<div class=\"c-rte{{#if settings.rteContextClass}}--{{settings.rteContextClass}}{{else}}--default{{/if}}{{#if settings.rteClasses}} {{settings.rteClasses}}{{/if}}\"\n     data-css=\"c-rte\">\n\t{{! Error handling }}\n\t{{#unless content.rteMd}}\n\t\t<h2 style=\"color: red\">Please provide a path to your markdown file!</h2>\n\t{{/unless}}\n\n\t{{#if settings.rteCWD}}\n\t\t{{! Error handling }}\n\t\t{{#unless settings.rteCWDLevelUp}}\n\t\t\t<h2 style=\"color: red\">You have to provide a level - default should be 0!</h2>\n\t\t{{/unless}}\n\n\t\t{{{markdown (buildPath @root.currentPage.dirname content.rteMd goUp=settings.rteCWDLevelUp)}}}\n\t{{else}}\n\n\t\t{{#if md}}\n\t\t\t{{{markdown md}}}\n\t\t{{else}}\n\t\t\t{{{markdown content.rteMd}}}\n\t\t{{/if}}\n\t{{/if}}\n</div>\n",
+            "parsed": {
+                "orig": "<div class=\"c-rte{{#if settings.rteContextClass}}--{{settings.rteContextClass}}{{else}}--default{{/if}}{{#if settings.rteClasses}} {{settings.rteClasses}}{{/if}}\"\n     data-css=\"c-rte\">\n\t{{! Error handling }}\n\t{{#unless content.rteMd}}\n\t\t<h2 style=\"color: red\">Please provide a path to your markdown file!</h2>\n\t{{/unless}}\n\n\t{{#if settings.rteCWD}}\n\t\t{{! Error handling }}\n\t\t{{#unless settings.rteCWDLevelUp}}\n\t\t\t<h2 style=\"color: red\">You have to provide a level - default should be 0!</h2>\n\t\t{{/unless}}\n\n\t\t{{{markdown (buildPath @root.currentPage.dirname content.rteMd goUp=settings.rteCWDLevelUp)}}}\n\t{{else}}\n\n\t\t{{#if md}}\n\t\t\t{{{markdown md}}}\n\t\t{{else}}\n\t\t\t{{{markdown content.rteMd}}}\n\t\t{{/if}}\n\t{{/if}}\n</div>\n",
+                "data": {},
+                "content": "<div class=\"c-rte{{#if settings.rteContextClass}}--{{settings.rteContextClass}}{{else}}--default{{/if}}{{#if settings.rteClasses}} {{settings.rteClasses}}{{/if}}\"\n     data-css=\"c-rte\">\n\t{{! Error handling }}\n\t{{#unless content.rteMd}}\n\t\t<h2 style=\"color: red\">Please provide a path to your markdown file!</h2>\n\t{{/unless}}\n\n\t{{#if settings.rteCWD}}\n\t\t{{! Error handling }}\n\t\t{{#unless settings.rteCWDLevelUp}}\n\t\t\t<h2 style=\"color: red\">You have to provide a level - default should be 0!</h2>\n\t\t{{/unless}}\n\n\t\t{{{markdown (buildPath @root.currentPage.dirname content.rteMd goUp=settings.rteCWDLevelUp)}}}\n\t{{else}}\n\n\t\t{{#if md}}\n\t\t\t{{{markdown md}}}\n\t\t{{else}}\n\t\t\t{{{markdown content.rteMd}}}\n\t\t{{/if}}\n\t{{/if}}\n</div>\n"
+            }
+        },
+        "slider__controls": {
+            "id": "slider__controls",
+            "assets": "../../../../",
+            "ext": ".html",
+            "srcExt": ".hbs",
+            "basename": "slider__controls.hbs",
+            "filename": "slider__controls",
+            "dirname": "src/app/shared/components/slider/templates",
+            "destDir": "app/",
+            "destSubDir": "shared/components/slider/templates",
+            "destFile": "shared/components/slider/templates/slider__controls.html",
+            "serverFile": "shared/components/slider/templates/slider__controls",
+            "raw": "<button class=\"slider__control is-previous\" data-js-item=\"slider-prev\">\n\t{{prev}}\n</button>\n<button class=\"slider__control is-next\" data-js-item=\"slider-next\">\n\t{{next}}\n</button>",
+            "parsed": {
+                "orig": "<button class=\"slider__control is-previous\" data-js-item=\"slider-prev\">\n\t{{prev}}\n</button>\n<button class=\"slider__control is-next\" data-js-item=\"slider-next\">\n\t{{next}}\n</button>",
+                "data": {},
+                "content": "<button class=\"slider__control is-previous\" data-js-item=\"slider-prev\">\n\t{{prev}}\n</button>\n<button class=\"slider__control is-next\" data-js-item=\"slider-next\">\n\t{{next}}\n</button>"
+            }
+        },
+        "slider__item": {
+            "id": "slider__item",
+            "assets": "../../../../",
+            "ext": ".html",
+            "srcExt": ".hbs",
+            "basename": "slider__item.hbs",
+            "filename": "slider__item",
+            "dirname": "src/app/shared/components/slider/templates",
+            "destDir": "app/",
+            "destSubDir": "shared/components/slider/templates",
+            "destFile": "shared/components/slider/templates/slider__item.html",
+            "serverFile": "shared/components/slider/templates/slider__item",
+            "raw": "<div class=\"slider__item\" data-js-item=\"slider-item\">\n\t{{{yield}}}\n</div>",
+            "parsed": {
+                "orig": "<div class=\"slider__item\" data-js-item=\"slider-item\">\n\t{{{yield}}}\n</div>",
+                "data": {},
+                "content": "<div class=\"slider__item\" data-js-item=\"slider-item\">\n\t{{{yield}}}\n</div>"
+            }
+        },
+        "slider__list": {
+            "id": "slider__list",
+            "assets": "../../../../",
+            "ext": ".html",
+            "srcExt": ".hbs",
+            "basename": "slider__list.hbs",
+            "filename": "slider__list",
+            "dirname": "src/app/shared/components/slider/templates",
+            "destDir": "app/",
+            "destSubDir": "shared/components/slider/templates",
+            "destFile": "shared/components/slider/templates/slider__list.html",
+            "serverFile": "shared/components/slider/templates/slider__list",
+            "raw": "<div class=\"slider__list-wrapper{{#if options.settings.sliderOverflow}} is-overflow{{/if}}\" data-js-item=\"slider-wrapper\">\n\t<div class=\"slider__list\" data-js-item=\"slider-ribbon\">\n\t\t{{{yield}}}\n\t</div>\n</div>",
+            "parsed": {
+                "orig": "<div class=\"slider__list-wrapper{{#if options.settings.sliderOverflow}} is-overflow{{/if}}\" data-js-item=\"slider-wrapper\">\n\t<div class=\"slider__list\" data-js-item=\"slider-ribbon\">\n\t\t{{{yield}}}\n\t</div>\n</div>",
+                "data": {},
+                "content": "<div class=\"slider__list-wrapper{{#if options.settings.sliderOverflow}} is-overflow{{/if}}\" data-js-item=\"slider-wrapper\">\n\t<div class=\"slider__list\" data-js-item=\"slider-ribbon\">\n\t\t{{{yield}}}\n\t</div>\n</div>"
+            }
+        },
+        "slider__pagination": {
+            "id": "slider__pagination",
+            "assets": "../../../../",
+            "ext": ".html",
+            "srcExt": ".hbs",
+            "basename": "slider__pagination.hbs",
+            "filename": "slider__pagination",
+            "dirname": "src/app/shared/components/slider/templates",
+            "destDir": "app/",
+            "destSubDir": "shared/components/slider/templates",
+            "destFile": "shared/components/slider/templates/slider__pagination.html",
+            "serverFile": "shared/components/slider/templates/slider__pagination",
+            "raw": "<ol class=\"slider__pagination-list\" data-js-item=\"slider-pagination-list\">\n</ol>",
+            "parsed": {
+                "orig": "<ol class=\"slider__pagination-list\" data-js-item=\"slider-pagination-list\">\n</ol>",
+                "data": {},
+                "content": "<ol class=\"slider__pagination-list\" data-js-item=\"slider-pagination-list\">\n</ol>"
+            }
+        },
+        "slider-usage": {
+            "id": "slider-usage",
+            "assets": "../../../../",
+            "ext": ".html",
+            "srcExt": ".hbs",
+            "basename": "slider-usage.hbs",
+            "filename": "slider-usage",
+            "dirname": "src/app/shared/components/slider/templates",
+            "destDir": "app/",
+            "destSubDir": "shared/components/slider/templates",
+            "destFile": "shared/components/slider/templates/slider-usage.html",
+            "serverFile": "shared/components/slider/templates/slider-usage",
+            "raw": "{{! wrapWith START: Slider }}\n{{#wrapWith \"slider\" settings=this.settings content=this.content}}\n\t{{! WrapWith START: Slider List }}\n\t{{#wrapWith \"slider__list\" settings=this.settings}}\n\t\t{{#times 8}}\n\t\t\t{{#wrapWith \"slider__item\"}}\n\t\t\t\t<img src=\"https://placehold.it/1920x800\" alt=\"test\">\n\t\t\t{{/wrapWith}}\n\t\t{{/times}}\n\t{{/wrapWith}}\n\t{{! WrapWith END: Slider List }}\n{{/wrapWith}}\n{{! wrapWith END: Slider}}",
+            "parsed": {
+                "orig": "{{! wrapWith START: Slider }}\n{{#wrapWith \"slider\" settings=this.settings content=this.content}}\n\t{{! WrapWith START: Slider List }}\n\t{{#wrapWith \"slider__list\" settings=this.settings}}\n\t\t{{#times 8}}\n\t\t\t{{#wrapWith \"slider__item\"}}\n\t\t\t\t<img src=\"https://placehold.it/1920x800\" alt=\"test\">\n\t\t\t{{/wrapWith}}\n\t\t{{/times}}\n\t{{/wrapWith}}\n\t{{! WrapWith END: Slider List }}\n{{/wrapWith}}\n{{! wrapWith END: Slider}}",
+                "data": {},
+                "content": "{{! wrapWith START: Slider }}\n{{#wrapWith \"slider\" settings=this.settings content=this.content}}\n\t{{! WrapWith START: Slider List }}\n\t{{#wrapWith \"slider__list\" settings=this.settings}}\n\t\t{{#times 8}}\n\t\t\t{{#wrapWith \"slider__item\"}}\n\t\t\t\t<img src=\"https://placehold.it/1920x800\" alt=\"test\">\n\t\t\t{{/wrapWith}}\n\t\t{{/times}}\n\t{{/wrapWith}}\n\t{{! WrapWith END: Slider List }}\n{{/wrapWith}}\n{{! wrapWith END: Slider}}"
+            }
+        },
+        "video": {
+            "id": "video",
+            "assets": "../../../../",
+            "ext": ".html",
+            "srcExt": ".hbs",
+            "basename": "video.hbs",
+            "filename": "video",
+            "dirname": "src/app/shared/components/video/templates",
+            "destDir": "app/",
+            "destSubDir": "shared/components/video/templates",
+            "destFile": "shared/components/video/templates/video.html",
+            "serverFile": "shared/components/video/templates/video",
+            "raw": "<video class=\"c-video{{#if settings.videoContextClass}}--{{settings.videoContextClass}}{{else}}--default{{/if}}{{#if\n\t\tsettings.videoClasses}} {{settings.videoClasses}}{{/if}}\"\n       data-css=\"c-video\"\n       poster=\"{{getUrl content.videoPoster}}\" {{settings.videoOptions}}\n       tabindex=\"0\">\n\t{{#if content.videoMp4}}\n\t\t<source src=\"{{getUrl content.videoMp4}}\" type='video/mp4; codecs=\"avc1.42E01E, mp4a.40.2\"'/>\n\t{{/if}}\n\t{{#if content.videoWebm}}\n\t\t<source src=\"{{getUrl content.videoWebm}}\" type='video/webm; codecs=\"vp8, vorbis\"'/>\n\t{{/if}}\n\t{{#if content.videoTrack}}\n\t\t<track src=\"{{getUrl content.trackSrc}}\" kind=\"{{content.trackSubtitle}}\" srclang=\"{{content.trackLang}}\"\n\t\t       label=\"{{content.trackLabel}}\"/>\n\t{{/if}}\n</video>",
+            "parsed": {
+                "orig": "<video class=\"c-video{{#if settings.videoContextClass}}--{{settings.videoContextClass}}{{else}}--default{{/if}}{{#if\n\t\tsettings.videoClasses}} {{settings.videoClasses}}{{/if}}\"\n       data-css=\"c-video\"\n       poster=\"{{getUrl content.videoPoster}}\" {{settings.videoOptions}}\n       tabindex=\"0\">\n\t{{#if content.videoMp4}}\n\t\t<source src=\"{{getUrl content.videoMp4}}\" type='video/mp4; codecs=\"avc1.42E01E, mp4a.40.2\"'/>\n\t{{/if}}\n\t{{#if content.videoWebm}}\n\t\t<source src=\"{{getUrl content.videoWebm}}\" type='video/webm; codecs=\"vp8, vorbis\"'/>\n\t{{/if}}\n\t{{#if content.videoTrack}}\n\t\t<track src=\"{{getUrl content.trackSrc}}\" kind=\"{{content.trackSubtitle}}\" srclang=\"{{content.trackLang}}\"\n\t\t       label=\"{{content.trackLabel}}\"/>\n\t{{/if}}\n</video>",
+                "data": {},
+                "content": "<video class=\"c-video{{#if settings.videoContextClass}}--{{settings.videoContextClass}}{{else}}--default{{/if}}{{#if\n\t\tsettings.videoClasses}} {{settings.videoClasses}}{{/if}}\"\n       data-css=\"c-video\"\n       poster=\"{{getUrl content.videoPoster}}\" {{settings.videoOptions}}\n       tabindex=\"0\">\n\t{{#if content.videoMp4}}\n\t\t<source src=\"{{getUrl content.videoMp4}}\" type='video/mp4; codecs=\"avc1.42E01E, mp4a.40.2\"'/>\n\t{{/if}}\n\t{{#if content.videoWebm}}\n\t\t<source src=\"{{getUrl content.videoWebm}}\" type='video/webm; codecs=\"vp8, vorbis\"'/>\n\t{{/if}}\n\t{{#if content.videoTrack}}\n\t\t<track src=\"{{getUrl content.trackSrc}}\" kind=\"{{content.trackSubtitle}}\" srclang=\"{{content.trackLang}}\"\n\t\t       label=\"{{content.trackLabel}}\"/>\n\t{{/if}}\n</video>"
+            }
+        },
+        "slider": {
+            "id": "slider",
+            "assets": "../../../../",
+            "ext": ".html",
+            "srcExt": ".hbs",
+            "basename": "slider.hbs",
+            "filename": "slider",
+            "dirname": "src/app/shared/components/slider/templates",
+            "destDir": "app/",
+            "destSubDir": "shared/components/slider/templates",
+            "destFile": "shared/components/slider/templates/slider.html",
+            "serverFile": "shared/components/slider/templates/slider",
+            "raw": "<div class=\"c-slider{{#if options.settings.sliderContextClass}}--{{options.settings.sliderContextClass}}{{else}}--default{{/if}}{{#if options.settings.sliderClasses}} {{options.settings.sliderClasses}}{{/if}}\"\n     data-css=\"c-slider\"\n     data-js-module=\"slider\"{{#if options.settings.sliderJsOptions}}\n     data-js-options='{{stringify options.settings.sliderJsOptions}}'{{/if}}>\n\n\t{{#with options.content.sliderButtons}}\n\t\t<div class=\"slider__controls-wrapper\" data-js-item=\"slider-actions\">\n\t\t\t{{> slider__controls }}\n\t\t</div>\n\t{{/with}}\n\n\t<div class=\"slider__content{{#unless options.settings.sliderInnerFullWidth}} is-container{{/unless}}\">\n\t\t{{{yield}}}\n\t</div>\n\n\t{{#unless options.settings.sliderHidePagination}}\n\t\t<div class=\"slider__pagination-wrapper\" data-js-item=\"slider-pagination\">\n\t\t\t{{> slider__pagination }}\n\t\t</div>\n\t{{/unless}}\n</div>",
+            "parsed": {
+                "orig": "<div class=\"c-slider{{#if options.settings.sliderContextClass}}--{{options.settings.sliderContextClass}}{{else}}--default{{/if}}{{#if options.settings.sliderClasses}} {{options.settings.sliderClasses}}{{/if}}\"\n     data-css=\"c-slider\"\n     data-js-module=\"slider\"{{#if options.settings.sliderJsOptions}}\n     data-js-options='{{stringify options.settings.sliderJsOptions}}'{{/if}}>\n\n\t{{#with options.content.sliderButtons}}\n\t\t<div class=\"slider__controls-wrapper\" data-js-item=\"slider-actions\">\n\t\t\t{{> slider__controls }}\n\t\t</div>\n\t{{/with}}\n\n\t<div class=\"slider__content{{#unless options.settings.sliderInnerFullWidth}} is-container{{/unless}}\">\n\t\t{{{yield}}}\n\t</div>\n\n\t{{#unless options.settings.sliderHidePagination}}\n\t\t<div class=\"slider__pagination-wrapper\" data-js-item=\"slider-pagination\">\n\t\t\t{{> slider__pagination }}\n\t\t</div>\n\t{{/unless}}\n</div>",
+                "data": {},
+                "content": "<div class=\"c-slider{{#if options.settings.sliderContextClass}}--{{options.settings.sliderContextClass}}{{else}}--default{{/if}}{{#if options.settings.sliderClasses}} {{options.settings.sliderClasses}}{{/if}}\"\n     data-css=\"c-slider\"\n     data-js-module=\"slider\"{{#if options.settings.sliderJsOptions}}\n     data-js-options='{{stringify options.settings.sliderJsOptions}}'{{/if}}>\n\n\t{{#with options.content.sliderButtons}}\n\t\t<div class=\"slider__controls-wrapper\" data-js-item=\"slider-actions\">\n\t\t\t{{> slider__controls }}\n\t\t</div>\n\t{{/with}}\n\n\t<div class=\"slider__content{{#unless options.settings.sliderInnerFullWidth}} is-container{{/unless}}\">\n\t\t{{{yield}}}\n\t</div>\n\n\t{{#unless options.settings.sliderHidePagination}}\n\t\t<div class=\"slider__pagination-wrapper\" data-js-item=\"slider-pagination\">\n\t\t\t{{> slider__pagination }}\n\t\t</div>\n\t{{/unless}}\n</div>"
+            }
+        },
+        "_metadata": {
+            "id": "_metadata",
+            "assets": "../../",
+            "ext": ".html",
+            "srcExt": ".hbs",
+            "basename": "_metadata.hbs",
+            "filename": "_metadata",
+            "dirname": "src/app/core/components",
+            "destDir": "app/",
+            "destSubDir": "core/components",
+            "destFile": "core/components/_metadata.html",
+            "serverFile": "core/components/_metadata",
+            "raw": "<meta charset=\"utf-8\"/>\n<meta http-equiv=\"X-UA-Compatible\" content=\"IE=Edge,chrome=IE7\"/>\n<meta name=\"viewport\" content=\"width=device-width\"/>\n<title>{{title}} | {{config.title}}</title>\n<link rel=\"shortcut icon\" href=\"{{assets}}img/favicon.ico\" type=\"image/x-icon\">\n<link rel=\"icon\" href=\"{{assets}}img/favicon.ico\" type=\"image/x-icon\">",
+            "parsed": {
+                "orig": "<meta charset=\"utf-8\"/>\n<meta http-equiv=\"X-UA-Compatible\" content=\"IE=Edge,chrome=IE7\"/>\n<meta name=\"viewport\" content=\"width=device-width\"/>\n<title>{{title}} | {{config.title}}</title>\n<link rel=\"shortcut icon\" href=\"{{assets}}img/favicon.ico\" type=\"image/x-icon\">\n<link rel=\"icon\" href=\"{{assets}}img/favicon.ico\" type=\"image/x-icon\">",
+                "data": {},
+                "content": "<meta charset=\"utf-8\"/>\n<meta http-equiv=\"X-UA-Compatible\" content=\"IE=Edge,chrome=IE7\"/>\n<meta name=\"viewport\" content=\"width=device-width\"/>\n<title>{{title}} | {{config.title}}</title>\n<link rel=\"shortcut icon\" href=\"{{assets}}img/favicon.ico\" type=\"image/x-icon\">\n<link rel=\"icon\" href=\"{{assets}}img/favicon.ico\" type=\"image/x-icon\">"
+            }
+        },
+        "_scripts": {
+            "id": "_scripts",
+            "assets": "../../",
+            "ext": ".html",
+            "srcExt": ".hbs",
+            "basename": "_scripts.hbs",
+            "filename": "_scripts",
+            "dirname": "src/app/core/components",
+            "destDir": "app/",
+            "destSubDir": "core/components",
+            "destFile": "core/components/_scripts.html",
+            "serverFile": "core/components/_scripts",
+            "raw": "<script src=\"{{@root.assets}}scripts/app.bundle.js\"></script>",
+            "parsed": {
+                "orig": "<script src=\"{{@root.assets}}scripts/app.bundle.js\"></script>",
+                "data": {},
+                "content": "<script src=\"{{@root.assets}}scripts/app.bundle.js\"></script>"
+            }
+        },
+        "_styles": {
+            "id": "_styles",
+            "assets": "../../",
+            "ext": ".html",
+            "srcExt": ".hbs",
+            "basename": "_styles.hbs",
+            "filename": "_styles",
+            "dirname": "src/app/core/components",
+            "destDir": "app/",
+            "destSubDir": "core/components",
+            "destFile": "core/components/_styles.html",
+            "serverFile": "core/components/_styles",
+            "raw": "<link href=\"https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700\" rel=\"stylesheet\">\n<link rel=\"stylesheet\" href=\"{{@root.assets}}css/app.bundle.css\"/>",
+            "parsed": {
+                "orig": "<link href=\"https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700\" rel=\"stylesheet\">\n<link rel=\"stylesheet\" href=\"{{@root.assets}}css/app.bundle.css\"/>",
+                "data": {},
+                "content": "<link href=\"https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700\" rel=\"stylesheet\">\n<link rel=\"stylesheet\" href=\"{{@root.assets}}css/app.bundle.css\"/>"
+            }
+        },
+        "section": {
+            "id": "section",
+            "assets": "../../../../",
+            "ext": ".html",
+            "srcExt": ".hbs",
+            "basename": "section.hbs",
+            "filename": "section",
+            "dirname": "src/app/core/components/section/templates",
+            "destDir": "app/",
+            "destSubDir": "core/components/section/templates",
+            "destFile": "core/components/section/templates/section.html",
+            "serverFile": "core/components/section/templates/section",
+            "raw": "<div class=\"c-section{{#if settings.sectionContextClass}}--{{settings.sectionContextClass}}{{else}}--default{{/if}}{{#if\n\t\tsettings.sectionClasses}} {{settings.sectionClasses}}{{/if}}\"\n     data-css=\"c-section\">\n\n\t{{#if props.headline}}\n\t\t<header class=\"section__header is-container\">\n\t\t\t<h2 class=\"section__headline\">\n\t\t\t\t{{props.headline}}\n\t\t\t</h2>\n\t\t</header>\n\t{{/if}}\n\n\t<div class=\"section__content is-container\">\n\t\t{{{yield}}}\n\t</div>\n\n</div>\n",
+            "parsed": {
+                "orig": "<div class=\"c-section{{#if settings.sectionContextClass}}--{{settings.sectionContextClass}}{{else}}--default{{/if}}{{#if\n\t\tsettings.sectionClasses}} {{settings.sectionClasses}}{{/if}}\"\n     data-css=\"c-section\">\n\n\t{{#if props.headline}}\n\t\t<header class=\"section__header is-container\">\n\t\t\t<h2 class=\"section__headline\">\n\t\t\t\t{{props.headline}}\n\t\t\t</h2>\n\t\t</header>\n\t{{/if}}\n\n\t<div class=\"section__content is-container\">\n\t\t{{{yield}}}\n\t</div>\n\n</div>\n",
+                "data": {},
+                "content": "<div class=\"c-section{{#if settings.sectionContextClass}}--{{settings.sectionContextClass}}{{else}}--default{{/if}}{{#if\n\t\tsettings.sectionClasses}} {{settings.sectionClasses}}{{/if}}\"\n     data-css=\"c-section\">\n\n\t{{#if props.headline}}\n\t\t<header class=\"section__header is-container\">\n\t\t\t<h2 class=\"section__headline\">\n\t\t\t\t{{props.headline}}\n\t\t\t</h2>\n\t\t</header>\n\t{{/if}}\n\n\t<div class=\"section__content is-container\">\n\t\t{{{yield}}}\n\t</div>\n\n</div>\n"
+            }
+        },
+        "navigation": {
+            "id": "navigation",
+            "assets": "../../../../",
+            "ext": ".html",
+            "srcExt": ".hbs",
+            "basename": "navigation.hbs",
+            "filename": "navigation",
+            "dirname": "src/app/core/components/navigation/templates",
+            "destDir": "app/",
+            "destSubDir": "core/components/navigation/templates",
+            "destFile": "core/components/navigation/templates/navigation.html",
+            "serverFile": "core/components/navigation/templates/navigation",
+            "raw": "<div class=\"c-navigation{{#if\n\t\tsettings.navigationContextClass}}--{{settings.navigationContextClass}}{{else}}--default{{/if}}{{#if\n\t\tsettings.navigationClasses}} {{settings.navigationClasses}}{{/if}}\"\n     data-css=\"c-navigation\"\n     data-js-module=\"navigation\"{{#if settings.navigationJsOptions}}\n     data-js-options='{{stringify settings.navigationJsOptions}}'{{/if}}>\n\t<ul class=\"navigation__list\">\n\t\t<li class=\"navigation__item\">\n\t\t\t<a href=\"/docs/index.html\" class=\"navigation__link{{#inArray @root.collections.sitemap.docs.files @root.currentPage.id}} is-active{{/inArray}}\">Docs</a>\n\t\t</li>\n\t\t<li class=\"navigation__item\">\n\t\t\t<a href=\"/docs.html\" class=\"navigation__link\">Examples</a>\n\t\t</li>\n\t\t<li class=\"navigation__item\">\n\t\t\t<a href=\"/docs.html\" class=\"navigation__link\">Tutorial</a>\n\t\t</li>\n\t</ul>\n</div>\n",
+            "parsed": {
+                "orig": "<div class=\"c-navigation{{#if\n\t\tsettings.navigationContextClass}}--{{settings.navigationContextClass}}{{else}}--default{{/if}}{{#if\n\t\tsettings.navigationClasses}} {{settings.navigationClasses}}{{/if}}\"\n     data-css=\"c-navigation\"\n     data-js-module=\"navigation\"{{#if settings.navigationJsOptions}}\n     data-js-options='{{stringify settings.navigationJsOptions}}'{{/if}}>\n\t<ul class=\"navigation__list\">\n\t\t<li class=\"navigation__item\">\n\t\t\t<a href=\"/docs/index.html\" class=\"navigation__link{{#inArray @root.collections.sitemap.docs.files @root.currentPage.id}} is-active{{/inArray}}\">Docs</a>\n\t\t</li>\n\t\t<li class=\"navigation__item\">\n\t\t\t<a href=\"/docs.html\" class=\"navigation__link\">Examples</a>\n\t\t</li>\n\t\t<li class=\"navigation__item\">\n\t\t\t<a href=\"/docs.html\" class=\"navigation__link\">Tutorial</a>\n\t\t</li>\n\t</ul>\n</div>\n",
+                "data": {},
+                "content": "<div class=\"c-navigation{{#if\n\t\tsettings.navigationContextClass}}--{{settings.navigationContextClass}}{{else}}--default{{/if}}{{#if\n\t\tsettings.navigationClasses}} {{settings.navigationClasses}}{{/if}}\"\n     data-css=\"c-navigation\"\n     data-js-module=\"navigation\"{{#if settings.navigationJsOptions}}\n     data-js-options='{{stringify settings.navigationJsOptions}}'{{/if}}>\n\t<ul class=\"navigation__list\">\n\t\t<li class=\"navigation__item\">\n\t\t\t<a href=\"/docs/index.html\" class=\"navigation__link{{#inArray @root.collections.sitemap.docs.files @root.currentPage.id}} is-active{{/inArray}}\">Docs</a>\n\t\t</li>\n\t\t<li class=\"navigation__item\">\n\t\t\t<a href=\"/docs.html\" class=\"navigation__link\">Examples</a>\n\t\t</li>\n\t\t<li class=\"navigation__item\">\n\t\t\t<a href=\"/docs.html\" class=\"navigation__link\">Tutorial</a>\n\t\t</li>\n\t</ul>\n</div>\n"
+            }
+        },
+        "sitemap": {
+            "id": "sitemap",
+            "assets": "../../../",
+            "ext": ".html",
+            "srcExt": ".hbs",
+            "basename": "sitemap.hbs",
+            "filename": "sitemap",
+            "dirname": "src/app/core/components/sitemap",
+            "destDir": "app/",
+            "destSubDir": "core/components/sitemap",
+            "destFile": "core/components/sitemap/sitemap.html",
+            "serverFile": "core/components/sitemap/sitemap",
+            "raw": " {{! ---\nImportant Notes:\nBe sure you use collections to categorize your sitemap.\nIf you do not want to use collections, just delete this `sitemap` partial\n--- }}\n\n<nav class=\"c-sitemap--default\" data-css=\"c-sitemap\">\n\t<!--<h2 class=\"sitemap__header\">Sitemap</h2>-->\n\n\t{{#each collections.docs}}\n\t\t<div class=\"sitemap__overview\">\n\t\t\t<h3 class=\"sitemap__headline\">{{uppercase name}}</h3>\n\t\t\t<ol class=\"sitemap__list\">\n\t\t\t\t{{#each ../pages}}\n\t\t\t\t\t{{#is parsed.data.docs ../name}}\n\t\t\t\t\t\t{{#isnt parsed.data.publish false}}\n\t\t\t\t\t\t\t<li class=\"sitemap__list-item\">\n\t\t\t\t\t\t\t\t<a href=\"/{{destFile}}\"\n\t\t\t\t\t\t\t\t   class=\"sitemap__list-item-link\">\n\t\t\t\t\t\t\t\t\t{{#if parsed.data.navigationLink}}\n\t\t\t\t\t\t\t\t\t\t{{parsed.data.navigationLink}}\n\t\t\t\t\t\t\t\t\t{{else}}\n\t\t\t\t\t\t\t\t\t\t{{this.filename}}\n\t\t\t\t\t\t\t\t\t{{/if}}\n\t\t\t\t\t\t\t\t</a>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t{{/isnt}}\n\t\t\t\t\t{{/is}}\n\t\t\t\t{{/each}}\n\t\t\t</ol>\n\t\t</div>\n\t{{/each}}\n</nav>\n",
+            "parsed": {
+                "orig": " {{! ---\nImportant Notes:\nBe sure you use collections to categorize your sitemap.\nIf you do not want to use collections, just delete this `sitemap` partial\n--- }}\n\n<nav class=\"c-sitemap--default\" data-css=\"c-sitemap\">\n\t<!--<h2 class=\"sitemap__header\">Sitemap</h2>-->\n\n\t{{#each collections.docs}}\n\t\t<div class=\"sitemap__overview\">\n\t\t\t<h3 class=\"sitemap__headline\">{{uppercase name}}</h3>\n\t\t\t<ol class=\"sitemap__list\">\n\t\t\t\t{{#each ../pages}}\n\t\t\t\t\t{{#is parsed.data.docs ../name}}\n\t\t\t\t\t\t{{#isnt parsed.data.publish false}}\n\t\t\t\t\t\t\t<li class=\"sitemap__list-item\">\n\t\t\t\t\t\t\t\t<a href=\"/{{destFile}}\"\n\t\t\t\t\t\t\t\t   class=\"sitemap__list-item-link\">\n\t\t\t\t\t\t\t\t\t{{#if parsed.data.navigationLink}}\n\t\t\t\t\t\t\t\t\t\t{{parsed.data.navigationLink}}\n\t\t\t\t\t\t\t\t\t{{else}}\n\t\t\t\t\t\t\t\t\t\t{{this.filename}}\n\t\t\t\t\t\t\t\t\t{{/if}}\n\t\t\t\t\t\t\t\t</a>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t{{/isnt}}\n\t\t\t\t\t{{/is}}\n\t\t\t\t{{/each}}\n\t\t\t</ol>\n\t\t</div>\n\t{{/each}}\n</nav>\n",
+                "data": {},
+                "content": " {{! ---\nImportant Notes:\nBe sure you use collections to categorize your sitemap.\nIf you do not want to use collections, just delete this `sitemap` partial\n--- }}\n\n<nav class=\"c-sitemap--default\" data-css=\"c-sitemap\">\n\t<!--<h2 class=\"sitemap__header\">Sitemap</h2>-->\n\n\t{{#each collections.docs}}\n\t\t<div class=\"sitemap__overview\">\n\t\t\t<h3 class=\"sitemap__headline\">{{uppercase name}}</h3>\n\t\t\t<ol class=\"sitemap__list\">\n\t\t\t\t{{#each ../pages}}\n\t\t\t\t\t{{#is parsed.data.docs ../name}}\n\t\t\t\t\t\t{{#isnt parsed.data.publish false}}\n\t\t\t\t\t\t\t<li class=\"sitemap__list-item\">\n\t\t\t\t\t\t\t\t<a href=\"/{{destFile}}\"\n\t\t\t\t\t\t\t\t   class=\"sitemap__list-item-link\">\n\t\t\t\t\t\t\t\t\t{{#if parsed.data.navigationLink}}\n\t\t\t\t\t\t\t\t\t\t{{parsed.data.navigationLink}}\n\t\t\t\t\t\t\t\t\t{{else}}\n\t\t\t\t\t\t\t\t\t\t{{this.filename}}\n\t\t\t\t\t\t\t\t\t{{/if}}\n\t\t\t\t\t\t\t\t</a>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t{{/isnt}}\n\t\t\t\t\t{{/is}}\n\t\t\t\t{{/each}}\n\t\t\t</ol>\n\t\t</div>\n\t{{/each}}\n</nav>\n"
+            }
+        },
+        "stage": {
+            "id": "stage",
+            "assets": "../../../../",
+            "ext": ".html",
+            "srcExt": ".hbs",
+            "basename": "stage.hbs",
+            "filename": "stage",
+            "dirname": "src/app/core/components/stage/templates",
+            "destDir": "app/",
+            "destSubDir": "core/components/stage/templates",
+            "destFile": "core/components/stage/templates/stage.html",
+            "serverFile": "core/components/stage/templates/stage",
+            "raw": "<div class=\"c-stage{{#if settings.stageContextClass}}--{{settings.stageContextClass}}{{else}}--default{{/if}}{{#if\n\t\tsettings.stageClasses}} {{settings.stageClasses}}{{/if}}\"\n     data-css=\"c-stage\">\n\t<div class=\"stage__content is-container\">\n\t\t<h1 class=\"stage__headline\">\n\t\t\tVEAMS\n\t\t\t<span>One tool to build fast, scalable, flexible & best practices driven web apps.</span>\n\t\t</h1>\n\n\t\t<div class=\"stage__teaser\">\n\n\t\t</div>\n\n\t\t<div class=\"stage__button-wrapper\">\n\t\t\t<a href=\"/docs/index.html\" class=\"stage__button\">Get Started</a>\n\t\t</div>\n\t</div>\n</div>\n",
+            "parsed": {
+                "orig": "<div class=\"c-stage{{#if settings.stageContextClass}}--{{settings.stageContextClass}}{{else}}--default{{/if}}{{#if\n\t\tsettings.stageClasses}} {{settings.stageClasses}}{{/if}}\"\n     data-css=\"c-stage\">\n\t<div class=\"stage__content is-container\">\n\t\t<h1 class=\"stage__headline\">\n\t\t\tVEAMS\n\t\t\t<span>One tool to build fast, scalable, flexible & best practices driven web apps.</span>\n\t\t</h1>\n\n\t\t<div class=\"stage__teaser\">\n\n\t\t</div>\n\n\t\t<div class=\"stage__button-wrapper\">\n\t\t\t<a href=\"/docs/index.html\" class=\"stage__button\">Get Started</a>\n\t\t</div>\n\t</div>\n</div>\n",
+                "data": {},
+                "content": "<div class=\"c-stage{{#if settings.stageContextClass}}--{{settings.stageContextClass}}{{else}}--default{{/if}}{{#if\n\t\tsettings.stageClasses}} {{settings.stageClasses}}{{/if}}\"\n     data-css=\"c-stage\">\n\t<div class=\"stage__content is-container\">\n\t\t<h1 class=\"stage__headline\">\n\t\t\tVEAMS\n\t\t\t<span>One tool to build fast, scalable, flexible & best practices driven web apps.</span>\n\t\t</h1>\n\n\t\t<div class=\"stage__teaser\">\n\n\t\t</div>\n\n\t\t<div class=\"stage__button-wrapper\">\n\t\t\t<a href=\"/docs/index.html\" class=\"stage__button\">Get Started</a>\n\t\t</div>\n\t</div>\n</div>\n"
+            }
+        },
+        "grid-row": {
+            "id": "grid-row",
+            "assets": "../../../../",
+            "ext": ".html",
+            "srcExt": ".hbs",
+            "basename": "grid-row.hbs",
+            "filename": "grid-row",
+            "dirname": "src/app/shared/utilities/grid/templates",
+            "destDir": "app/",
+            "destSubDir": "shared/utilities/grid/templates",
+            "destFile": "shared/utilities/grid/templates/grid-row.html",
+            "serverFile": "shared/utilities/grid/templates/grid-row",
+            "raw": "---\npublish: false\n---\n<div class=\"u-grid-row{{#unless props.gridPadding}} is-collapsed{{/unless}}{{#if props.gridRowClasses}} {{props.gridRowClasses}}{{/if}}\">\n\t{{{yield}}}\n</div>",
+            "parsed": {
+                "orig": "---\npublish: false\n---\n<div class=\"u-grid-row{{#unless props.gridPadding}} is-collapsed{{/unless}}{{#if props.gridRowClasses}} {{props.gridRowClasses}}{{/if}}\">\n\t{{{yield}}}\n</div>",
+                "data": {
+                    "publish": false
+                },
+                "content": "<div class=\"u-grid-row{{#unless props.gridPadding}} is-collapsed{{/unless}}{{#if props.gridRowClasses}} {{props.gridRowClasses}}{{/if}}\">\n\t{{{yield}}}\n</div>"
+            }
+        },
+        "grid-col": {
+            "id": "grid-col",
+            "assets": "../../../../",
+            "ext": ".html",
+            "srcExt": ".hbs",
+            "basename": "grid-col.hbs",
+            "filename": "grid-col",
+            "dirname": "src/app/shared/utilities/grid/templates",
+            "destDir": "app/",
+            "destSubDir": "shared/utilities/grid/templates",
+            "destFile": "shared/utilities/grid/templates/grid-col.html",
+            "serverFile": "shared/utilities/grid/templates/grid-col",
+            "raw": "---\npublish: false\n---\n\n<div class=\"u-grid-col{{#if props.colClasses}} {{props.colClasses}}{{/if}}\">\n\t{{{yield}}}\n</div>",
+            "parsed": {
+                "orig": "---\npublish: false\n---\n\n<div class=\"u-grid-col{{#if props.colClasses}} {{props.colClasses}}{{/if}}\">\n\t{{{yield}}}\n</div>",
+                "data": {
+                    "publish": false
+                },
+                "content": "\n<div class=\"u-grid-col{{#if props.colClasses}} {{props.colClasses}}{{/if}}\">\n\t{{{yield}}}\n</div>"
+            }
+        },
+        "grid-usage": {
+            "id": "grid-usage",
+            "assets": "../../../../",
+            "ext": ".html",
+            "srcExt": ".hbs",
+            "basename": "grid-usage.hbs",
+            "filename": "grid-usage",
+            "dirname": "src/app/shared/utilities/grid/templates",
+            "destDir": "app/",
+            "destSubDir": "shared/utilities/grid/templates",
+            "destFile": "shared/utilities/grid/templates/grid-usage.html",
+            "serverFile": "shared/utilities/grid/templates/grid-usage",
+            "raw": "{{! WrapWith START: Grid Row }}\n{{#wrapWith \"grid-row\" settings=this.settings}}\n\t{{#times content.repeats}}\n\t\t{{! WrapWith START: Col }}\n\t\t{{#wrapWith \"grid-col\" colClasses=../settings.colClasses }}\n\t\t\tLorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam consectetur corporis cum, deleniti dignissimos ducimus ea eligendi, fugiat fugit illum molestias natus necessitatibus perferendis quasi quidem reiciendis similique ullam voluptatum!\n\t\t{{/wrapWith}}\n\t{{! WrapWith END: Col }}\n\t{{/times}}\n{{/wrapWith}}\n{{! WrapWith END: Grid Row }}",
+            "parsed": {
+                "orig": "{{! WrapWith START: Grid Row }}\n{{#wrapWith \"grid-row\" settings=this.settings}}\n\t{{#times content.repeats}}\n\t\t{{! WrapWith START: Col }}\n\t\t{{#wrapWith \"grid-col\" colClasses=../settings.colClasses }}\n\t\t\tLorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam consectetur corporis cum, deleniti dignissimos ducimus ea eligendi, fugiat fugit illum molestias natus necessitatibus perferendis quasi quidem reiciendis similique ullam voluptatum!\n\t\t{{/wrapWith}}\n\t{{! WrapWith END: Col }}\n\t{{/times}}\n{{/wrapWith}}\n{{! WrapWith END: Grid Row }}",
+                "data": {},
+                "content": "{{! WrapWith START: Grid Row }}\n{{#wrapWith \"grid-row\" settings=this.settings}}\n\t{{#times content.repeats}}\n\t\t{{! WrapWith START: Col }}\n\t\t{{#wrapWith \"grid-col\" colClasses=../settings.colClasses }}\n\t\t\tLorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam consectetur corporis cum, deleniti dignissimos ducimus ea eligendi, fugiat fugit illum molestias natus necessitatibus perferendis quasi quidem reiciendis similique ullam voluptatum!\n\t\t{{/wrapWith}}\n\t{{! WrapWith END: Col }}\n\t{{/times}}\n{{/wrapWith}}\n{{! WrapWith END: Grid Row }}"
+            }
+        }
+    },
+    "pages": {
+        "docs/installation/index": {
+            "id": "docs/installation/index",
+            "assets": "../../",
+            "ext": ".html",
+            "srcExt": ".hbs",
+            "basename": "index.hbs",
+            "filename": "index",
+            "dirname": "src/app/pages/docs/installation",
+            "destDir": "app/",
+            "destSubDir": "docs/installation",
+            "destFile": "docs/installation/index.html",
+            "serverFile": "docs/installation/index",
+            "raw": "---\ntitle: Installation of CLI\nsitemap: \"Docs\"\nsortOrder: \"10\"\ndocs: \"Getting Started\"\nnavigationLink: \"CLI Installation\"\n---\n\n{{#extend \"lyt-default\"}}\n\t{{#content \"main\"}}\n\n    {{! WrapWith START: Section One }}\n\t\t{{#wrapWith \"section\"\n            headline=\"CLI Installation\"\n            media=\"\"\n            githubLink=\"https://github.com/Veams/core/issues/new\"\n\t\t}}\n\n\t\t\tFar far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.\n\t\t\tSeparated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.\n\t\t\tA small river named Duden flows by their place and supplies it with the necessary regelialia.\n\t\t\tIt is a paradisematic country, in which roasted parts of sentences fly into your mouth.\n\n\n\t\t{{/wrapWith}}\n\t{{! WrapWith END: Section One }}\n\n\t{{/content}}\n{{/extend}}\n",
+            "parsed": {
+                "orig": "---\ntitle: Installation of CLI\nsitemap: \"Docs\"\nsortOrder: \"10\"\ndocs: \"Getting Started\"\nnavigationLink: \"CLI Installation\"\n---\n\n{{#extend \"lyt-default\"}}\n\t{{#content \"main\"}}\n\n    {{! WrapWith START: Section One }}\n\t\t{{#wrapWith \"section\"\n            headline=\"CLI Installation\"\n            media=\"\"\n            githubLink=\"https://github.com/Veams/core/issues/new\"\n\t\t}}\n\n\t\t\tFar far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.\n\t\t\tSeparated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.\n\t\t\tA small river named Duden flows by their place and supplies it with the necessary regelialia.\n\t\t\tIt is a paradisematic country, in which roasted parts of sentences fly into your mouth.\n\n\n\t\t{{/wrapWith}}\n\t{{! WrapWith END: Section One }}\n\n\t{{/content}}\n{{/extend}}\n",
+                "data": {
+                    "title": "Installation of CLI",
+                    "sitemap": "Docs",
+                    "sortOrder": "10",
+                    "docs": "Getting Started",
+                    "navigationLink": "CLI Installation"
+                },
+                "content": "\n{{#extend \"lyt-default\"}}\n\t{{#content \"main\"}}\n\n    {{! WrapWith START: Section One }}\n\t\t{{#wrapWith \"section\"\n            headline=\"CLI Installation\"\n            media=\"\"\n            githubLink=\"https://github.com/Veams/core/issues/new\"\n\t\t}}\n\n\t\t\tFar far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.\n\t\t\tSeparated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.\n\t\t\tA small river named Duden flows by their place and supplies it with the necessary regelialia.\n\t\t\tIt is a paradisematic country, in which roasted parts of sentences fly into your mouth.\n\n\n\t\t{{/wrapWith}}\n\t{{! WrapWith END: Section One }}\n\n\t{{/content}}\n{{/extend}}\n"
+            }
+        },
+        "docs/index": {
+            "id": "docs/index",
+            "assets": "../",
+            "ext": ".html",
+            "srcExt": ".hbs",
+            "basename": "index.hbs",
+            "filename": "index",
+            "dirname": "src/app/pages/docs",
+            "destDir": "app/",
+            "destSubDir": "docs",
+            "destFile": "docs/index.html",
+            "serverFile": "docs/index",
+            "raw": "---\ntitle: Introduction to Veams\nsitemap: \"docs\"\nsortOrder: \"00\"\ndocs: \"Getting Started\"\nnavigationLink: \"Introduction\"\n---\n\n{{#extend \"lyt-default\"}}\n\t{{#content \"stage\"}}{{/content}}\n\t{{#content \"main\"}}\n\n\t\t{{! WrapWith START: Section One }}\n\t\t{{#wrapWith \"section\"\n\t\t            headline=\"Introduction\"\n\t\t            media=\"\"\n\t\t            githubLink=\"https://github.com/Veams/core/issues/new\"\n\t\t}}\n\n\t\t\t{{> rte md=\"src/external/core/README.md\"}}\n\t\t{{/wrapWith}}\n\t{{! WrapWith END: Section One }}\n\t{{/content}}\n{{/extend}}\n",
+            "parsed": {
+                "orig": "---\ntitle: Introduction to Veams\nsitemap: \"docs\"\nsortOrder: \"00\"\ndocs: \"Getting Started\"\nnavigationLink: \"Introduction\"\n---\n\n{{#extend \"lyt-default\"}}\n\t{{#content \"stage\"}}{{/content}}\n\t{{#content \"main\"}}\n\n\t\t{{! WrapWith START: Section One }}\n\t\t{{#wrapWith \"section\"\n\t\t            headline=\"Introduction\"\n\t\t            media=\"\"\n\t\t            githubLink=\"https://github.com/Veams/core/issues/new\"\n\t\t}}\n\n\t\t\t{{> rte md=\"src/external/core/README.md\"}}\n\t\t{{/wrapWith}}\n\t{{! WrapWith END: Section One }}\n\t{{/content}}\n{{/extend}}\n",
+                "data": {
+                    "title": "Introduction to Veams",
+                    "sitemap": "docs",
+                    "sortOrder": "00",
+                    "docs": "Getting Started",
+                    "navigationLink": "Introduction"
+                },
+                "content": "\n{{#extend \"lyt-default\"}}\n\t{{#content \"stage\"}}{{/content}}\n\t{{#content \"main\"}}\n\n\t\t{{! WrapWith START: Section One }}\n\t\t{{#wrapWith \"section\"\n\t\t            headline=\"Introduction\"\n\t\t            media=\"\"\n\t\t            githubLink=\"https://github.com/Veams/core/issues/new\"\n\t\t}}\n\n\t\t\t{{> rte md=\"src/external/core/README.md\"}}\n\t\t{{/wrapWith}}\n\t{{! WrapWith END: Section One }}\n\t{{/content}}\n{{/extend}}\n"
+            }
+        },
+        "home/index": {
+            "id": "home/index",
+            "assets": "../",
+            "ext": ".html",
+            "srcExt": ".hbs",
+            "basename": "index.hbs",
+            "filename": "index",
+            "dirname": "src/app/pages/home",
+            "destDir": "app/",
+            "destSubDir": "home",
+            "destFile": "home/index.html",
+            "serverFile": "home/index",
+            "raw": "---\ntitle: Veams\nbodyclass: \"is-front\"\ncontextData: home\n---\n\n{{#extend \"lyt-default\"}}\n\t{{#content \"sidebar\"}}{{/content}}\n\t{{#content \"main\"}}\n\n\n\t\t{{{print collection='docs' sortBy='sortOrder'}}}\n\n\t\t{{#with sections.In3Minutes}}\n\n\t\t{{! WrapWith START: Section }}\n\t\t\t{{#wrapWith \"section\" headline=headline}}\n\n\t\t\t{{! WrapWith START: Grid Row }}\n\t\t\t\t{{#wrapWith \"grid-row\"}}\n\n\t\t\t\t{{! WrapWith START: Grid Col }}\n\t\t\t\t\t{{#wrapWith \"grid-col\" colClasses=\"is-col-mobile-s-12\"}}\n\n\t\t\t\t\t{{! WrapWith START: Slider }}\n\t\t\t\t\t\t{{#wrapWith \"slider\" settings=@root.slider.variations.overflow.settings\n\t\t\t\t\t\t            content=@root.slider.variations.overflow.content}}\n\t\t\t\t\t\t{{! WrapWith START: Slider List }}\n\t\t\t\t\t\t\t{{#wrapWith \"slider__list\" settings=@root.slider.variations.overflow.settings}}\n\n\t\t\t\t\t\t\t\t{{#each teasers}}\n\t\t\t\t\t\t\t\t{{! WrapWith START: Slider Item }}\n\t\t\t\t\t\t\t\t\t{{#wrapWith \"slider__item\"}}\n\n\t\t\t\t\t\t\t\t\t{{! WrapWith START: Grid Row }}\n\t\t\t\t\t\t\t\t\t\t{{#wrapWith \"grid-row\" gridPadding=true}}\n\n\t\t\t\t\t\t\t\t\t\t{{! WrapWith START:  }}\n\t\t\t\t\t\t\t\t\t\t\t{{#wrapWith \"grid-col\" colClasses=\"is-col-mobile-s-7\"}}\n\t\t\t\t\t\t\t\t\t\t\t\t{{#parseJSON '{\n\t\t\t\t\t\t\t\t\t\t\t\t\t\"content\": {\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\"videoMp4\": \"http://assets.veams.org/movies/veams-install.mp4\"\n\t\t\t\t\t\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t\t\t\t\t\t}'}}\n\t\t\t\t\t\t\t\t\t\t\t\t\t{{> video }}\n\t\t\t\t\t\t\t\t\t\t\t\t{{/parseJSON}}\n\t\t\t\t\t\t\t\t\t\t\t{{/wrapWith}}\n\t\t\t\t\t\t\t\t\t\t\t{{! WrapWith END:  }}\n\n\t\t\t\t\t\t\t\t\t\t\t{{! WrapWith START: Grid Col }}\n\t\t\t\t\t\t\t\t\t\t\t{{#wrapWith \"grid-col\" colClasses=\"is-col-mobile-s-5\"}}\n\t\t\t\t\t\t\t\t\t\t\t\t{{#deepMerge @root.rte.variations.default with=this}}\n\t\t\t\t\t\t\t\t\t\t\t\t\t{{> rte }}\n\t\t\t\t\t\t\t\t\t\t\t\t{{/deepMerge}}\n\t\t\t\t\t\t\t\t\t\t\t{{/wrapWith}}\n\t\t\t\t\t\t\t\t\t\t{{! WrapWith END: Grid Col }}\n\t\t\t\t\t\t\t\t\t\t{{/wrapWith}}\n\n\t\t\t\t\t\t\t\t\t{{/wrapWith}}\n\n\t\t\t\t\t\t\t\t{{/each}}\n\t\t\t\t\t\t\t{{/wrapWith}}\n\t\t\t\t\t\t{{! WrapWith END: Slider List }}\n\n\t\t\t\t\t\t{{/wrapWith}}\n\t\t\t\t\t{{! WrapWith END: Slider }}\n\n\t\t\t\t\t{{/wrapWith}}\n\t\t\t\t{{! WrapWith END: Grid Col }}\n\n\t\t\t\t{{/wrapWith}}\n\t\t\t{{! WrapWith END: Grid Row }}\n\n\t\t\t{{/wrapWith}}\n\t\t{{! WrapWith END: Section }}\n\n\t\t{{/with}}\n\n\t{{/content}}\n{{/extend}}\n",
+            "parsed": {
+                "orig": "---\ntitle: Veams\nbodyclass: \"is-front\"\ncontextData: home\n---\n\n{{#extend \"lyt-default\"}}\n\t{{#content \"sidebar\"}}{{/content}}\n\t{{#content \"main\"}}\n\n\n\t\t{{{print collection='docs' sortBy='sortOrder'}}}\n\n\t\t{{#with sections.In3Minutes}}\n\n\t\t{{! WrapWith START: Section }}\n\t\t\t{{#wrapWith \"section\" headline=headline}}\n\n\t\t\t{{! WrapWith START: Grid Row }}\n\t\t\t\t{{#wrapWith \"grid-row\"}}\n\n\t\t\t\t{{! WrapWith START: Grid Col }}\n\t\t\t\t\t{{#wrapWith \"grid-col\" colClasses=\"is-col-mobile-s-12\"}}\n\n\t\t\t\t\t{{! WrapWith START: Slider }}\n\t\t\t\t\t\t{{#wrapWith \"slider\" settings=@root.slider.variations.overflow.settings\n\t\t\t\t\t\t            content=@root.slider.variations.overflow.content}}\n\t\t\t\t\t\t{{! WrapWith START: Slider List }}\n\t\t\t\t\t\t\t{{#wrapWith \"slider__list\" settings=@root.slider.variations.overflow.settings}}\n\n\t\t\t\t\t\t\t\t{{#each teasers}}\n\t\t\t\t\t\t\t\t{{! WrapWith START: Slider Item }}\n\t\t\t\t\t\t\t\t\t{{#wrapWith \"slider__item\"}}\n\n\t\t\t\t\t\t\t\t\t{{! WrapWith START: Grid Row }}\n\t\t\t\t\t\t\t\t\t\t{{#wrapWith \"grid-row\" gridPadding=true}}\n\n\t\t\t\t\t\t\t\t\t\t{{! WrapWith START:  }}\n\t\t\t\t\t\t\t\t\t\t\t{{#wrapWith \"grid-col\" colClasses=\"is-col-mobile-s-7\"}}\n\t\t\t\t\t\t\t\t\t\t\t\t{{#parseJSON '{\n\t\t\t\t\t\t\t\t\t\t\t\t\t\"content\": {\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\"videoMp4\": \"http://assets.veams.org/movies/veams-install.mp4\"\n\t\t\t\t\t\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t\t\t\t\t\t}'}}\n\t\t\t\t\t\t\t\t\t\t\t\t\t{{> video }}\n\t\t\t\t\t\t\t\t\t\t\t\t{{/parseJSON}}\n\t\t\t\t\t\t\t\t\t\t\t{{/wrapWith}}\n\t\t\t\t\t\t\t\t\t\t\t{{! WrapWith END:  }}\n\n\t\t\t\t\t\t\t\t\t\t\t{{! WrapWith START: Grid Col }}\n\t\t\t\t\t\t\t\t\t\t\t{{#wrapWith \"grid-col\" colClasses=\"is-col-mobile-s-5\"}}\n\t\t\t\t\t\t\t\t\t\t\t\t{{#deepMerge @root.rte.variations.default with=this}}\n\t\t\t\t\t\t\t\t\t\t\t\t\t{{> rte }}\n\t\t\t\t\t\t\t\t\t\t\t\t{{/deepMerge}}\n\t\t\t\t\t\t\t\t\t\t\t{{/wrapWith}}\n\t\t\t\t\t\t\t\t\t\t{{! WrapWith END: Grid Col }}\n\t\t\t\t\t\t\t\t\t\t{{/wrapWith}}\n\n\t\t\t\t\t\t\t\t\t{{/wrapWith}}\n\n\t\t\t\t\t\t\t\t{{/each}}\n\t\t\t\t\t\t\t{{/wrapWith}}\n\t\t\t\t\t\t{{! WrapWith END: Slider List }}\n\n\t\t\t\t\t\t{{/wrapWith}}\n\t\t\t\t\t{{! WrapWith END: Slider }}\n\n\t\t\t\t\t{{/wrapWith}}\n\t\t\t\t{{! WrapWith END: Grid Col }}\n\n\t\t\t\t{{/wrapWith}}\n\t\t\t{{! WrapWith END: Grid Row }}\n\n\t\t\t{{/wrapWith}}\n\t\t{{! WrapWith END: Section }}\n\n\t\t{{/with}}\n\n\t{{/content}}\n{{/extend}}\n",
+                "data": {
+                    "title": "Veams",
+                    "bodyclass": "is-front",
+                    "contextData": "home"
+                },
+                "content": "\n{{#extend \"lyt-default\"}}\n\t{{#content \"sidebar\"}}{{/content}}\n\t{{#content \"main\"}}\n\n\n\t\t{{{print collection='docs' sortBy='sortOrder'}}}\n\n\t\t{{#with sections.In3Minutes}}\n\n\t\t{{! WrapWith START: Section }}\n\t\t\t{{#wrapWith \"section\" headline=headline}}\n\n\t\t\t{{! WrapWith START: Grid Row }}\n\t\t\t\t{{#wrapWith \"grid-row\"}}\n\n\t\t\t\t{{! WrapWith START: Grid Col }}\n\t\t\t\t\t{{#wrapWith \"grid-col\" colClasses=\"is-col-mobile-s-12\"}}\n\n\t\t\t\t\t{{! WrapWith START: Slider }}\n\t\t\t\t\t\t{{#wrapWith \"slider\" settings=@root.slider.variations.overflow.settings\n\t\t\t\t\t\t            content=@root.slider.variations.overflow.content}}\n\t\t\t\t\t\t{{! WrapWith START: Slider List }}\n\t\t\t\t\t\t\t{{#wrapWith \"slider__list\" settings=@root.slider.variations.overflow.settings}}\n\n\t\t\t\t\t\t\t\t{{#each teasers}}\n\t\t\t\t\t\t\t\t{{! WrapWith START: Slider Item }}\n\t\t\t\t\t\t\t\t\t{{#wrapWith \"slider__item\"}}\n\n\t\t\t\t\t\t\t\t\t{{! WrapWith START: Grid Row }}\n\t\t\t\t\t\t\t\t\t\t{{#wrapWith \"grid-row\" gridPadding=true}}\n\n\t\t\t\t\t\t\t\t\t\t{{! WrapWith START:  }}\n\t\t\t\t\t\t\t\t\t\t\t{{#wrapWith \"grid-col\" colClasses=\"is-col-mobile-s-7\"}}\n\t\t\t\t\t\t\t\t\t\t\t\t{{#parseJSON '{\n\t\t\t\t\t\t\t\t\t\t\t\t\t\"content\": {\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\"videoMp4\": \"http://assets.veams.org/movies/veams-install.mp4\"\n\t\t\t\t\t\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t\t\t\t\t\t}'}}\n\t\t\t\t\t\t\t\t\t\t\t\t\t{{> video }}\n\t\t\t\t\t\t\t\t\t\t\t\t{{/parseJSON}}\n\t\t\t\t\t\t\t\t\t\t\t{{/wrapWith}}\n\t\t\t\t\t\t\t\t\t\t\t{{! WrapWith END:  }}\n\n\t\t\t\t\t\t\t\t\t\t\t{{! WrapWith START: Grid Col }}\n\t\t\t\t\t\t\t\t\t\t\t{{#wrapWith \"grid-col\" colClasses=\"is-col-mobile-s-5\"}}\n\t\t\t\t\t\t\t\t\t\t\t\t{{#deepMerge @root.rte.variations.default with=this}}\n\t\t\t\t\t\t\t\t\t\t\t\t\t{{> rte }}\n\t\t\t\t\t\t\t\t\t\t\t\t{{/deepMerge}}\n\t\t\t\t\t\t\t\t\t\t\t{{/wrapWith}}\n\t\t\t\t\t\t\t\t\t\t{{! WrapWith END: Grid Col }}\n\t\t\t\t\t\t\t\t\t\t{{/wrapWith}}\n\n\t\t\t\t\t\t\t\t\t{{/wrapWith}}\n\n\t\t\t\t\t\t\t\t{{/each}}\n\t\t\t\t\t\t\t{{/wrapWith}}\n\t\t\t\t\t\t{{! WrapWith END: Slider List }}\n\n\t\t\t\t\t\t{{/wrapWith}}\n\t\t\t\t\t{{! WrapWith END: Slider }}\n\n\t\t\t\t\t{{/wrapWith}}\n\t\t\t\t{{! WrapWith END: Grid Col }}\n\n\t\t\t\t{{/wrapWith}}\n\t\t\t{{! WrapWith END: Grid Row }}\n\n\t\t\t{{/wrapWith}}\n\t\t{{! WrapWith END: Section }}\n\n\t\t{{/with}}\n\n\t{{/content}}\n{{/extend}}\n"
+            }
+        },
+        "methodology/css/context-styling/index": {
+            "id": "methodology/css/context-styling/index",
+            "assets": "../../../",
+            "ext": ".html",
+            "srcExt": ".hbs",
+            "basename": "index.hbs",
+            "filename": "index",
+            "dirname": "src/app/pages/methodology/css/context-styling",
+            "destDir": "app/",
+            "destSubDir": "methodology/css/context-styling",
+            "destFile": "methodology/css/context-styling/index.html",
+            "serverFile": "methodology/css/context-styling/index",
+            "raw": "---\ntitle: Context Styling\nsitemap: \"Docs\"\ndocs: \"Methodology\"\nnavigationLink: \"Context Styling\"\n---\n\n{{#extend \"lyt-default\"}}\n\t{{#content \"stage\"}}{{/content}}\n\t{{#content \"main\"}}\n\n    {{! WrapWith START: Section One }}\n\t\t{{#wrapWith \"section\"\n            headline=\"How to scope styles to a specific HTML element.\"\n            media=\"\"\n            githubLink=\"https://github.com/Veams/documentation/issues/new\"\n\t\t}}\n\n\t\t\t{{> rte md=\"src/external/veams/methodology/css/context/methodology__cssContext.md\"}}\n\n\t\t{{/wrapWith}}\n\t{{! WrapWith END: Section One }}\n\n\t{{/content}}\n{{/extend}}\n",
+            "parsed": {
+                "orig": "---\ntitle: Context Styling\nsitemap: \"Docs\"\ndocs: \"Methodology\"\nnavigationLink: \"Context Styling\"\n---\n\n{{#extend \"lyt-default\"}}\n\t{{#content \"stage\"}}{{/content}}\n\t{{#content \"main\"}}\n\n    {{! WrapWith START: Section One }}\n\t\t{{#wrapWith \"section\"\n            headline=\"How to scope styles to a specific HTML element.\"\n            media=\"\"\n            githubLink=\"https://github.com/Veams/documentation/issues/new\"\n\t\t}}\n\n\t\t\t{{> rte md=\"src/external/veams/methodology/css/context/methodology__cssContext.md\"}}\n\n\t\t{{/wrapWith}}\n\t{{! WrapWith END: Section One }}\n\n\t{{/content}}\n{{/extend}}\n",
+                "data": {
+                    "title": "Context Styling",
+                    "sitemap": "Docs",
+                    "docs": "Methodology",
+                    "navigationLink": "Context Styling"
+                },
+                "content": "\n{{#extend \"lyt-default\"}}\n\t{{#content \"stage\"}}{{/content}}\n\t{{#content \"main\"}}\n\n    {{! WrapWith START: Section One }}\n\t\t{{#wrapWith \"section\"\n            headline=\"How to scope styles to a specific HTML element.\"\n            media=\"\"\n            githubLink=\"https://github.com/Veams/documentation/issues/new\"\n\t\t}}\n\n\t\t\t{{> rte md=\"src/external/veams/methodology/css/context/methodology__cssContext.md\"}}\n\n\t\t{{/wrapWith}}\n\t{{! WrapWith END: Section One }}\n\n\t{{/content}}\n{{/extend}}\n"
+            }
+        },
+        "methodology/css/global-styling/index": {
+            "id": "methodology/css/global-styling/index",
+            "assets": "../../../",
+            "ext": ".html",
+            "srcExt": ".hbs",
+            "basename": "index.hbs",
+            "filename": "index",
+            "dirname": "src/app/pages/methodology/css/global-styling",
+            "destDir": "app/",
+            "destSubDir": "methodology/css/global-styling",
+            "destFile": "methodology/css/global-styling/index.html",
+            "serverFile": "methodology/css/global-styling/index",
+            "raw": "---\ntitle: Global Styling\nsitemap: \"Docs\"\ndocs: \"Methodology\"\nnavigationLink: \"Global Styling\"\n---\n\n{{#extend \"lyt-default\"}}\n\t{{#content \"stage\"}}{{/content}}\n\t{{#content \"main\"}}\n\n    {{! WrapWith START: Section One }}\n\t\t{{#wrapWith \"section\"\n            headline=\"How we share styles in instruments.\"\n            media=\"\"\n            githubLink=\"https://github.com/Veams/documentation/issues/new\"\n\t\t}}\n\n\t\t\t{{> rte md=\"src/external/veams/methodology/css/global/methodology__cssGlobal.md\"}}\n\n\t\t{{/wrapWith}}\n\t{{! WrapWith END: Section One }}\n\n\t{{/content}}\n{{/extend}}\n",
+            "parsed": {
+                "orig": "---\ntitle: Global Styling\nsitemap: \"Docs\"\ndocs: \"Methodology\"\nnavigationLink: \"Global Styling\"\n---\n\n{{#extend \"lyt-default\"}}\n\t{{#content \"stage\"}}{{/content}}\n\t{{#content \"main\"}}\n\n    {{! WrapWith START: Section One }}\n\t\t{{#wrapWith \"section\"\n            headline=\"How we share styles in instruments.\"\n            media=\"\"\n            githubLink=\"https://github.com/Veams/documentation/issues/new\"\n\t\t}}\n\n\t\t\t{{> rte md=\"src/external/veams/methodology/css/global/methodology__cssGlobal.md\"}}\n\n\t\t{{/wrapWith}}\n\t{{! WrapWith END: Section One }}\n\n\t{{/content}}\n{{/extend}}\n",
+                "data": {
+                    "title": "Global Styling",
+                    "sitemap": "Docs",
+                    "docs": "Methodology",
+                    "navigationLink": "Global Styling"
+                },
+                "content": "\n{{#extend \"lyt-default\"}}\n\t{{#content \"stage\"}}{{/content}}\n\t{{#content \"main\"}}\n\n    {{! WrapWith START: Section One }}\n\t\t{{#wrapWith \"section\"\n            headline=\"How we share styles in instruments.\"\n            media=\"\"\n            githubLink=\"https://github.com/Veams/documentation/issues/new\"\n\t\t}}\n\n\t\t\t{{> rte md=\"src/external/veams/methodology/css/global/methodology__cssGlobal.md\"}}\n\n\t\t{{/wrapWith}}\n\t{{! WrapWith END: Section One }}\n\n\t{{/content}}\n{{/extend}}\n"
+            }
+        },
+        "methodology/css/index": {
+            "id": "methodology/css/index",
+            "assets": "../../",
+            "ext": ".html",
+            "srcExt": ".hbs",
+            "basename": "index.hbs",
+            "filename": "index",
+            "dirname": "src/app/pages/methodology/css",
+            "destDir": "app/",
+            "destSubDir": "methodology/css",
+            "destFile": "methodology/css/index.html",
+            "serverFile": "methodology/css/index",
+            "raw": "---\ntitle: CSS\nsitemap: \"Docs\"\ndocs: \"Methodology\"\nnavigationLink: \"CSS\"\n---\n\n{{#extend \"lyt-default\"}}\n\t{{#content \"stage\"}}{{/content}}\n\t{{#content \"main\"}}\n\n    {{! WrapWith START: Section One }}\n\t\t{{#wrapWith \"section\"\n            headline=\"CSS naming convention\"\n            media=\"\"\n            githubLink=\"https://github.com/Veams/documentation/issues/new\"\n\t\t}}\n\n\t\t\t{{> rte md=\"src/external/veams/methodology/css/introduction/methodology__cssIntro.md\"}}\n\n\t\t{{/wrapWith}}\n\t{{! WrapWith END: Section One }}\n\n\t{{/content}}\n{{/extend}}\n",
+            "parsed": {
+                "orig": "---\ntitle: CSS\nsitemap: \"Docs\"\ndocs: \"Methodology\"\nnavigationLink: \"CSS\"\n---\n\n{{#extend \"lyt-default\"}}\n\t{{#content \"stage\"}}{{/content}}\n\t{{#content \"main\"}}\n\n    {{! WrapWith START: Section One }}\n\t\t{{#wrapWith \"section\"\n            headline=\"CSS naming convention\"\n            media=\"\"\n            githubLink=\"https://github.com/Veams/documentation/issues/new\"\n\t\t}}\n\n\t\t\t{{> rte md=\"src/external/veams/methodology/css/introduction/methodology__cssIntro.md\"}}\n\n\t\t{{/wrapWith}}\n\t{{! WrapWith END: Section One }}\n\n\t{{/content}}\n{{/extend}}\n",
+                "data": {
+                    "title": "CSS",
+                    "sitemap": "Docs",
+                    "docs": "Methodology",
+                    "navigationLink": "CSS"
+                },
+                "content": "\n{{#extend \"lyt-default\"}}\n\t{{#content \"stage\"}}{{/content}}\n\t{{#content \"main\"}}\n\n    {{! WrapWith START: Section One }}\n\t\t{{#wrapWith \"section\"\n            headline=\"CSS naming convention\"\n            media=\"\"\n            githubLink=\"https://github.com/Veams/documentation/issues/new\"\n\t\t}}\n\n\t\t\t{{> rte md=\"src/external/veams/methodology/css/introduction/methodology__cssIntro.md\"}}\n\n\t\t{{/wrapWith}}\n\t{{! WrapWith END: Section One }}\n\n\t{{/content}}\n{{/extend}}\n"
+            }
+        },
+        "methodology/css/modifier-styling/index": {
+            "id": "methodology/css/modifier-styling/index",
+            "assets": "../../../",
+            "ext": ".html",
+            "srcExt": ".hbs",
+            "basename": "index.hbs",
+            "filename": "index",
+            "dirname": "src/app/pages/methodology/css/modifier-styling",
+            "destDir": "app/",
+            "destSubDir": "methodology/css/modifier-styling",
+            "destFile": "methodology/css/modifier-styling/index.html",
+            "serverFile": "methodology/css/modifier-styling/index",
+            "raw": "---\ntitle: Modifier Styling\nsitemap: \"Docs\"\ndocs: \"Methodology\"\nnavigationLink: \"Modifier Styling\"\n---\n\n{{#extend \"lyt-default\"}}\n\t{{#content \"stage\"}}{{/content}}\n\t{{#content \"main\"}}\n\n    {{! WrapWith START: Section One }}\n\t\t{{#wrapWith \"section\"\n            headline=\"How we change a state of an HTML element.\"\n            media=\"\"\n            githubLink=\"https://github.com/Veams/documentation/issues/new\"\n\t\t}}\n\n\t\t\t{{> rte md=\"src/external/veams/methodology/css/modifiers/methodology__cssModifiers.md\"}}\n\n\t\t{{/wrapWith}}\n\t{{! WrapWith END: Section One }}\n\n\t{{/content}}\n{{/extend}}\n",
+            "parsed": {
+                "orig": "---\ntitle: Modifier Styling\nsitemap: \"Docs\"\ndocs: \"Methodology\"\nnavigationLink: \"Modifier Styling\"\n---\n\n{{#extend \"lyt-default\"}}\n\t{{#content \"stage\"}}{{/content}}\n\t{{#content \"main\"}}\n\n    {{! WrapWith START: Section One }}\n\t\t{{#wrapWith \"section\"\n            headline=\"How we change a state of an HTML element.\"\n            media=\"\"\n            githubLink=\"https://github.com/Veams/documentation/issues/new\"\n\t\t}}\n\n\t\t\t{{> rte md=\"src/external/veams/methodology/css/modifiers/methodology__cssModifiers.md\"}}\n\n\t\t{{/wrapWith}}\n\t{{! WrapWith END: Section One }}\n\n\t{{/content}}\n{{/extend}}\n",
+                "data": {
+                    "title": "Modifier Styling",
+                    "sitemap": "Docs",
+                    "docs": "Methodology",
+                    "navigationLink": "Modifier Styling"
+                },
+                "content": "\n{{#extend \"lyt-default\"}}\n\t{{#content \"stage\"}}{{/content}}\n\t{{#content \"main\"}}\n\n    {{! WrapWith START: Section One }}\n\t\t{{#wrapWith \"section\"\n            headline=\"How we change a state of an HTML element.\"\n            media=\"\"\n            githubLink=\"https://github.com/Veams/documentation/issues/new\"\n\t\t}}\n\n\t\t\t{{> rte md=\"src/external/veams/methodology/css/modifiers/methodology__cssModifiers.md\"}}\n\n\t\t{{/wrapWith}}\n\t{{! WrapWith END: Section One }}\n\n\t{{/content}}\n{{/extend}}\n"
+            }
+        },
+        "methodology/index": {
+            "id": "methodology/index",
+            "assets": "../",
+            "ext": ".html",
+            "srcExt": ".hbs",
+            "basename": "index.hbs",
+            "filename": "index",
+            "dirname": "src/app/pages/methodology",
+            "destDir": "app/",
+            "destSubDir": "methodology",
+            "destFile": "methodology/index.html",
+            "serverFile": "methodology/index",
+            "raw": "---\ntitle: Methodology\nsitemap: \"Docs\"\ndocs: \"Methodology\"\nnavigationLink: \"Overview\"\n---\n\n{{#extend \"lyt-default\"}}\n\t{{#content \"stage\"}}{{/content}}\n\t{{#content \"main\"}}\n\n    {{! WrapWith START: Section One }}\n\t\t{{#wrapWith \"section\"\n            headline=\"Overview to Veams-Methodology\"\n            media=\"\"\n            githubLink=\"https://github.com/Veams/documentation/issues/new\"\n\t\t}}\n\n\t\t\t{{> rte md=\"src/external/veams/methodology/methodology__index.md\"}}\n\n\t\t{{/wrapWith}}\n\t{{! WrapWith END: Section One }}\n\n\t{{/content}}\n{{/extend}}\n",
+            "parsed": {
+                "orig": "---\ntitle: Methodology\nsitemap: \"Docs\"\ndocs: \"Methodology\"\nnavigationLink: \"Overview\"\n---\n\n{{#extend \"lyt-default\"}}\n\t{{#content \"stage\"}}{{/content}}\n\t{{#content \"main\"}}\n\n    {{! WrapWith START: Section One }}\n\t\t{{#wrapWith \"section\"\n            headline=\"Overview to Veams-Methodology\"\n            media=\"\"\n            githubLink=\"https://github.com/Veams/documentation/issues/new\"\n\t\t}}\n\n\t\t\t{{> rte md=\"src/external/veams/methodology/methodology__index.md\"}}\n\n\t\t{{/wrapWith}}\n\t{{! WrapWith END: Section One }}\n\n\t{{/content}}\n{{/extend}}\n",
+                "data": {
+                    "title": "Methodology",
+                    "sitemap": "Docs",
+                    "docs": "Methodology",
+                    "navigationLink": "Overview"
+                },
+                "content": "\n{{#extend \"lyt-default\"}}\n\t{{#content \"stage\"}}{{/content}}\n\t{{#content \"main\"}}\n\n    {{! WrapWith START: Section One }}\n\t\t{{#wrapWith \"section\"\n            headline=\"Overview to Veams-Methodology\"\n            media=\"\"\n            githubLink=\"https://github.com/Veams/documentation/issues/new\"\n\t\t}}\n\n\t\t\t{{> rte md=\"src/external/veams/methodology/methodology__index.md\"}}\n\n\t\t{{/wrapWith}}\n\t{{! WrapWith END: Section One }}\n\n\t{{/content}}\n{{/extend}}\n"
+            }
+        },
+        "methodology/instruments/components/index": {
+            "id": "methodology/instruments/components/index",
+            "assets": "../../../",
+            "ext": ".html",
+            "srcExt": ".hbs",
+            "basename": "index.hbs",
+            "filename": "index",
+            "dirname": "src/app/pages/methodology/instruments/components",
+            "destDir": "app/",
+            "destSubDir": "methodology/instruments/components",
+            "destFile": "methodology/instruments/components/index.html",
+            "serverFile": "methodology/instruments/components/index",
+            "raw": "---\ntitle: Components\nsitemap: \"Docs\"\ndocs: \"Methodology\"\nnavigationLink: \"Components\"\n---\n\n{{#extend \"lyt-default\"}}\n\t{{#content \"stage\"}}{{/content}}\n\t{{#content \"main\"}}\n\n    {{! WrapWith START: Section One }}\n\t\t{{#wrapWith \"section\"\n            headline=\"Components: Generic elements which can be used all over our application.\"\n            media=\"\"\n            githubLink=\"https://github.com/Veams/documentation/issues/new\"\n\t\t}}\n\n\t\t\t{{> rte md=\"src/external/veams/methodology/instruments/components/methodology__components.md\"}}\n\n\t\t{{/wrapWith}}\n\t{{! WrapWith END: Section One }}\n\n\t{{/content}}\n{{/extend}}\n",
+            "parsed": {
+                "orig": "---\ntitle: Components\nsitemap: \"Docs\"\ndocs: \"Methodology\"\nnavigationLink: \"Components\"\n---\n\n{{#extend \"lyt-default\"}}\n\t{{#content \"stage\"}}{{/content}}\n\t{{#content \"main\"}}\n\n    {{! WrapWith START: Section One }}\n\t\t{{#wrapWith \"section\"\n            headline=\"Components: Generic elements which can be used all over our application.\"\n            media=\"\"\n            githubLink=\"https://github.com/Veams/documentation/issues/new\"\n\t\t}}\n\n\t\t\t{{> rte md=\"src/external/veams/methodology/instruments/components/methodology__components.md\"}}\n\n\t\t{{/wrapWith}}\n\t{{! WrapWith END: Section One }}\n\n\t{{/content}}\n{{/extend}}\n",
+                "data": {
+                    "title": "Components",
+                    "sitemap": "Docs",
+                    "docs": "Methodology",
+                    "navigationLink": "Components"
+                },
+                "content": "\n{{#extend \"lyt-default\"}}\n\t{{#content \"stage\"}}{{/content}}\n\t{{#content \"main\"}}\n\n    {{! WrapWith START: Section One }}\n\t\t{{#wrapWith \"section\"\n            headline=\"Components: Generic elements which can be used all over our application.\"\n            media=\"\"\n            githubLink=\"https://github.com/Veams/documentation/issues/new\"\n\t\t}}\n\n\t\t\t{{> rte md=\"src/external/veams/methodology/instruments/components/methodology__components.md\"}}\n\n\t\t{{/wrapWith}}\n\t{{! WrapWith END: Section One }}\n\n\t{{/content}}\n{{/extend}}\n"
+            }
+        },
+        "methodology/instruments/regions/index": {
+            "id": "methodology/instruments/regions/index",
+            "assets": "../../../",
+            "ext": ".html",
+            "srcExt": ".hbs",
+            "basename": "index.hbs",
+            "filename": "index",
+            "dirname": "src/app/pages/methodology/instruments/regions",
+            "destDir": "app/",
+            "destSubDir": "methodology/instruments/regions",
+            "destFile": "methodology/instruments/regions/index.html",
+            "serverFile": "methodology/instruments/regions/index",
+            "raw": "---\ntitle: Regions\nsitemap: \"Docs\"\ndocs: \"Methodology\"\nnavigationLink: \"Regions\"\n---\n\n{{#extend \"lyt-default\"}}\n\t{{#content \"stage\"}}{{/content}}\n\t{{#content \"main\"}}\n\n    {{! WrapWith START: Section One }}\n\t\t{{#wrapWith \"section\"\n            headline=\"Regions: An instrument to divide your layout.\"\n            media=\"\"\n            githubLink=\"https://github.com/Veams/documentation/issues/new\"\n\t\t}}\n\n\t\t\t{{> rte md=\"src/external/veams/methodology/instruments/regions/methodology__regions.md\"}}\n\n\t\t{{/wrapWith}}\n\t{{! WrapWith END: Section One }}\n\n\t{{/content}}\n{{/extend}}\n",
+            "parsed": {
+                "orig": "---\ntitle: Regions\nsitemap: \"Docs\"\ndocs: \"Methodology\"\nnavigationLink: \"Regions\"\n---\n\n{{#extend \"lyt-default\"}}\n\t{{#content \"stage\"}}{{/content}}\n\t{{#content \"main\"}}\n\n    {{! WrapWith START: Section One }}\n\t\t{{#wrapWith \"section\"\n            headline=\"Regions: An instrument to divide your layout.\"\n            media=\"\"\n            githubLink=\"https://github.com/Veams/documentation/issues/new\"\n\t\t}}\n\n\t\t\t{{> rte md=\"src/external/veams/methodology/instruments/regions/methodology__regions.md\"}}\n\n\t\t{{/wrapWith}}\n\t{{! WrapWith END: Section One }}\n\n\t{{/content}}\n{{/extend}}\n",
+                "data": {
+                    "title": "Regions",
+                    "sitemap": "Docs",
+                    "docs": "Methodology",
+                    "navigationLink": "Regions"
+                },
+                "content": "\n{{#extend \"lyt-default\"}}\n\t{{#content \"stage\"}}{{/content}}\n\t{{#content \"main\"}}\n\n    {{! WrapWith START: Section One }}\n\t\t{{#wrapWith \"section\"\n            headline=\"Regions: An instrument to divide your layout.\"\n            media=\"\"\n            githubLink=\"https://github.com/Veams/documentation/issues/new\"\n\t\t}}\n\n\t\t\t{{> rte md=\"src/external/veams/methodology/instruments/regions/methodology__regions.md\"}}\n\n\t\t{{/wrapWith}}\n\t{{! WrapWith END: Section One }}\n\n\t{{/content}}\n{{/extend}}\n"
+            }
+        },
+        "methodology/instruments/utilities/index": {
+            "id": "methodology/instruments/utilities/index",
+            "assets": "../../../",
+            "ext": ".html",
+            "srcExt": ".hbs",
+            "basename": "index.hbs",
+            "filename": "index",
+            "dirname": "src/app/pages/methodology/instruments/utilities",
+            "destDir": "app/",
+            "destSubDir": "methodology/instruments/utilities",
+            "destFile": "methodology/instruments/utilities/index.html",
+            "serverFile": "methodology/instruments/utilities/index",
+            "raw": "---\ntitle: Utilities\nsitemap: \"Docs\"\ndocs: \"Methodology\"\nnavigationLink: \"Utilities\"\n---\n\n{{#extend \"lyt-default\"}}\n\t{{#content \"stage\"}}{{/content}}\n\t{{#content \"main\"}}\n\n    {{! WrapWith START: Section One }}\n\t\t{{#wrapWith \"section\"\n            headline=\"Utilities: Markup helper to structure your HTML.\"\n            media=\"\"\n            githubLink=\"https://github.com/Veams/documentation/issues/new\"\n\t\t}}\n\n\t\t\t{{> rte md=\"src/external/veams/methodology/instruments/utilities/methodology__utilities.md\"}}\n\n\t\t{{/wrapWith}}\n\t{{! WrapWith END: Section One }}\n\n\t{{/content}}\n{{/extend}}\n",
+            "parsed": {
+                "orig": "---\ntitle: Utilities\nsitemap: \"Docs\"\ndocs: \"Methodology\"\nnavigationLink: \"Utilities\"\n---\n\n{{#extend \"lyt-default\"}}\n\t{{#content \"stage\"}}{{/content}}\n\t{{#content \"main\"}}\n\n    {{! WrapWith START: Section One }}\n\t\t{{#wrapWith \"section\"\n            headline=\"Utilities: Markup helper to structure your HTML.\"\n            media=\"\"\n            githubLink=\"https://github.com/Veams/documentation/issues/new\"\n\t\t}}\n\n\t\t\t{{> rte md=\"src/external/veams/methodology/instruments/utilities/methodology__utilities.md\"}}\n\n\t\t{{/wrapWith}}\n\t{{! WrapWith END: Section One }}\n\n\t{{/content}}\n{{/extend}}\n",
+                "data": {
+                    "title": "Utilities",
+                    "sitemap": "Docs",
+                    "docs": "Methodology",
+                    "navigationLink": "Utilities"
+                },
+                "content": "\n{{#extend \"lyt-default\"}}\n\t{{#content \"stage\"}}{{/content}}\n\t{{#content \"main\"}}\n\n    {{! WrapWith START: Section One }}\n\t\t{{#wrapWith \"section\"\n            headline=\"Utilities: Markup helper to structure your HTML.\"\n            media=\"\"\n            githubLink=\"https://github.com/Veams/documentation/issues/new\"\n\t\t}}\n\n\t\t\t{{> rte md=\"src/external/veams/methodology/instruments/utilities/methodology__utilities.md\"}}\n\n\t\t{{/wrapWith}}\n\t{{! WrapWith END: Section One }}\n\n\t{{/content}}\n{{/extend}}\n"
+            }
+        }
+    },
+    "collections": {
+        "docs": {
+            "Getting Started": {
+                "name": "Getting Started",
+                "files": [
+                    "docs/installation/index",
+                    "docs/index"
+                ]
+            },
+            "Methodology": {
+                "name": "Methodology",
+                "files": [
+                    "methodology/css/context-styling/index",
+                    "methodology/css/global-styling/index",
+                    "methodology/css/index",
+                    "methodology/css/modifier-styling/index",
+                    "methodology/index",
+                    "methodology/instruments/components/index",
+                    "methodology/instruments/regions/index",
+                    "methodology/instruments/utilities/index"
+                ]
+            }
+        },
+        "subcategory": {},
+        "examples": {},
+        "tutorial": {},
+        "sitemap": {
+            "Docs": {
+                "name": "Docs",
+                "files": [
+                    "docs/installation/index",
+                    "methodology/css/context-styling/index",
+                    "methodology/css/global-styling/index",
+                    "methodology/css/index",
+                    "methodology/css/modifier-styling/index",
+                    "methodology/index",
+                    "methodology/instruments/components/index",
+                    "methodology/instruments/regions/index",
+                    "methodology/instruments/utilities/index"
+                ]
+            },
+            "docs": {
+                "name": "docs",
+                "files": [
+                    "docs/index"
+                ]
+            }
+        },
+        "type": {}
+    },
+    "customTypes": [],
+    "sitemap.settings": {
+        "type": "component",
+        "layout": "lyt-docs",
+        "publish": false
+    },
+    "navigation.settings": {
+        "paths": {
+            "scripts": "src/core/components/navigation/scripts/navigation",
+            "styles": "src/core/components/navigation/styles/navigation"
+        },
+        "type": "component",
+        "contextData": "navigation",
+        "layout": "lyt-docs",
+        "publish": true
+    },
+    "navigation": {
+        "variations": {
+            "default": {
+                "docs": {
+                    "variationName": "Default"
+                },
+                "settings": {
+                    "navigationContextClass": "default",
+                    "navigationClasses": false,
+                    "navigationJsOptions": {}
+                },
+                "content": {}
+            }
+        }
+    },
+    "section": {
+        "variations": {
+            "default": {
+                "docs": {
+                    "variationName": "Default"
+                },
+                "settings": {
+                    "sectionContextClass": "default",
+                    "sectionClasses": false
+                },
+                "content": {}
+            }
+        }
+    },
+    "rte": {
+        "variations": {
+            "default": {
+                "docs": {
+                    "variationName": "Markdown file in current working directory"
+                },
+                "settings": {
+                    "rteContextClass": "content",
+                    "rteClasses": false,
+                    "rteCWD": true,
+                    "rteCWDLevelUp": "0"
+                },
+                "content": {
+                    "rteMd": "../../../external/core/README.md"
+                }
+            }
+        }
+    },
+    "rte.settings": {
+        "type": "component",
+        "contextData": "rte",
+        "displayName": "rte",
+        "layout": "lyt-docs",
+        "scssFiles": [
+            "_rte.scss"
+        ]
+    },
+    "slider": {
+        "variations": {
+            "simple": {
+                "docs": {
+                    "variationName": "Default Slider"
+                },
+                "settings": {
+                    "sliderContextClass": "default"
+                },
+                "content": {
+                    "sliderButtons": {
+                        "next": "Next",
+                        "prev": "Previous"
+                    }
+                }
+            },
+            "multiple": {
+                "docs": {
+                    "variationName": "Multiple items defined by breakpoints",
+                    "variationDescription": "By providing 'visibleItems' you can define the visible active slides per breakpoint."
+                },
+                "settings": {
+                    "sliderContextClass": "default",
+                    "sliderJsOptions": {
+                        "visibleItems": {
+                            "mobile-s": 1,
+                            "mobile-m": 1,
+                            "mobile-l": 2,
+                            "tablet-s": 2,
+                            "tablet-l": 2,
+                            "desktop-s": 3,
+                            "desktop-m": 3,
+                            "desktop-l": 3
+                        }
+                    }
+                },
+                "content": {
+                    "sliderButtons": {
+                        "next": "Next",
+                        "prev": "Previous"
+                    }
+                }
+            },
+            "multipleWithGroupedPagination": {
+                "docs": {
+                    "variationName": "Multiple items, grouped pagination and custom slide number",
+                    "variationDescription": "By providing 'groupPaginationItems' you can group the pagination items. Furthermore you can modify the number of elements you want to slide to the left or right by using 'slideByItemNumber'."
+                },
+                "settings": {
+                    "sliderContextClass": "default",
+                    "sliderJsOptions": {
+                        "groupPaginationItems": true,
+                        "slideByItemNumber": 1,
+                        "visibleItems": {
+                            "mobile-s": 1,
+                            "mobile-m": 1,
+                            "mobile-l": 2,
+                            "tablet-s": 2,
+                            "tablet-l": 2,
+                            "desktop-s": 3,
+                            "desktop-m": 3,
+                            "desktop-l": 3
+                        }
+                    }
+                },
+                "content": {
+                    "sliderButtons": {
+                        "next": "Next",
+                        "prev": "Previous"
+                    }
+                }
+            },
+            "infinite": {
+                "docs": {
+                    "variationName": "Slider with enabled infinite option",
+                    "variationDescription": "This means that the first and last elements get cloned and appended to the slide items. Please be aware of that you can not use this option in combination with multiple active slide elements."
+                },
+                "settings": {
+                    "sliderContextClass": "default",
+                    "sliderJsOptions": {
+                        "infinite": true
+                    }
+                },
+                "content": {
+                    "sliderButtons": {
+                        "next": "Next",
+                        "prev": "Previous"
+                    }
+                }
+            },
+            "overflow": {
+                "docs": {
+                    "variationName": "Slider with overflow area",
+                    "variationDescription": "By providing 'sliderOverflow' you can display all other items next to the active slide(s) as well."
+                },
+                "settings": {
+                    "sliderContextClass": "default",
+                    "sliderOverflow": true,
+                    "sliderJsOptions": {
+                        "infinite": false
+                    }
+                },
+                "content": {
+                    "sliderButtons": {
+                        "next": "Next",
+                        "prev": "Previous"
+                    }
+                }
+            },
+            "autoplay": {
+                "docs": {
+                    "variationName": "Slider with AutoPlay option",
+                    "variationDescription": "The autoPlay option gives you the possibility to cycle through your slides automatically by a defined interval. You need to make sure to enable the infinite option. On hover the sliding stops."
+                },
+                "settings": {
+                    "sliderContextClass": "default",
+                    "sliderJsOptions": {
+                        "infinite": true,
+                        "autoPlay": true,
+                        "autoPlayInterval": 3500
+                    }
+                },
+                "content": {
+                    "sliderButtons": {
+                        "next": "Next",
+                        "prev": "Previous"
+                    }
+                }
+            }
+        }
+    },
+    "slider-usage.settings": {
+        "type": "component",
+        "contextData": "slider",
+        "displayName": "slider",
+        "layout": "lyt-docs",
+        "subTemplates": [
+            "slider.hbs",
+            "slider__controls.hbs",
+            "slider__item.hbs",
+            "slider__list.hbs",
+            "slider__pagination.hbs"
+        ],
+        "scssFiles": [
+            "_slider.scss"
+        ],
+        "jsFiles": [
+            "slider.js"
+        ]
+    },
+    "video": {
+        "variations": {
+            "default": {
+                "docs": {
+                    "variationName": "Default video",
+                    "sectionCenter": true
+                },
+                "settings": {
+                    "videoContextClass": false,
+                    "videoClasses": false,
+                    "videoOptions": "controls buffer"
+                },
+                "content": {
+                    "videoPoster": "http://sandbox.thewikies.com/vfe-generator/images/big-buck-bunny_poster.jpg",
+                    "videoMp4": "http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4",
+                    "videoWebm": "http://clips.vorwaerts-gmbh.de/big_buck_bunny.webm",
+                    "videoTrack": {
+                        "trackSubtitle": false,
+                        "trackLang": false,
+                        "trackLabel": false
+                    }
+                }
+            }
+        }
+    },
+    "video.settings": {
+        "type": "component",
+        "contextData": "video",
+        "layout": "lyt-docs",
+        "scssFiles": [
+            "_video.scss"
+        ]
+    },
+    "stage.settings": {
+        "paths": {
+            "styles": "src/app/core/components/stage/styles/stage"
+        },
+        "type": "component",
+        "contextData": "stage",
+        "layout": "lyt-docs",
+        "publish": true
+    },
+    "section.settings": {
+        "paths": {
+            "styles": "src/app/core/components/section/styles/section"
+        },
+        "type": "component",
+        "contextData": "section",
+        "layout": "lyt-docs",
+        "publish": true
+    },
+    "package": {
+        "name": "@veams/component-video",
+        "version": "1.0.1",
+        "description": "A video component supporting WebM, MP4 and Subtitles.",
+        "repository": {
+            "type": "git",
+            "url": "git://github.com/Veams/component-video.git"
+        },
+        "keywords": [
+            "veams"
+        ],
+        "author": "Sebastian Fitzner",
+        "license": "MIT",
+        "bugs": {
+            "url": "https://github.com/Veams/component-video/issues"
+        },
+        "homepage": "https://github.com/Veams/component-video#readme"
+    },
+    "home": {
+        "sections": {
+            "In3Minutes": {
+                "headline": "Build your customized web application in 3 minutes.",
+                "teasers": [
+                    {
+                        "content": {
+                            "rteMd": "markdown/install-cli.md"
+                        }
+                    },
+                    {
+                        "content": {
+                            "rteMd": "markdown/create-and-start.md"
+                        }
+                    },
+                    {
+                        "content": {
+                            "rteMd": "markdown/install-components.md"
+                        }
+                    },
+                    {
+                        "content": {
+                            "rteMd": "markdown/generate-components.md"
+                        }
+                    }
+                ]
+            }
+        }
+    },
+    "grid": {
+        "variations": {
+            "4-grid": {
+                "docs": {
+                    "variationName": "4 Columns Collapsed"
+                },
+                "settings": {
+                    "gridPadding": true,
+                    "colClasses": "is-col-mobile-s-6 is-col-mobile-l-3"
+                },
+                "content": {
+                    "repeats": 4
+                }
+            },
+            "3-grid": {
+                "docs": {
+                    "variationName": "3 Columns"
+                },
+                "settings": {
+                    "colClasses": "is-col-mobile-s-12 is-col-mobile-l-4"
+                },
+                "content": {
+                    "repeats": 3
+                }
+            },
+            "custom-example": {
+                "docs": {
+                    "variationName": "Custom Setup with Offset (see README)"
+                },
+                "settings": {
+                    "colClasses": "is-col-mobile-s-12 is-col-mobile-xl-6 is-col-tablet-p-4 is-col-tablet-p-offset-4 is-col-tablet-l-6 is-col-tablet-l-offset-0"
+                },
+                "content": {
+                    "repeats": 1
+                }
+            }
+        }
+    },
+    "stage": {
+        "variations": {
+            "default": {
+                "docs": {
+                    "variationName": "Default"
+                },
+                "settings": {
+                    "stageContextClass": "default",
+                    "stageClasses": false
+                },
+                "content": {}
+            }
+        }
+    },
+    "grid.settings": {
+        "type": "utility",
+        "contextData": "grid",
+        "layout": "lyt-docs",
+        "subTemplates": [
+            "grid-col.hbs",
+            "grid-row.hbs"
+        ],
+        "scssFiles": [
+            "_grid.scss"
+        ]
+    }
+}
