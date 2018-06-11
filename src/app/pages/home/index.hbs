@@ -1,0 +1,80 @@
+---
+title: Veams
+bodyclass: "is-front"
+contextData: home
+---
+
+{{#extend "lyt-default"}}
+	{{#content "sidebar"}}{{/content}}
+	{{#content "main"}}
+
+
+		{{{print collection='docs' sortBy='sortOrder'}}}
+
+		{{#with sections.In3Minutes}}
+
+		{{! WrapWith START: Section }}
+			{{#wrapWith "section" headline=headline}}
+
+			{{! WrapWith START: Grid Row }}
+				{{#wrapWith "grid-row"}}
+
+				{{! WrapWith START: Grid Col }}
+					{{#wrapWith "grid-col" colClasses="is-col-mobile-s-12"}}
+
+					{{! WrapWith START: Slider }}
+						{{#wrapWith "slider" settings=@root.slider.variations.overflow.settings
+						            content=@root.slider.variations.overflow.content}}
+						{{! WrapWith START: Slider List }}
+							{{#wrapWith "slider__list" settings=@root.slider.variations.overflow.settings}}
+
+								{{#each teasers}}
+								{{! WrapWith START: Slider Item }}
+									{{#wrapWith "slider__item"}}
+
+									{{! WrapWith START: Grid Row }}
+										{{#wrapWith "grid-row" gridPadding=true}}
+
+										{{! WrapWith START:  }}
+											{{#wrapWith "grid-col" colClasses="is-col-mobile-s-7"}}
+												{{#parseJSON '{
+													"content": {
+														"videoMp4": "http://assets.veams.org/movies/veams-install.mp4"
+													}
+												}'}}
+													{{> video }}
+												{{/parseJSON}}
+											{{/wrapWith}}
+											{{! WrapWith END:  }}
+
+											{{! WrapWith START: Grid Col }}
+											{{#wrapWith "grid-col" colClasses="is-col-mobile-s-5"}}
+												{{#deepMerge @root.rte.variations.default with=this}}
+													{{> rte }}
+												{{/deepMerge}}
+											{{/wrapWith}}
+										{{! WrapWith END: Grid Col }}
+										{{/wrapWith}}
+
+									{{/wrapWith}}
+
+								{{/each}}
+							{{/wrapWith}}
+						{{! WrapWith END: Slider List }}
+
+						{{/wrapWith}}
+					{{! WrapWith END: Slider }}
+
+					{{/wrapWith}}
+				{{! WrapWith END: Grid Col }}
+
+				{{/wrapWith}}
+			{{! WrapWith END: Grid Row }}
+
+			{{/wrapWith}}
+		{{! WrapWith END: Section }}
+
+		{{/with}}
+
+	{{/content}}
+{{/extend}}

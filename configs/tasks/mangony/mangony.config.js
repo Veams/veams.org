@@ -10,6 +10,7 @@ module.exports = {
 		},
 		collections: [
 			'docs',
+			'subcategory',
 			'examples',
 			'tutorial',
 			'sitemap',
@@ -17,11 +18,13 @@ module.exports = {
 		],
 		cwd: config.paths.app,
 		dest: config.paths.dest,
-		exportData: false,
+		exportData: true,
 		flatten: false,
 		types: {
 			data: {
 				dir: '',
+				createDeepIds: false,
+				pathDelimiter: '_',
 				files: [
 					'core/**/*.hjson',
 					'core/**/*.json',
@@ -29,6 +32,7 @@ module.exports = {
 					// 'app/features/**/*.json',
 					'shared/components/**/*.hjson',
 					'shared/components/**/*.json',
+					'pages/**/*.hjson',
 					'shared/utilities/**/*.hjson',
 					'shared/utilities/**/*.json'
 				]

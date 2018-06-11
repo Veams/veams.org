@@ -1,0 +1,23 @@
+---
+title: Documentation Style Guide
+sitemap: "Docs"
+docs: "Style Guide"
+navigationLink: "Summary"
+---
+
+{{#extend "lyt-default"}}
+	{{#content "main"}}
+
+    {{! WrapWith START: Section One }}
+		{{#wrapWith "section"
+            headline="Documentation Style Guide"
+            media=""
+            githubLink="https://github.com/Veams/core/issues/new"
+		}}
+
+			{{> rte md="src/external/veams/how-to/style-guide/style-guide__summary.md"}}
+		{{/wrapWith}}
+	{{! WrapWith END: Section One }}
+
+	{{/content}}
+{{/extend}}
