@@ -4,7 +4,8 @@ module.exports = function () {
 			type: 'text',
 			name: 'title',
 			message: 'How is the title of the page?'
-		},{
+		},
+		{
 			type: 'text',
 			name: 'navigationLink',
 			message: 'How is the navigation link text of the page?'
@@ -38,6 +39,12 @@ module.exports = function () {
 			name: 'category',
 			message: 'In which category section do you want to save it?',
 			default: 'Getting Started'
+		},
+		{
+			type: 'text',
+			name: 'category',
+			message: 'In which category section do you want to save it?',
+			default: 'Methodology'
 		}
 	]
 };

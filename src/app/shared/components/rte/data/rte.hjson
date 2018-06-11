@@ -8,10 +8,10 @@
 				"rteContextClass": "content",
 				"rteClasses": false,
 				"rteCWD": true,
-				"rteCWDLevelUp": "1"
+				"rteCWDLevelUp": "0"
 			},
 			"content": {
-				"rteMd": "../../external/core/README.md"
+				"rteMd": "../../../external/core/README.md"
 			}
 		}
 	}

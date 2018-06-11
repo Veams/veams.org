@@ -39,7 +39,7 @@ $breakpoints: (
 /* ---------------------------------------------------
 Grid
 --------------------------------------------------- */
-$grid-visual: false;
+$grid-visual: true;
 
 /* ---------------------------------------------------
 Colors
@@ -47,6 +47,7 @@ Colors
 $color-white: #fff;
 $color-primary-light: #4a9ea3;
 $color-primary-lighter: #a4ced0;
+$color-primary-dark: #006150;
 $color-grey-dark: #23241f;
 $color-grey-light: #f5f5f5;
 

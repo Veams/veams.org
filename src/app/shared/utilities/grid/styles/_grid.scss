@@ -141,6 +141,5 @@ Grid Col
 		@include grid-sizes($bp-map, $key);
 		$bp-map: map-get($grid-breakpoints, $key);
 		$gutter: map-get($bp-map, gutter);
-
 	}
 }

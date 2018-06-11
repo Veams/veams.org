@@ -6,7 +6,7 @@ Layout Styles
 Variables
 --------------------------------------------------- */
 $lyt-sidebar-width: 280px;
-$lyt-sidebar-offset: 65px;
+$lyt-sidebar-offset: 64px;
 $lyt-container-margin-top: 4rem;
 $lyt-index-map: (
 	header: 10,
@@ -26,6 +26,7 @@ Header
 	padding: $margin-base;
 	background-color: darken($color-grey-dark, 8);
 	z-index: map-get($lyt-index-map, header);
+	box-shadow: #000 -1px 1px 10px;
 }
 
 .r-header-left {
@@ -84,7 +85,7 @@ Main
 	float: right;
 	width: calc(100% - #{$lyt-sidebar-width});
 	overflow-x: hidden;
-	padding: $lyt-container-margin-top $margin-base * 3;
+	padding: $lyt-container-margin-top 0;
 	box-sizing: border-box;
 
 	.is-front & {

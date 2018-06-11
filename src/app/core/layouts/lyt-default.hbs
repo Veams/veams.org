@@ -19,7 +19,7 @@
 <div class="page-wrapper">
 	<header class="r-header">
 		<div class="r-header-left">
-			<a href="/index.html">
+			<a href="/home/index.html">
 				<img src="https://www.veams.org/img/svg/icons/veams-std-invert.svg" width="148px">
 			</a>
 		</div>
@@ -33,7 +33,7 @@
 		<section class="r-stage">
 			<div class="stage__content">
 				{{#block "stage"}}
-					{{#with stage.variations.default}}
+					{{#with @root.stage.variations.default}}
 						{{> stage}}
 					{{/with}}
 				{{/block}}

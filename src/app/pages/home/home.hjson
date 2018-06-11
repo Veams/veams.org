@@ -1,0 +1,29 @@
+{
+	"sections": {
+		"In3Minutes": {
+			"headline": "Build your customized web application in 3 minutes.",
+			"teasers": [
+				{
+					"content": {
+						"rteMd": "markdown/install-cli.md"
+					}
+				},
+				{
+					"content": {
+						"rteMd": "markdown/create-and-start.md"
+					}
+				},
+				{
+					"content": {
+						"rteMd": "markdown/install-components.md"
+					}
+				},
+				{
+					"content": {
+						"rteMd": "markdown/generate-components.md"
+					}
+				}
+			]
+		}
+	}
+}
