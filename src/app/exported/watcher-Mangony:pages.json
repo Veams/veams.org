@@ -2,10 +2,22 @@
     "/Users/george/Projects/veams.org/src/app/pages/docs": [
         "index.hbs"
     ],
+    "/Users/george/Projects/veams.org/src/app/pages/classes": [
+        "index.hbs"
+    ],
     "/Users/george/Projects/veams.org/src/app/pages/home": [
         "index.hbs"
     ],
+    "/Users/george/Projects/veams.org/src/app/pages/javascript": [
+        "items.hbs",
+        "methodology.hbs",
+        "options.hbs",
+        "together.hbs"
+    ],
     "/Users/george/Projects/veams.org/src/app/pages/methodology": [
+        "index.hbs"
+    ],
+    "/Users/george/Projects/veams.org/src/app/pages/style-guide": [
         "index.hbs"
     ],
     "/Users/george/Projects/veams.org/src/app/pages/docs/installation": [
@@ -14,22 +26,22 @@
     "/Users/george/Projects/veams.org/src/app/pages/methodology/css": [
         "index.hbs"
     ],
-    "/Users/george/Projects/veams.org/src/app/pages/methodology/css/context-styling": [
-        "index.hbs"
-    ],
     "/Users/george/Projects/veams.org/src/app/pages/methodology/css/global-styling": [
         "index.hbs"
     ],
     "/Users/george/Projects/veams.org/src/app/pages/methodology/css/modifier-styling": [
         "index.hbs"
     ],
-    "/Users/george/Projects/veams.org/src/app/pages/methodology/instruments/components": [
-        "index.hbs"
-    ],
     "/Users/george/Projects/veams.org/src/app/pages/methodology/instruments/regions": [
         "index.hbs"
     ],
+    "/Users/george/Projects/veams.org/src/app/pages/methodology/instruments/components": [
+        "index.hbs"
+    ],
     "/Users/george/Projects/veams.org/src/app/pages/methodology/instruments/utilities": [
+        "index.hbs"
+    ],
+    "/Users/george/Projects/veams.org/src/app/pages/methodology/css/context-styling": [
         "index.hbs"
     ]
 }

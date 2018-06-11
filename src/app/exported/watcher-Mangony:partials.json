@@ -21,18 +21,18 @@
     "/Users/george/Projects/veams.org/src/app/shared/components/video/templates": [
         "video.hbs"
     ],
-    "/Users/george/Projects/veams.org/src/app/core/components/navigation/templates": [
-        "navigation.hbs"
-    ],
-    "/Users/george/Projects/veams.org/src/app/core/components/stage/templates": [
-        "stage.hbs"
-    ],
-    "/Users/george/Projects/veams.org/src/app/core/components/section/templates": [
-        "section.hbs"
-    ],
     "/Users/george/Projects/veams.org/src/app/shared/utilities/grid/templates": [
         "grid-col.hbs",
         "grid-row.hbs",
         "grid-usage.hbs"
+    ],
+    "/Users/george/Projects/veams.org/src/app/core/components/navigation/templates": [
+        "navigation.hbs"
+    ],
+    "/Users/george/Projects/veams.org/src/app/core/components/section/templates": [
+        "section.hbs"
+    ],
+    "/Users/george/Projects/veams.org/src/app/core/components/stage/templates": [
+        "stage.hbs"
     ]
 }
