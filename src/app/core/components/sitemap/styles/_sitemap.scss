@@ -6,6 +6,8 @@ Component: Sitemap
 Global Styles
 --------------------------------------------------- */
 [data-css="c-sitemap"] {
+	padding: 0 $margin-base;
+
 	.sitemap__headline {
 		margin-bottom: $margin-base;
 		font-size: 2rem;

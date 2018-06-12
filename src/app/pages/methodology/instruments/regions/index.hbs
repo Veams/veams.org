@@ -9,17 +9,20 @@ navigationLink: "Regions"
 	{{#content "stage"}}{{/content}}
 	{{#content "main"}}
 
-    {{! WrapWith START: Section One }}
+	{{! WrapWith START: Section One }}
 		{{#wrapWith "section"
-            headline="Regions: An instrument to divide your layout."
-            media=""
-            githubLink="https://github.com/Veams/documentation/issues/new"
+		            headline="Regions: An instrument to divide your layout."
+		            headlineClasses="is-left"
+		            media=""
+		            githubLink="https://github.com/Veams/documentation/issues/new"
 		}}
 
-			{{> rte md="src/external/veams/methodology/instruments/regions/methodology__regions.md"}}
+			{{#with @root.currentPage }}
+				{{~> rte md="src/external/veams/methodology/instruments/regions/methodology__regions.md" ~}}
+			{{/with}}
 
 		{{/wrapWith}}
 	{{! WrapWith END: Section One }}
 
 	{{/content}}
-{{/extend}}
+{{/extend}}~

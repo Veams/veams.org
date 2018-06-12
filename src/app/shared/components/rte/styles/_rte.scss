@@ -32,8 +32,8 @@ Global Styles
 		font-size: 2rem;
 		font-weight: $font-light;
 		line-height: 1.5;
-		margin: 2.75rem 0;
-		padding-top: 2rem;
+		margin: $margin-base * 4 0 2.75rem 0;
+		padding-top: 0;
 		text-transform: uppercase;
 		color: lighten($color-grey-dark, 35);
 	}
@@ -157,6 +157,13 @@ Global Styles
 		}
 	}
 
+	div,
+	section {
+		> :first-child {
+			margin-top: 0;
+		}
+	}
+
 	code {
 		transitiona: all 500ms ease;
 
@@ -260,31 +267,6 @@ Context: Default
 		border-bottom: 2px solid #fff;
 		border-right: none 0;
 		border-left: none 0;
-	}
-
-	/*
-		Standard elements for markdown
-		----------------------- */
-	code[class="language-bash"],
-	code[class="language-html"],
-	code[class="language-hbs"],
-	code[class="language-js"],
-	code[class="language-scss"] {
-		display: block;
-		background: #242420;
-		font-size: 100%;
-		word-wrap: normal;
-		color: lighten(#e7db74, 15);
-		overflow-x: auto;
-	}
-
-	pre {
-		white-space: pre-line;
-		margin-bottom: 4rem;
-
-		code {
-			padding: .9rem 1rem;
-		}
 	}
 
 	table {

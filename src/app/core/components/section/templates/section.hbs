@@ -4,7 +4,7 @@
 
 	{{#if props.headline}}
 		<header class="section__header is-container">
-			<h2 class="section__headline">
+			<h2 class="section__headline{{#if props.headlineClasses}} {{props.headlineClasses}}{{/if}}">
 				{{props.headline}}
 			</h2>
 		</header>

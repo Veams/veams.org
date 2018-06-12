@@ -85,12 +85,13 @@ Main
 	float: right;
 	width: calc(100% - #{$lyt-sidebar-width});
 	overflow-x: hidden;
-	padding: $lyt-container-margin-top 0;
+	padding: $lyt-container-margin-top;
 	box-sizing: border-box;
 
 	.is-front & {
 		float: none;
 		width: 100%;
+		padding: $lyt-container-margin-top 0;
 	}
 
 }

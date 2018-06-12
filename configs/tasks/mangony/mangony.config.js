@@ -18,7 +18,7 @@ module.exports = {
 		],
 		cwd: config.paths.app,
 		dest: config.paths.dest,
-		exportData: true,
+		exportData: false,
 		flatten: false,
 		types: {
 			data: {

@@ -92,7 +92,7 @@ Grid Row
 				@if ($grid-visual) { // visualizing layout internal
 					@include grid-visual();
 
-					border: 1px dotted deepskyblue;
+					border: 1px dotted #00bfff;
 				}
 
 				margin-left: -($gutter);
