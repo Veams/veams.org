@@ -1,0 +1,11 @@
+{
+	"sections": {
+		"install": {
+			"video": {
+				"content": {
+					"videoMp4": "https://assets.veams.org/movies/veams-install.mp4"
+				}
+			}
+		}
+	}
+}

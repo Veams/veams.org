@@ -9,7 +9,7 @@ contextData: home
 	{{#content "main"}}
 
 
-		{{{print collection='docs' sortBy='sortOrder'}}}
+		{{!{print collection='docs' sortBy='sortOrder'}}}
 
 		{{#with sections.In3Minutes}}
 
@@ -50,7 +50,7 @@ contextData: home
 											{{! WrapWith START: Grid Col }}
 											{{#wrapWith "grid-col" colClasses="is-col-mobile-s-5"}}
 												{{#deepMerge @root.rte.variations.default with=this}}
-													{{> rte }}
+													{{~> rte }}
 												{{/deepMerge}}
 											{{/wrapWith}}
 										{{! WrapWith END: Grid Col }}

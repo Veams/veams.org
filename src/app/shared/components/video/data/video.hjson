@@ -11,7 +11,7 @@
 				"videoOptions": "controls buffer"
 			},
 			"content": {
-				"videoPoster": "http://sandbox.thewikies.com/vfe-generator/images/big-buck-bunny_poster.jpg",
+				"videoPoster": "https://images.pexels.com/photos/34950/pexels-photo.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
 				"videoMp4": "http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4",
 				"videoWebm": "http://clips.vorwaerts-gmbh.de/big_buck_bunny.webm",
 				"videoTrack": {

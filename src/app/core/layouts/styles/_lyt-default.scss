@@ -55,7 +55,6 @@ Sidebar
 	height: 100%;
 	box-sizing: border-box;
 	color: $color-grey-dark;
-	position: fixed;
 	z-index: map-get($lyt-index-map, sidebar);
 	overflow-x: auto;
 	background-image: $bg-pattern;

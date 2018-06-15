@@ -57,10 +57,13 @@ module.exports = [
 		// Tell webpack to run babel on every file it runs through
 		module: {
 			rules: [
-				scriptRule()
+				scriptRule(),
+				styleRule()
 			]
 		},
-		plugins: scriptPlugins(),
+		plugins: scriptPlugins().concat(
+			stylePlugins(configContext)
+		),
 		// Some libraries import Node modules but don't use them in the browser.
 		// Tell Webpack to provide empty mocks for them so importing them works.
 		node: {
@@ -75,29 +78,6 @@ module.exports = [
 		// cumbersome.
 		performance: {
 			hints: false
-		}
-	}, {
-		context,
-		devtool: env === 'local' ? 'cheap-module-source-map' : false,
-		// Entry point for webpack
-		entry: {
-			'app': `${context}/app.scss`
-		},
-		output: {
-			filename: 'css/[name].bundle.css',
-			path: outputPath
-		},
-		module: {
-			rules: [
-				styleRule()
-			]
-		},
-		plugins: stylePlugins(configContext),
-		// Turn off performance hints during development because we don't do any
-		// splitting or minification in interest of speed. These warnings become
-		// cumbersome.
-		performance: {
-			hints: env === 'production' ? 'warning' : false
 		}
 	}
 ];

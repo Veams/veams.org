@@ -1,6 +1,7 @@
 /**
  * Main entry file for application.
  */
+import './app.scss';
 import { Veams } from './app.veams';
 import Navigation from './core/components/navigation/scripts/navigation';
 import Slider from './shared/components/slider/scripts/slider';

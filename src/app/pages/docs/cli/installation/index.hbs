@@ -1,0 +1,29 @@
+---
+title: Installation of CLI
+sitemap: "Docs"
+sortOrder: "10"
+docs: "CLI"
+navigationLink: "Installation"
+contextData: installation
+---
+
+{{#extend "lyt-default"}}
+	{{#content "main"}}
+
+	{{! WrapWith START: Section One }}
+		{{#wrapWith "section"
+		            headline="CLI Installation"
+		            headlineClasses="is-left"
+
+		            media=""
+		            githubLink="https://github.com/Veams/cli/issues/new"
+		}}
+
+			{{#deepMerge @root.video.variations.default with=this.sections.install.video}}
+				{{~> rte md="src/external/cli/README.md"}}
+			{{/deepMerge}}
+		{{/wrapWith}}
+	{{! WrapWith END: Section One }}
+
+	{{/content}}
+{{/extend}}
