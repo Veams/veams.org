@@ -10,6 +10,15 @@ module.exports.register = function (handlebars) {
 		let pages = Object.keys(collectionPages).filter((page) => {
 			return collectionPages[ page ].parsed.data[ collectionName ];
 		});
+
+		let subCollectionName = block.hash.subCollection;
+		let subcollectionPages = block.data.root.pages;
+		let subpages = Object.keys(subcollectionPages).filter((page) => {
+			return subcollectionPages[page].parsed.data[subCollectionName];
+		});
+
+		console.log('subpages: ', subpages);
+
 		let listTpl = function (categoryName, pages) {
 			return `
 			<div class="sitemap__overview">
@@ -19,6 +28,7 @@ module.exports.register = function (handlebars) {
 				</ol>
 			</div>
 		`};
+
 		let listElTpl = function (pages) {
 			let listEls = '';
 
@@ -30,18 +40,37 @@ module.exports.register = function (handlebars) {
 						<a href="/" class="sitemap__list-item-link">
 							${currentPageObj.parsed.data.navigationLink}
 						</a>
+						${subListTpl(subpages)}
 					</li>
 					`
 			});
 
 			return listEls;
-
-
 		};
+
+		let subListTpl = function (subpages) {
+			let subListEls = '';
+
+			subpages.forEach((page) => {
+				let subpageObj = subcollectionPages[page];
+
+				subListEls += `
+					<ol>
+						<li>
+							<a href="/" style="color:red">${subpageObj.parsed.data.navigationLink}</a>
+						</li>
+					</ol>
+					`
+			});
+
+			return subListEls;
+		};
+
 		let list = '';
 
 		for (let categoryName in collectionItem) {
-			let catPages = pages.sort(page => parseInt(collectionPages[ page ].parsed.data[ sortBy ], 10)).filter((page) => collectionPages[ page ].parsed.data[ collectionName ] === categoryName)
+			let catPages = pages.sort(page => parseInt(collectionPages[ page ].parsed.data[ sortBy ], 10))
+				.filter((page) => collectionPages[ page ].parsed.data[ collectionName ] === categoryName)
 			list += listTpl(categoryName, catPages);
 		}
 
