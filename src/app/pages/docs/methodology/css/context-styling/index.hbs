@@ -9,14 +9,15 @@ navigationLink: "Context Styling"
 	{{#content "stage"}}{{/content}}
 	{{#content "main"}}
 
-    {{! WrapWith START: Section One }}
+	{{! WrapWith START: Section One }}
 		{{#wrapWith "section"
-            headline="How to scope styles to a specific HTML element."
-            media=""
-            githubLink="https://github.com/Veams/documentation/issues/new"
+					headline="How to scope styles to a specific HTML element."
+					headlineClasses="is-left"
+					media=""
+					githubLink="https://github.com/Veams/documentation/issues/new"
 		}}
 
-			{{> rte md="src/external/veams/methodology/css/context/methodology__cssContext.md"}}
+			{{~> rte md="src/external/veams/methodology/css/context/methodology__cssContext.md"}}
 
 		{{/wrapWith}}
 	{{! WrapWith END: Section One }}
