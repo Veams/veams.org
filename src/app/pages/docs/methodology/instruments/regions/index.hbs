@@ -13,16 +13,12 @@ sortOrder: "10"
 
 	{{! WrapWith START: Section One }}
 		{{#wrapWith "section"
-		            headline="Instruments"
-		            headlineClasses="is-left"
-		            media=""
-		            githubLink="https://github.com/Veams/documentation/issues/new"
+					headline="Instruments"
+					headlineClasses="is-left"
+					media=""
+					githubLink="https://github.com/Veams/documentation/issues/new"
 		}}
-
-			{{#with @root.currentPage }}
-				{{~> rte md="src/external/veams/methodology/instruments/regions/methodology__regions.md" ~}}
-			{{/with}}
-
+			{{~> rte md="src/external/veams/methodology/instruments/regions/methodology__regions.md" }}
 		{{/wrapWith}}
 	{{! WrapWith END: Section One }}
 
