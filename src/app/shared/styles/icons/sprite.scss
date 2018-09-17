@@ -5,7 +5,7 @@
 	@include sprites-bg-svg();
 }
 @mixin sprites-bg-size() {
-	background-size: 520px 520px;
+	background-size: 45px 45px;
 }
 %sprites-bg-size {
 	@include sprites-bg-size();
@@ -17,19 +17,19 @@
 %sprites-bg-png {
 	@include sprites-bg-png();
 }
-@mixin sprites-lightbulb() {
+@mixin sprites-icon-lightbulb() {
 	@include sprites-bg-size;
 	@include sprites-bg-svg;
-	width: 512px;
-	height: 512px;
+	width: 40px;
+	height: 40px;
 	background-position: 0 0;
 	@at-root .no-svg & {
 		@include sprites-bg-png;
 	}
 }
 
-%sprites-lightbulb {
-	@include sprites-lightbulb();
+%sprites-icon-lightbulb {
+	@include sprites-icon-lightbulb();
 }
 
 

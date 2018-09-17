@@ -33,12 +33,8 @@ Global Styles
 		font-weight: $font-light;
 		line-height: 1.5;
 		margin: $margin-base * 4 0 2.75rem 0;
-		padding: 10px 10px 10px 100px;
 		text-transform: uppercase;
 		color: lighten($color-grey-dark, 35);
-		background-color: lighten($hippie-blue, 35)
-
-
 	}
 
 	h4 {
@@ -232,6 +228,30 @@ Global Styles
 	th {
 		background-color: $color-primary-light;
 		color: #fff;
+	}
+	
+	/* 
+	Blockquote
+	----------------------- */
+	blockquote {
+		position: relative;
+		font-size: 2.5rem;
+		font-weight: $font-light;
+		line-height: 1.5;
+		margin: $margin-base * 4 0 2.75rem 0;
+		padding: 10px 10px 10px 80px;
+		color: $color-white;
+		background-color: lighten($hippie-blue, 10);
+
+		&::before {
+			position: absolute;
+			display: block;
+			top: 8px;
+			left: 20px;
+			content: "";
+			z-index: 1000;
+			@include sprites-icon-lightbulb();
+		}
 	}
 }
 
