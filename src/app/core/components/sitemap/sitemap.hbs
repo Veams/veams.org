@@ -8,26 +8,33 @@ If you do not want to use collections, just delete this `sitemap` partial
 	<!--<h2 class="sitemap__header">Sitemap</h2>-->
 
 	{{#each collections.docs}}
-		<div class="sitemap__overview">
-			<h3 class="sitemap__headline">{{uppercase name}}</h3>
-			<ol class="sitemap__list">
-				{{#each ../pages}}
-					{{#is parsed.data.docs ../name}}
-						{{#isnt parsed.data.publish false}}
-							<li class="sitemap__list-item">
-								<a href="/{{destFile}}"
-								   class="sitemap__list-item-link">
-									{{#if parsed.data.navigationLink}}
-										{{parsed.data.navigationLink}}
-									{{else}}
-										{{this.filename}}
-									{{/if}}
-								</a>
-							</li>
-						{{/isnt}}
-					{{/is}}
-				{{/each}}
-			</ol>
-		</div>
+		{{#is name "Getting Started"}}
+			<div class="sitemap__overview">
+				<h3 class="sitemap__headline">{{uppercase name}}</h3>
+
+				{{> sitemap__list pages=../pages context=this }}
+			</div>
+		{{/is}}
+		{{#is name "CLI"}}
+			<div class="sitemap__overview">
+				<h3 class="sitemap__headline">{{uppercase name}}</h3>
+
+				{{> sitemap__list pages=../pages context=this }}
+			</div>
+		{{/is}}
+		{{#is name "Methodology"}}
+			<div class="sitemap__overview">
+				<h3 class="sitemap__headline">{{uppercase name}}</h3>
+
+				{{> sitemap__list pages=../pages context=this }}
+			</div>
+		{{/is}}
+		{{#is name "Classes"}}
+			<div class="sitemap__overview">
+				<h3 class="sitemap__headline">{{uppercase name}}</h3>
+
+				{{> sitemap__list pages=../pages context=this }}
+			</div>
+		{{/is}}
 	{{/each}}
 </nav>

@@ -1,8 +1,11 @@
 <video class="c-video{{#if settings.videoContextClass}}--{{settings.videoContextClass}}{{else}}--default{{/if}}{{#if
-		settings.videoClasses}} {{settings.videoClasses}}{{/if}}"
+	settings.videoClasses}} {{settings.videoClasses}}{{/if}}"
        data-css="c-video"
        poster="{{getUrl content.videoPoster}}" {{settings.videoOptions}}
-       tabindex="0">
+       tabindex="0"
+       controls {{#if settings.autoplay}}
+       autoplay{{/if}}{{#if settings.loop}}
+       loop{{/if}}>
 	{{#if content.videoMp4}}
 		<source src="{{getUrl content.videoMp4}}" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'/>
 	{{/if}}

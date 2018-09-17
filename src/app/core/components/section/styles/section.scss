@@ -6,7 +6,7 @@ component: section
 Global Styles
 --------------------------------------------------- */
 [data-css="c-section"] {
-	padding: $margin-base * 4 0 $margin-base * 6;
+	padding: $margin-base 0 $margin-base * 6;
 	border-bottom: 1px dotted $color-grey-dark;
 
 	.section__headline {

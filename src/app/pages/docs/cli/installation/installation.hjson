@@ -2,8 +2,13 @@
 	"sections": {
 		"install": {
 			"video": {
+				"settings": {
+					"autoplay": true,
+					"loop": true
+				},
 				"content": {
-					"videoMp4": "https://assets.veams.org/movies/veams-install.mp4"
+					"videoPoster": "",
+					"videoMp4": "http://assets.veams.org/movies/veams-install.mp4"
 				}
 			}
 		}

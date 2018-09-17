@@ -78,6 +78,9 @@ Global Styles
 		list-style: decimal;
 		counter-reset: listCounter;
 		margin-left: 3rem;
+		color: $color-grey-dark;
+		font-family: $font-family;
+		font-weight: $font-light;
 
 		li {
 			counter-increment: listCounter;
@@ -115,6 +118,9 @@ Global Styles
 		list-style: none;
 		margin-left: 3rem;
 		margin-bottom: 1rem;
+		color: $color-grey-dark;
+		font-family: $font-family;
+		font-weight: $font-light;
 
 		&:last-child {
 			margin-bottom: 0;

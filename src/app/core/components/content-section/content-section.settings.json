@@ -1,0 +1,13 @@
+
+{
+    "paths": {
+        "styles": "src/app/core/components/content-section/styles/content-section"
+    },
+    "scssFiles": [
+        "content-section.scss"
+    ],
+    "type": "component",
+    "contextData": "content-section",
+    "layout": "lyt-docs",
+    "publish": true
+}

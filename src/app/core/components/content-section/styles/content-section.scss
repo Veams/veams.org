@@ -1,0 +1,22 @@
+/* ===================================================
+component: content-section
+=================================================== */
+
+/* ---------------------------------------------------
+Global Styles
+--------------------------------------------------- */
+[data-css="c-content-section"] {
+	padding: $margin-base * 4 0;
+	border-top: 2px dotted $color-primary-light;
+
+	&:first-child {
+		border-top: none;
+		padding-top: 0;
+	}
+}
+
+/* ---------------------------------------------------
+Context: Default
+--------------------------------------------------- */
+.c-content-section--default {
+}

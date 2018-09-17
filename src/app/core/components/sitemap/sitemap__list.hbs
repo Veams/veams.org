@@ -1,0 +1,26 @@
+<ol class="sitemap__list">
+	{{#objToArr pages}}
+		{{#sortArr this "parsed.data.sortOrder"}}
+
+			{{#each this}}
+				{{#is parsed.data.docs ../../name}}
+					{{#isnt parsed.data.publish false}}
+						<li class="sitemap__list-item">
+							{{#if parsed.data.sub}}
+								<!--<strong class="sitemap__sub">{{parsed.data.sub}}</strong>-->
+							{{/if}}
+							<a href="/{{destFile}}"
+							   class="sitemap__list-item-link">
+								{{#if parsed.data.navigationLink}}
+									{{parsed.data.navigationLink}}
+								{{else}}
+									{{this.filename}}
+								{{/if}}
+							</a>
+						</li>
+					{{/isnt}}
+				{{/is}}
+			{{/each}}
+		{{/sortArr}}
+	{{/objToArr}}
+</ol>
