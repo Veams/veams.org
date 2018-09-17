@@ -25,19 +25,19 @@ The app contains multiple sections which have its own responsibility. In general
 ├── app.veams.js
 ├── app.scss
 ├── assets
-│   ├── fonts
-│   ├── icons
-│   ├── img
-│   └── media
+│   ├── fonts
+│   ├── icons
+│   ├── img
+│   └── media
 ├── core
-│   ├── components
-│   ├── layouts
-│   ├── store
-│   └── styles
-│       ├── base.scss
-│       ├── get-media.scss
-│       ├── modifiers.scss
-│       └── print.scss
+│   ├── components
+│   ├── layouts
+│   ├── store
+│   └── styles
+│       ├── base.scss
+│       ├── get-media.scss
+│       ├── modifiers.scss
+│       └── print.scss
 ├── features(*)
 ├── pages
 └── shared
@@ -46,8 +46,8 @@ The app contains multiple sections which have its own responsibility. In general
         ├── _shared.scss
         ├── _vars.scss
         ├── helpers
-        │   ├── _helpers.scss
-        │   └── functions
+        │   ├── _helpers.scss
+        │   └── functions
         └── icons
 └── utilities
 ```

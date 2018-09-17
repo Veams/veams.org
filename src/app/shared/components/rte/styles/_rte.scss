@@ -33,9 +33,12 @@ Global Styles
 		font-weight: $font-light;
 		line-height: 1.5;
 		margin: $margin-base * 4 0 2.75rem 0;
-		padding-top: 0;
+		padding: 10px 10px 10px 100px;
 		text-transform: uppercase;
 		color: lighten($color-grey-dark, 35);
+		background-color: lighten($hippie-blue, 35)
+
+
 	}
 
 	h4 {
