@@ -1,16 +1,10 @@
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const StyleLintPlugin = require('stylelint-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = function (configContext) {
 	return [
-		new StyleLintPlugin({
-			configFile: `${configContext}/tasks/linting/stylelint.config.js`,
-			files: [
-				'**/*.s?(a|c)ss'
-			]
-		}),
-		new ExtractTextPlugin({
-			allChunks: true,
+		new MiniCssExtractPlugin({
+			// Options similar to the same options in webpackOptions.output
+			// both options are optional
 			filename: '/css/[name].bundle.css'
 		})
 	]

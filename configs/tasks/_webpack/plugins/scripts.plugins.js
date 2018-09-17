@@ -5,7 +5,7 @@ const webpack = require('webpack');
 const CaseSensitivePathsPlugin = require('case-sensitive-paths-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const CompressionPlugin = require('compression-webpack-plugin');
-const WatchMissingNodeModulesPlugin = require('react-dev-utils/WatchMissingNodeModulesPlugin');
+// const WatchMissingNodeModulesPlugin = require('react-dev-utils/WatchMissingNodeModulesPlugin');
 
 /**
  * Environment & Config
@@ -29,7 +29,7 @@ module.exports = function scriptPlugins() {
 		// to restart the development server for Webpack to discover it. This plugin
 		// makes the discovery automatic so you don't have to restart.
 		// See https://github.com/facebookincubator/create-react-app/issues/186
-		new WatchMissingNodeModulesPlugin('node_modules'),
+		// new WatchMissingNodeModulesPlugin('node_modules'),
 		// Copy asset files from src/app
 		new CopyWebpackPlugin([ {
 			from: `assets`,

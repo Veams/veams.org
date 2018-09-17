@@ -1,4 +1,4 @@
- {{! ---
+{{! ---
 Important Notes:
 Be sure you use collections to categorize your sitemap.
 If you do not want to use collections, just delete this `sitemap` partial
@@ -6,35 +6,81 @@ If you do not want to use collections, just delete this `sitemap` partial
 
 <nav class="c-sitemap--default" data-css="c-sitemap">
 	<!--<h2 class="sitemap__header">Sitemap</h2>-->
+	<div class="sitemap__overview">
+		<h3 class="sitemap__headline">Getting Started</h3>
 
-	{{#each collections.docs}}
-		{{#is name "Getting Started"}}
-			<div class="sitemap__overview">
-				<h3 class="sitemap__headline">{{uppercase name}}</h3>
-
+		{{#each collections.docs}}
+			{{#is name "Getting Started"}}
 				{{> sitemap__list pages=../pages context=this }}
-			</div>
-		{{/is}}
-		{{#is name "CLI"}}
-			<div class="sitemap__overview">
-				<h3 class="sitemap__headline">{{uppercase name}}</h3>
+			{{/is}}
+		{{/each}}
+	</div>
 
-				{{> sitemap__list pages=../pages context=this }}
-			</div>
-		{{/is}}
-		{{#is name "Methodology"}}
-			<div class="sitemap__overview">
-				<h3 class="sitemap__headline">{{uppercase name}}</h3>
+	<div class="sitemap__overview">
+		<h3 class="sitemap__headline">CLI</h3>
 
+		{{#each collections.docs}}
+			{{#is name "CLI"}}
 				{{> sitemap__list pages=../pages context=this }}
-			</div>
-		{{/is}}
-		{{#is name "Classes"}}
-			<div class="sitemap__overview">
-				<h3 class="sitemap__headline">{{uppercase name}}</h3>
+			{{/is}}
+		{{/each}}
+	</div>
 
+	<div class="sitemap__overview">
+		<h3 class="sitemap__headline">Methodology</h3>
+
+		{{#each collections.docs}}
+			{{#is name "Methodology"}}
+
+				<ol class="sitemap__list">
+					<li class="sitemap__list-item">
+						<h4 class="sitemap__sub">General</h4>
+
+						{{#objToArr ../pages}}
+							{{#filter this by="parsed.data.subcategory" val="General"}}
+								{{> sitemap__list pages=this context=../../this }}
+							{{/filter}}
+						{{/objToArr}}
+					</li>
+					<li class="sitemap__list-item">
+						<h4 class="sitemap__sub">Instruments</h4>
+
+						{{#objToArr ../pages}}
+							{{#filter this by="parsed.data.subcategory" val="Instruments"}}
+								{{> sitemap__list pages=this context=../../this }}
+							{{/filter}}
+						{{/objToArr}}
+					</li>
+					<li class="sitemap__list-item">
+						<h4 class="sitemap__sub">Classes and Markup</h4>
+
+						{{#objToArr ../pages}}
+							{{#filter this by="parsed.data.subcategory" val="Classes and Markup"}}
+								{{> sitemap__list pages=this context=../../this }}
+							{{/filter}}
+						{{/objToArr}}
+					</li>
+					<li class="sitemap__list-item">
+						<h4 class="sitemap__sub">JavaScript</h4>
+						{{#objToArr ../pages}}
+							{{#filter this by="parsed.data.subcategory" val="JavaScript"}}
+								{{> sitemap__list pages=this context=../../this }}
+							{{/filter}}
+						{{/objToArr}}
+					</li>
+				</ol>
+
+			{{/is}}
+		{{/each}}
+	</div>
+
+	<div class="sitemap__overview">
+		<h3 class="sitemap__headline">Framework</h3>
+
+		{{#each collections.docs}}
+			{{#is name "Framework"}}
 				{{> sitemap__list pages=../pages context=this }}
-			</div>
-		{{/is}}
-	{{/each}}
+			{{/is}}
+		{{/each}}
+	</div>
 </nav>
