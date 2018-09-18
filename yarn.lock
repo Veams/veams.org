@@ -1666,7 +1666,7 @@ block-stream@*:
   dependencies:
     inherits "~2.0.0"
 
-bluebird@^3.0.5, bluebird@^3.5.1, bluebird@~3.5.1:
+bluebird@^3.5.1, bluebird@~3.5.1:
   version "3.5.1"
   resolved "https://registry.yarnpkg.com/bluebird/-/bluebird-3.5.1.tgz#d9551f9de98f1fcda1e683d17ee91a0602ee2eb9"
 
@@ -3375,16 +3375,6 @@ ecc-jsbn@~0.1.1:
   resolved "https://registry.yarnpkg.com/ecc-jsbn/-/ecc-jsbn-0.1.1.tgz#0fc73a9ed5f0d53c38193398523ef7e543777505"
   dependencies:
     jsbn "~0.1.0"
-
-editorconfig@^0.13.2:
-  version "0.13.3"
-  resolved "https://registry.yarnpkg.com/editorconfig/-/editorconfig-0.13.3.tgz#e5219e587951d60958fd94ea9a9a008cdeff1b34"
-  dependencies:
-    bluebird "^3.0.5"
-    commander "^2.9.0"
-    lru-cache "^3.2.0"
-    semver "^5.1.0"
-    sigmund "^1.0.1"
 
 editorconfig@^0.15.0:
   version "0.15.0"
@@ -5667,15 +5657,6 @@ js-base64@^2.1.8, js-base64@^2.1.9:
   version "2.4.3"
   resolved "https://registry.yarnpkg.com/js-base64/-/js-base64-2.4.3.tgz#2e545ec2b0f2957f41356510205214e98fad6582"
 
-js-beautify@~1.7.5:
-  version "1.7.5"
-  resolved "https://registry.yarnpkg.com/js-beautify/-/js-beautify-1.7.5.tgz#69d9651ef60dbb649f65527b53674950138a7919"
-  dependencies:
-    config-chain "~1.1.5"
-    editorconfig "^0.13.2"
-    mkdirp "~0.5.0"
-    nopt "~3.0.1"
-
 js-beautify@~1.8.6:
   version "1.8.6"
   resolved "https://registry.yarnpkg.com/js-beautify/-/js-beautify-1.8.6.tgz#6a7e61e47a6e45fb58c5e22499eed350f8607d98"
@@ -6185,12 +6166,6 @@ lowercase-keys@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/lowercase-keys/-/lowercase-keys-1.0.1.tgz#6f9e30b47084d971a7c820ff15a6c5167b74c26f"
 
-lru-cache@^3.2.0:
-  version "3.2.0"
-  resolved "https://registry.yarnpkg.com/lru-cache/-/lru-cache-3.2.0.tgz#71789b3b7f5399bec8565dda38aa30d2a097efee"
-  dependencies:
-    pseudomap "^1.0.1"
-
 lru-cache@^4.0.1, lru-cache@^4.1.1, lru-cache@^4.1.3:
   version "4.1.3"
   resolved "https://registry.yarnpkg.com/lru-cache/-/lru-cache-4.1.3.tgz#a1175cf3496dfc8436c156c334b4955992bce69c"
@@ -6212,21 +6187,6 @@ mangony-hbs-helper-wrap-with@~0.0.3:
   version "0.0.8"
   resolved "https://registry.yarnpkg.com/mangony-hbs-helper-wrap-with/-/mangony-hbs-helper-wrap-with-0.0.8.tgz#80fbbbf1ed82ba34fe3fd2c6358350109919e7e4"
 
-mangony-hbs-helpers@^0.6.0:
-  version "0.6.1"
-  resolved "https://registry.yarnpkg.com/mangony-hbs-helpers/-/mangony-hbs-helpers-0.6.1.tgz#cb55e59a6bdfb0e763c703bdacad85c4a35fc860"
-  dependencies:
-    deepmerge "^2.1.1"
-    export-files "~2.1.1"
-    get-value "^3.0.1"
-    highlight.js "~9.12.0"
-    js-beautify "~1.7.5"
-    markdown-it "~8.4.1"
-    markdown-it-attrs "2.1.0"
-    markdown-it-named-headers "0.0.4"
-    moment "~2.22.2"
-    prismjs "^1.14.0"
-
 mangony-hbs-helpers@^0.6.3:
   version "0.6.3"
   resolved "https://registry.yarnpkg.com/mangony-hbs-helpers/-/mangony-hbs-helpers-0.6.3.tgz#981f70ab43f27e6679ee09622aa52147c16374e9"
@@ -6242,9 +6202,9 @@ mangony-hbs-helpers@^0.6.3:
     moment "~2.22.2"
     prismjs "^1.15.0"
 
-mangony@^1.5.0:
-  version "1.5.0"
-  resolved "https://registry.yarnpkg.com/mangony/-/mangony-1.5.0.tgz#9bb1a3bd553ddbf0a89b6ddeed34bd644db61e45"
+mangony@^1.5.1:
+  version "1.5.1"
+  resolved "https://registry.yarnpkg.com/mangony/-/mangony-1.5.1.tgz#42e49000475f61a2c7e6c0dbf0efd1f5db1b8af2"
   dependencies:
     bluebird "~3.5.1"
     browser-sync "^2.24.4"
@@ -6261,7 +6221,7 @@ mangony@^1.5.0:
     handlebars-layouts "~3.1.3"
     hjson "~3.1.1"
     mangony-hbs-helper-wrap-with "~0.0.3"
-    mangony-hbs-helpers "^0.6.0"
+    mangony-hbs-helpers "^0.6.3"
     markdown-it "~8.4.1"
     markdown-it-attrs "2.1.0"
     markdown-it-named-headers "0.0.4"
@@ -6989,7 +6949,7 @@ nodemon@^1.18.4:
     undefsafe "^2.0.2"
     update-notifier "^2.3.0"
 
-"nopt@2 || 3", nopt@~3.0.1:
+"nopt@2 || 3":
   version "3.0.6"
   resolved "https://registry.yarnpkg.com/nopt/-/nopt-3.0.6.tgz#c6465dbf08abcd4db359317f79ac68a646b28ff9"
   dependencies:
@@ -8257,12 +8217,6 @@ preserve@^0.2.0:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/preserve/-/preserve-0.2.0.tgz#815ed1f6ebc65926f865b310c0713bcb3315ce4b"
 
-prismjs@^1.14.0:
-  version "1.14.0"
-  resolved "https://registry.yarnpkg.com/prismjs/-/prismjs-1.14.0.tgz#bbccfdb8be5d850d26453933cb50122ca0362ae0"
-  optionalDependencies:
-    clipboard "^2.0.0"
-
 prismjs@^1.15.0:
   version "1.15.0"
   resolved "https://registry.yarnpkg.com/prismjs/-/prismjs-1.15.0.tgz#8801d332e472091ba8def94976c8877ad60398d9"
@@ -8318,7 +8272,7 @@ ps-tree@^1.1.0:
   dependencies:
     event-stream "~3.3.0"
 
-pseudomap@^1.0.1, pseudomap@^1.0.2:
+pseudomap@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/pseudomap/-/pseudomap-1.0.2.tgz#f052a28da70e618917ef0a8ac34c1ae5a68286b3"
 
