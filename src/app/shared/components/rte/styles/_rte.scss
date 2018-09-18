@@ -83,10 +83,10 @@ Global Styles
 
 		li {
 			counter-increment: listCounter;
-			list-style: none;
-			margin: 2.3rem 0;
+			list-style: decimal;
+			margin: 2.3rem 1.5rem;
 			position: relative;
-			padding-left: 3.5rem;
+			padding-left: 1.5rem;
 			font-size: 1.8rem;
 
 			&::before {
@@ -251,6 +251,15 @@ Global Styles
 			content: "";
 			z-index: 1000;
 			@include sprites-icon-lightbulb();
+		}
+	}
+
+	h1,
+	h2,
+	h3,
+	h4 {
+		+ blockquote {
+			margin-top: 0;
 		}
 	}
 }

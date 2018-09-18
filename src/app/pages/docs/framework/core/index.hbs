@@ -1,0 +1,25 @@
+---
+title: Core
+sitemap: "Docs"
+subcategory: "Base"
+docs: "Framework"
+navigationLink: "Core"
+---
+
+{{#extend "lyt-default"}}
+	{{#content "main"}}
+
+    {{! WrapWith START: Section One }}
+		{{#wrapWith "section"
+            headline="Core"
+            media=""
+            githubLink="https://github.com/Veams/core/issues/new"
+		}}
+
+			{{~> rte md="src/external/core/README.md"}}
+
+		{{/wrapWith}}
+	{{! WrapWith END: Section One }}
+
+	{{/content}}
+{{/extend}}

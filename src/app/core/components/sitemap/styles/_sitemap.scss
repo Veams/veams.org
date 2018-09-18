@@ -8,9 +8,81 @@ Global Styles
 [data-css="c-sitemap"] {
 	padding: 0 $margin-base;
 
+	.sitemap__overview {
+		padding: $margin-base * 4 0;
+		position: relative;
+
+		&:first-child {
+			padding-top: 0;
+		}
+
+		&::after,
+		&::before {
+			@include pseudo();
+			opacity: 1;
+		}
+
+		&::after {
+			width: 100%;
+			background: $color-white;
+			height: 3px;
+			bottom: 0;
+			left: 0;
+		}
+
+		&::before {
+			width: 100%;
+			background: lighten($color-grey-dark, 60);
+			height: 1px;
+			bottom: .3rem;
+			left: 0;
+		}
+	}
+
 	.sitemap__headline {
 		margin-bottom: $margin-base;
+		margin-top: 0;
+		font-size: 2.6rem;
+		font-family: $font-family;
+		font-weight: $font-thin;
+	}
+
+	.sitemap__sub {
+		margin: $margin-base * 2.5 0 $margin-base;
 		font-size: 2rem;
+		font-family: $font-family;
+		font-weight: $font-light;
+		position: relative;
+
+		&::after,
+		&::before {
+			@include pseudo();
+			opacity: .3;
+		}
+
+		&::after {
+			width: 100%;
+			background: $color-white;
+			height: 3px;
+			top: -$margin-base/1.5;
+			left: 0;
+		}
+
+		&::before {
+			width: 100%;
+			background: lighten($color-grey-dark, 60);
+			height: 1px;
+			top: -($margin-base/1.5) - .2rem;
+			left: 0;
+		}
+	}
+
+	.sitemap__list {
+		margin: 0 $margin-base/2;
+
+		.sitemap__list {
+			margin-left: $margin-base;
+		}
 	}
 }
 

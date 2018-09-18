@@ -55,7 +55,7 @@ If you do not want to use collections, just delete this `sitemap` partial
 						<h4 class="sitemap__sub">Classes and Markup</h4>
 
 						{{#objToArr ../pages}}
-							{{#filter this by="parsed.data.subcategory" val="Classes and Markup"}}
+							{{#filter this by="parsed.data.subcategory" val="Markup and Classes"}}
 								{{> sitemap__list pages=this context=../../this }}
 							{{/filter}}
 						{{/objToArr}}
