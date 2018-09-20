@@ -1,0 +1,28 @@
+---
+title: How to use the CLI
+sitemap: "Docs"
+docs: "CLI"
+sortOrder: "20"
+subcategory: "General"
+navigationLink: "Commands"
+---
+
+{{#extend "lyt-default"}}
+	{{#content "stage"}}{{/content}}
+	{{#content "main"}}
+
+	{{! WrapWith START: Section One }}
+		{{#wrapWith "section"
+		            headline=this.title
+		            headlineClasses="is-left"
+		            media=""
+		            githubLink="https://github.com/Veams/core/issues/new"
+		}}
+
+			{{~> rte md="src/external/cli/docs/usage.md"}}
+
+		{{/wrapWith }}
+	{{! WrapWith END: Section One }}
+
+	{{/content}}
+{{/extend}}

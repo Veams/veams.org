@@ -1,0 +1,16 @@
+{
+	"sections": {
+		"install": {
+			"video": {
+				"settings": {
+					"autoplay": true,
+					"loop": true
+				},
+				"content": {
+					"videoPoster": "",
+					"videoMp4": "http://assets.veams.org/movies/veams--new-project.mp4"
+				}
+			}
+		}
+	}
+}

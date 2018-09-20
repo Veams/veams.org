@@ -1,25 +1,24 @@
 ---
-title: How to use the CLI
+title: Veams Generator
 sitemap: "Docs"
 docs: "CLI"
-sortOrder: "20"
-navigationLink: "Usage"
+subcategory: "Generators"
+navigationLink: "Veams Generator"
 ---
 
 {{#extend "lyt-default"}}
+	{{#content "stage"}}{{/content}}
 	{{#content "main"}}
 
 	{{! WrapWith START: Section One }}
 		{{#wrapWith "section"
-		            headline=this.title
-		            headlineClasses="is-left"
+		            headline="Project Generator"
 		            media=""
+		            headlineClasses="is-left"
 		            githubLink="https://github.com/Veams/core/issues/new"
 		}}
-
-			{{~> rte md="src/external/cli/USAGE.md"}}
-
-		{{/wrapWith }}
+			{{~> rte md="src/external/generator-veams/README.md"}}
+		{{/wrapWith}}
 	{{! WrapWith END: Section One }}
 
 	{{/content}}

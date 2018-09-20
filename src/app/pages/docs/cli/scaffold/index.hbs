@@ -1,11 +1,11 @@
 ---
-title: Installation of CLI
+title: Scaffold a new project
 sitemap: "Docs"
-sortOrder: "10"
 docs: "CLI"
 subcategory: "General"
-navigationLink: "Installation"
-contextData: installation
+sortOrder: 30
+navigationLink: "Scaffold a new project"
+contextData: "cli-scaffold"
 ---
 
 {{#extend "lyt-default"}}
@@ -14,14 +14,13 @@ contextData: installation
 
 	{{! WrapWith START: Section One }}
 		{{#wrapWith "section"
-		            headline="CLI Installation"
+		            headline="Scaffold a new project"
 		            headlineClasses="is-left"
-
 		            media=""
-		            githubLink="https://github.com/Veams/cli/issues/new"
+		            githubLink="https://github.com/Veams/core/issues/new"
 		}}
 			{{#deepMerge @root.video.variations.default with=this.sections.install.video}}
-				{{~> rte md="src/external/cli/README.md"}}
+				{{~> rte md="src/external/cli/docs/scaffold.md"}}
 			{{/deepMerge}}
 		{{/wrapWith}}
 	{{! WrapWith END: Section One }}
