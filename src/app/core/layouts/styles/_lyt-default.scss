@@ -90,7 +90,7 @@ Main
 	.is-front & {
 		float: none;
 		width: 100%;
-		padding: $lyt-container-margin-top 0;
+		padding: $margin-base * 6 0;
 	}
 
 }

@@ -28,6 +28,7 @@ Global Styles
 	display: inline-block;
 	position: relative;
 	width: 100%;
+	margin-bottom: $margin-base * 6;
 
 	/*
 	Unresolved state
@@ -119,7 +120,7 @@ Global Styles
 	.slider__pagination-wrapper {
 		@include centering(h);
 
-		bottom: $slider-pagination-size;
+		bottom: $margin-base * -6;
 	}
 
 	.slider__pagination-list {

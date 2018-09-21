@@ -9,7 +9,7 @@ contextData: home
 	{{#content "main"}}
 
 
-		{{!{print collection='docs' sortBy='sortOrder'}}}
+		{{!{print collection='docs' sortBy='sortOrder'}}
 
 		{{#with sections.In3Minutes}}
 
@@ -33,10 +33,10 @@ contextData: home
 									{{#wrapWith "slider__item"}}
 
 									{{! WrapWith START: Grid Row }}
-										{{#wrapWith "grid-row" gridPadding=true}}
+										{{#wrapWith "grid-row"}}
 
 										{{! WrapWith START:  }}
-											{{#wrapWith "grid-col" colClasses="is-col-mobile-s-7"}}
+											{{#wrapWith "grid-col" colClasses="is-col-mobile-s-5 is-col-mobile-s-offset-1"}}
 												{{#with (JSONparse '{
 													"content": {
 														"videoMp4": "http://assets.veams.org/movies/veams-install.mp4"
