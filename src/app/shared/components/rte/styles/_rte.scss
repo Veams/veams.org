@@ -63,7 +63,6 @@ Global Styles
 	strong,
 	b {
 		font-weight: 700;
-		color: lighten($color-grey-dark, 25);
 	}
 
 	em {
@@ -170,8 +169,8 @@ Global Styles
 
 	code {
 		transitiona: all 500ms ease;
-
 		font-family: Courier, Monospace, "Courier New", sans-serif;
+		color: $color-primary-light;
 	}
 
 	pre {
@@ -228,8 +227,8 @@ Global Styles
 		background-color: $color-primary-light;
 		color: #fff;
 	}
-	
-	/* 
+
+	/*
 	Blockquote
 	----------------------- */
 	blockquote {
@@ -267,16 +266,14 @@ Context: Default
 --------------------------------------------------- */
 .c-rte--default {
 	a {
-		color: $color-primary-dark;
+		color: $color-primary-light;
 	}
 
 	h2 {
-		font-weight: $font-normal;
 		color: $color-grey-dark;
 	}
 
 	h3 {
-		font-weight: $font-normal;
 		color: $color-grey-dark;
 		border-top: none;
 	}
