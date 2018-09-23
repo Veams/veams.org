@@ -1,6 +1,6 @@
 {
   "projects": {
-    "src/external/docs": "https://github.com/Veams/documentation.git",
+    "src/external/documentation": "https://github.com/Veams/documentation.git",
     "src/external/core": "https://github.com/Veams/core.git",
     "src/external/base": "https://github.com/Veams/base.git",
     "src/external/cli": "https://github.com/Veams/cli.git",
