@@ -82,15 +82,15 @@ Global Styles
 		li {
 			counter-increment: listCounter;
 			list-style: decimal;
-			margin: 2.3rem 1.5rem;
+			margin: 1.3rem 1rem;
 			position: relative;
-			padding-left: 1.5rem;
+			padding-left: 1rem;
 			font-size: 1.8rem;
 
 			&::before {
 				@extend %pseudo;
 
-				content: counter(listCounter) '.';
+				// content: counter(listCounter) '.';
 				font-weight: 500;
 				z-index: 1;
 				color: color(white);
@@ -114,7 +114,7 @@ Global Styles
 	ul {
 		list-style: none;
 		margin-left: 3rem;
-		margin-bottom: 1rem;
+		margin-bottom: .5rem;
 		color: $color-grey-dark;
 		font-family: $font-family;
 		font-weight: $font-light;
@@ -124,12 +124,15 @@ Global Styles
 		}
 
 		li {
+			counter-increment: none;
+			list-style: none;
 			position: relative;
-			padding: .5rem 2.5rem;
+			padding: .5rem 2rem;
 
 			&::before {
 				@extend %pseudo;
 
+				content: '';
 				left: 0;
 				top: 12px;
 				width: 8px;

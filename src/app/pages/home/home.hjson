@@ -5,22 +5,26 @@
 			"teasers": [
 				{
 					"content": {
-						"rteMd": "markdown/install-cli.md"
+						"rteMd": "markdown/install-cli.md",
+						"videoMp4": "http://assets.veams.org/movies/veams-install.mp4"
 					}
 				},
 				{
 					"content": {
-						"rteMd": "markdown/create-and-start.md"
+						"rteMd": "markdown/create-and-start.md",
+						"videoMp4": "http://assets.veams.org/movies/veams--new-project.mp4"
 					}
 				},
 				{
 					"content": {
-						"rteMd": "markdown/install-components.md"
+						"rteMd": "markdown/install-components.md",
+						"videoMp4": "http://assets.veams.org/movies/veams--install-component.mp4"
 					}
 				},
 				{
 					"content": {
-						"rteMd": "markdown/generate-components.md"
+						"rteMd": "markdown/generate-components.md",
+						"videoMp4": "http://assets.veams.org/movies/veams--generate-component.mp4"
 					}
 				}
 			]

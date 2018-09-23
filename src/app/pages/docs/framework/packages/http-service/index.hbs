@@ -1,0 +1,25 @@
+---
+title: Core
+sitemap: "Docs"
+subcategory: "Other Packages"
+docs: "Framework"
+navigationLink: "Http-Service"
+---
+
+{{#extend "lyt-default"}}
+	{{#content "stage"}}{{/content}}
+	{{#content "main"}}
+
+    {{! WrapWith START: Section One }}
+		{{#wrapWith "section"
+            media=""
+            githubLink="https://github.com/Veams/http-service/issues/new"
+		}}
+
+			{{~> rte md="src/external/http-service/README.md"}}
+
+		{{/wrapWith}}
+	{{! WrapWith END: Section One }}
+
+	{{/content}}
+{{/extend}}

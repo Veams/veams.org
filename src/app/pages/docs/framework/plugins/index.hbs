@@ -1,0 +1,25 @@
+---
+title: Plugins
+sitemap: "Docs"
+subcategory: "Plugins"
+docs: "Framework"
+navigationLink: "Overview"
+---
+
+{{#extend "lyt-default"}}
+	{{#content "stage"}}{{/content}}
+	{{#content "main"}}
+
+    {{! WrapWith START: Section One }}
+		{{#wrapWith "section"
+            media=""
+            githubLink="https://github.com/Veams/core/issues/new"
+		}}
+
+			{{~> rte md="src/external/documentation/framework/js/plugins.md"}}
+
+		{{/wrapWith}}
+	{{! WrapWith END: Section One }}
+
+	{{/content}}
+{{/extend}}

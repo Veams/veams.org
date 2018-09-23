@@ -1,5 +1,5 @@
 // Global Packages 
-import 'lazysizes';
+// import 'lazysizes';
 import { environment } from 'env';
 
 // Veams & Veams Plugins

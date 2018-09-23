@@ -1,0 +1,21 @@
+---
+title: Logger
+sitemap: "Docs"
+docs: "Framework"
+subcategory: "Plugins"
+navigationLink: "Store"
+---
+
+{{#extend "lyt-default"}}
+	{{#content "stage"}}{{/content}}
+	{{#content "main"}}
+	{{! WrapWith START: Section One }}
+		{{#wrapWith "section"
+		            media=""
+		            githubLink="https://github.com/Veams/plugin-store/issues/new"
+		}}
+			{{~> rte md="src/external/plugin-store/README.md"}}
+		{{/wrapWith}}
+	{{! WrapWith END: Section One }}
+	{{/content}}
+{{/extend}}

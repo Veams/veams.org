@@ -1,0 +1,25 @@
+---
+title: Logger
+sitemap: "Docs"
+docs: "Framework"
+subcategory: "Plugins"
+navigationLink: "Logger"
+---
+
+{{#extend "lyt-default"}}
+	{{#content "stage"}}{{/content}}
+	{{#content "main"}}
+
+	{{! WrapWith START: Section One }}
+		{{#wrapWith "section"
+		            media=""
+		            githubLink="https://github.com/Veams/core/issues/new"
+		}}
+
+			{{~> rte md="src/external/plugin-logger/README.md"}}
+
+		{{/wrapWith}}
+	{{! WrapWith END: Section One }}
+
+	{{/content}}
+{{/extend}}

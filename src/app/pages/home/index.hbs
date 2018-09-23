@@ -37,13 +37,7 @@ contextData: home
 
 										{{! WrapWith START:  }}
 											{{#wrapWith "grid-col" colClasses="is-col-mobile-s-5 is-col-mobile-s-offset-1"}}
-												{{#with (JSONparse '{
-													"content": {
-														"videoMp4": "http://assets.veams.org/movies/veams-install.mp4"
-													}
-												}')}}
 													{{> video }}
-												{{/with}}
 											{{/wrapWith}}
 											{{! WrapWith END:  }}
 

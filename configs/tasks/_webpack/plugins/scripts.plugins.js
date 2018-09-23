@@ -37,29 +37,5 @@ module.exports = function scriptPlugins() {
 		} ])
 	];
 
-	if (!local) {
-		plugins.push(new webpack.optimize.UglifyJsPlugin({
-			mangle: true,
-			compress: {
-				warnings: false, // Suppress uglification warnings
-				pure_getters: true,
-				unsafe: true,
-				unsafe_comps: true,
-				screw_ie8: true
-			},
-			output: {
-				comments: false
-			}
-		}));
-
-		plugins.push(new CompressionPlugin({
-			asset: '[path].gz[query]',
-			algorithm: 'gzip',
-			test: /\.js$|\.css$|\.html$/,
-			threshold: 10240,
-			minRatio: 0.8
-		}));
-	}
-
 	return plugins;
 };

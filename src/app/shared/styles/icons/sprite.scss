@@ -5,7 +5,7 @@
 	@include sprites-bg-svg();
 }
 @mixin sprites-bg-size() {
-	background-size: 45px 45px;
+	background-size: 820px 595px;
 }
 %sprites-bg-size {
 	@include sprites-bg-size();
@@ -17,12 +17,27 @@
 %sprites-bg-png {
 	@include sprites-bg-png();
 }
+@mixin sprites-github-mark() {
+	@include sprites-bg-size;
+	@include sprites-bg-svg;
+	width: 33px;
+	height: 32px;
+	background-position: -650px -70px;
+	@at-root .no-svg & {
+		@include sprites-bg-png;
+	}
+}
+
+%sprites-github-mark {
+	@include sprites-github-mark();
+}
+
 @mixin sprites-icon-lightbulb() {
 	@include sprites-bg-size;
 	@include sprites-bg-svg;
 	width: 40px;
 	height: 40px;
-	background-position: 0 0;
+	background-position: -605px -70px;
 	@at-root .no-svg & {
 		@include sprites-bg-png;
 	}
@@ -30,6 +45,141 @@
 
 %sprites-icon-lightbulb {
 	@include sprites-icon-lightbulb();
+}
+
+@mixin sprites-veams-components() {
+	@include sprites-bg-size;
+	@include sprites-bg-svg;
+	width: 202px;
+	height: 79px;
+	background-position: -145px -300px;
+	@at-root .no-svg & {
+		@include sprites-bg-png;
+	}
+}
+
+%sprites-veams-components {
+	@include sprites-veams-components();
+}
+
+@mixin sprites-veams-generator() {
+	@include sprites-bg-size;
+	@include sprites-bg-svg;
+	width: 202px;
+	height: 79px;
+	background-position: -355px -300px;
+	@at-root .no-svg & {
+		@include sprites-bg-png;
+	}
+}
+
+%sprites-veams-generator {
+	@include sprites-veams-generator();
+}
+
+@mixin sprites-veams-generator-symbol() {
+	@include sprites-bg-size;
+	@include sprites-bg-svg;
+	width: 137px;
+	height: 117px;
+	background-position: 0 -300px;
+	@at-root .no-svg & {
+		@include sprites-bg-png;
+	}
+}
+
+%sprites-veams-generator-symbol {
+	@include sprites-veams-generator-symbol();
+}
+
+@mixin sprites-veams-js() {
+	@include sprites-bg-size;
+	@include sprites-bg-svg;
+	width: 202px;
+	height: 79px;
+	background-position: 0 -425px;
+	@at-root .no-svg & {
+		@include sprites-bg-png;
+	}
+}
+
+%sprites-veams-js {
+	@include sprites-veams-js();
+}
+
+@mixin sprites-veams-methodology() {
+	@include sprites-bg-size;
+	@include sprites-bg-svg;
+	width: 202px;
+	height: 79px;
+	background-position: 0 -510px;
+	@at-root .no-svg & {
+		@include sprites-bg-png;
+	}
+}
+
+%sprites-veams-methodology {
+	@include sprites-veams-methodology();
+}
+
+@mixin sprites-veams-sass() {
+	@include sprites-bg-size;
+	@include sprites-bg-svg;
+	width: 202px;
+	height: 79px;
+	background-position: -210px -425px;
+	@at-root .no-svg & {
+		@include sprites-bg-png;
+	}
+}
+
+%sprites-veams-sass {
+	@include sprites-veams-sass();
+}
+
+@mixin sprites-veams-std() {
+	@include sprites-bg-size;
+	@include sprites-bg-svg;
+	width: 209px;
+	height: 61px;
+	background-position: -210px -510px;
+	@at-root .no-svg & {
+		@include sprites-bg-png;
+	}
+}
+
+%sprites-veams-std {
+	@include sprites-veams-std();
+}
+
+@mixin sprites-veams-std-invert() {
+	@include sprites-bg-size;
+	@include sprites-bg-svg;
+	width: 209px;
+	height: 61px;
+	background-position: -605px 0;
+	@at-root .no-svg & {
+		@include sprites-bg-png;
+	}
+}
+
+%sprites-veams-std-invert {
+	@include sprites-veams-std-invert();
+}
+
+@mixin sprites-veams-std-symbol() {
+	@include sprites-bg-size;
+	@include sprites-bg-svg;
+	width: 596px;
+	height: 294px;
+	background-position: 0 0;
+	@at-root .no-svg & {
+		@include sprites-bg-png;
+	}
+}
+
+%sprites-veams-std-symbol {
+	@include sprites-veams-std-symbol();
 }
 
 

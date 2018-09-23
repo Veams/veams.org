@@ -1,6 +1,6 @@
 {
   "projects": {
-    "src/external/veams": "https://github.com/Veams/documentation.git",
+    "src/external/docs": "https://github.com/Veams/documentation.git",
     "src/external/core": "https://github.com/Veams/core.git",
     "src/external/base": "https://github.com/Veams/base.git",
     "src/external/cli": "https://github.com/Veams/cli.git",
@@ -18,7 +18,7 @@
     "src/external/plugin-store": "https://github.com/Veams/plugin-store.git",
     "src/external/plugin-templater": "https://github.com/Veams/plugin-templater.git",
     "src/external/plugin-media-query-handler": "https://github.com/Veams/plugin-media-query-handler.git",
-    "src/external/plugin-media-logger": "https://github.com/Veams/plugin-logger.git",
+    "src/external/plugin-logger": "https://github.com/Veams/plugin-logger.git",
     "src/external/plugin-dom": "https://github.com/Veams/plugin-dom.git",
     "src/external/helpers": "https://github.com/Veams/helpers.git",
     "src/external/http-service": "https://github.com/Veams/http-service.git"

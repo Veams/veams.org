@@ -52,7 +52,36 @@ If you do not want to use collections, just delete this `sitemap` partial
 
 		{{#each collections.docs}}
 			{{#is name "Framework"}}
-				{{> sitemap__list pages=../pages context=this }}
+
+				<ol class="sitemap__list">
+					<li class="sitemap__list-item">
+						<h4 class="sitemap__sub">Base</h4>
+
+						{{#objToArr ../pages}}
+							{{#filter this by="parsed.data.subcategory" val="Base"}}
+								{{> sitemap__list pages=this context=../../this }}
+							{{/filter}}
+						{{/objToArr}}
+					</li>
+					<li class="sitemap__list-item">
+						<h4 class="sitemap__sub">Plugins</h4>
+
+						{{#objToArr ../pages}}
+							{{#filter this by="parsed.data.subcategory" val="Plugins"}}
+								{{> sitemap__list pages=this context=../../this }}
+							{{/filter}}
+						{{/objToArr}}
+					</li>
+					<li class="sitemap__list-item">
+						<h4 class="sitemap__sub">Other Packages</h4>
+
+						{{#objToArr ../pages}}
+							{{#filter this by="parsed.data.subcategory" val="Other Packages"}}
+								{{> sitemap__list pages=this context=../../this }}
+							{{/filter}}
+						{{/objToArr}}
+					</li>
+				</ol>
 			{{/is}}
 		{{/each}}
 	</div>

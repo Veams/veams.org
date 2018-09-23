@@ -1,0 +1,21 @@
+---
+title: Logger
+sitemap: "Docs"
+docs: "Framework"
+subcategory: "Plugins"
+navigationLink: "Templater"
+---
+
+{{#extend "lyt-default"}}
+	{{#content "stage"}}{{/content}}
+	{{#content "main"}}
+	{{! WrapWith START: Section One }}
+		{{#wrapWith "section"
+		            media=""
+		            githubLink="https://github.com/Veams/plugin-templater/issues/new"
+		}}
+			{{~> rte md="src/external/plugin-templater/README.md"}}
+		{{/wrapWith}}
+	{{! WrapWith END: Section One }}
+	{{/content}}
+{{/extend}}
