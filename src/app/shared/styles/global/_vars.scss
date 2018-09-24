@@ -15,8 +15,7 @@ Breakpoints
 // Breakpoints
 $bp-mobile-s: 0;
 $bp-mobile-p: 480px;
-$bp-mobile-l: 600px;
-$bp-mobile-xl: 657px;
+$bp-mobile-l: 657px;
 $bp-tablet-p: 768px;
 $bp-tablet-l: 1024px;
 $bp-desktop-m: 1230px;
@@ -29,11 +28,48 @@ $breakpoints: (
 	'mobile-s': $bp-mobile-s,
 	'mobile-p': $bp-mobile-p,
 	'mobile-l': $bp-mobile-l,
-	'mobile-xl': $bp-mobile-xl,
 	'tablet-p': $bp-tablet-p,
 	'tablet-l': $bp-tablet-l,
 	'desktop-m': $bp-desktop-m,
 	'desktop-l': $bp-desktop-l
+);
+
+$grid-breakpoints-defaults: (
+	'mobile-s': (
+		columns: 12,
+		gutter: 30px,
+		media: $bp-mobile-s
+	),
+	'mobile-p': (
+		columns: 12,
+		gutter: 30px,
+		media: $bp-mobile-p
+	),
+	'mobile-l': (
+		columns: 12,
+		gutter: 30px,
+		media: $bp-mobile-l
+	),
+	'tablet-p': (
+		columns: 12,
+		gutter: 30px,
+		media: $bp-tablet-p
+	),
+	'tablet-l': (
+		columns: 12,
+		gutter: 30px,
+		media: $bp-tablet-l
+	),
+	'desktop-m': (
+		columns: 12,
+		gutter: 30px,
+		media: $bp-desktop-m
+	),
+	'desktop-l': (
+		columns: 12,
+		gutter: 30px,
+		media: $bp-desktop-l
+	)
 );
 
 /* ---------------------------------------------------
