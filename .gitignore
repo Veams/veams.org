@@ -18,7 +18,7 @@ node_modules
 .idea
 /app
 src/app/exported
-src/external/veams
+src/external/documentation
 src/external/core
 src/external/base
 src/external/cli
@@ -36,7 +36,7 @@ src/external/plugin-vent
 src/external/plugin-store
 src/external/plugin-templater
 src/external/plugin-media-query-handler
-src/external/plugin-media-logger
+src/external/plugin-logger
 src/external/plugin-dom
 src/external/helpers
 src/external/http-service
