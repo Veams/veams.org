@@ -5,7 +5,7 @@
 Here you go. Open up another terminal and install a component right into your project: 
 
 ``` bash 
-veams install component slider
+veams install @veams/component slider
 ```
 
 After that you get a nice looking documentation with all slider variations in place. 
