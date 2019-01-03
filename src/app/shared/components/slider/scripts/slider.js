@@ -75,9 +75,9 @@ class Slider extends Component {
 			unresolvedClass: 'is-unresolved', // Unresolved class which gets removed when initialized
 			visibleItems: { // Visible items per viewport
 				'mobile-s': 1,
-				'mobile-m': 1,
+				'mobile-p': 1,
 				'mobile-l': 1,
-				'tablet-s': 1,
+				'tablet-p': 1,
 				'tablet-l': 1,
 				'desktop-s': 1,
 				'desktop-m': 1,

@@ -4,4 +4,8 @@ Modifiers
 .is-container {
 	max-width: $bp-desktop-l !important;
 	margin: 0 auto !important;
+
+	@include media("<tablet-p") {
+		padding: 0 $margin-base !important;
+	}
 }

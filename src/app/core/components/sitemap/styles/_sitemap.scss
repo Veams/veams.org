@@ -84,6 +84,14 @@ Global Styles
 			margin-left: $margin-base;
 		}
 	}
+
+	.sitemap__list-item {
+		margin: 0 0 $margin-base 0;
+		line-height: 115%;
+	}
+
+	.sitemap__list-item-link {
+	}
 }
 
 /* ---------------------------------------------------

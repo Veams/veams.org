@@ -4,24 +4,36 @@
 			"headline": "Build your customized web application in 3 minutes.",
 			"teasers": [
 				{
+					"settings": {
+						"rteContextClass": "slider"
+					},
 					"content": {
 						"rteMd": "markdown/install-cli.md",
 						"videoMp4": "http://assets.veams.org/movies/veams-install.mp4"
 					}
 				},
 				{
+					"settings":  {
+						"rteContextClass":  "slider"
+					},
 					"content": {
 						"rteMd": "markdown/create-and-start.md",
 						"videoMp4": "http://assets.veams.org/movies/veams--new-project.mp4"
 					}
 				},
 				{
+					"settings":  {
+						"rteContextClass":  "slider"
+					},
 					"content": {
 						"rteMd": "markdown/install-components.md",
 						"videoMp4": "http://assets.veams.org/movies/veams--install-component.mp4"
 					}
 				},
 				{
+					"settings":  {
+						"rteContextClass":  "slider"
+					},
 					"content": {
 						"rteMd": "markdown/generate-components.md",
 						"videoMp4": "http://assets.veams.org/movies/veams--generate-component.mp4"

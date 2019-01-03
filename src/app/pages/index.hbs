@@ -36,13 +36,14 @@ contextData: home
 										{{#wrapWith "grid-row"}}
 
 										{{! WrapWith START:  }}
-											{{#wrapWith "grid-col" colClasses="is-col-mobile-s-5 is-col-mobile-s-offset-1"}}
+											{{#wrapWith "grid-col"
+														colClasses="is-col-tablet-p-5 is-col-tablet-p-offset-1"}}
 													{{> video }}
 											{{/wrapWith}}
 											{{! WrapWith END:  }}
 
 											{{! WrapWith START: Grid Col }}
-											{{#wrapWith "grid-col" colClasses="is-col-mobile-s-5"}}
+											{{#wrapWith "grid-col" colClasses="is-col-tablet-p-5"}}
 												{{#deepMerge @root.rte.variations.default with=this}}
 													{{~> rte }}
 												{{/deepMerge}}

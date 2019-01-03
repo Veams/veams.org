@@ -71,6 +71,7 @@ Global Styles
 		opacity: .3;
 		transition: opacity $slider-duration $slider-ease-method;
 		vertical-align: top;
+		padding: 1rem;
 
 		&.is-active {
 			opacity: 1;
@@ -99,6 +100,10 @@ Global Styles
 		position: absolute;
 		padding: 1rem;
 		transition: background-color $slider-duration/4 $slider-ease-method;
+
+		@include media("<tablet-p") {
+			display: none;
+		}
 
 		&:hover {
 			cursor: pointer;

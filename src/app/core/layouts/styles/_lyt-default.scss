@@ -43,6 +43,11 @@ Content Wrapper
 .page-content-wrapper {
 	margin-top: $lyt-sidebar-offset;
 	position: relative;
+
+	@include media("<800px") {
+		margin-top: 54px;
+	}
+
 }
 
 /* ---------------------------------------------------
@@ -60,7 +65,15 @@ Sidebar
 	background-image: $bg-pattern;
 	padding: $lyt-container-margin-top $margin-base * 2;
 
-	a {
+	@include media("<=tablet-p") {
+		width: $lyt-sidebar-width - 80px;
+	}
+
+	@include media("<mobile-l") {
+		width: 100%;
+	}
+
+		a {
 		color: darken($color-primary-light, 10);
 		text-decoration: none;
 
@@ -86,6 +99,17 @@ Main
 	overflow-x: hidden;
 	padding: $lyt-container-margin-top;
 	box-sizing: border-box;
+
+
+	@include media("<=tablet-p") {
+		width: calc(100% - #{$lyt-sidebar-width - 80px});
+	}
+
+	@include media("<mobile-l") {
+		width: 100%;
+		float: left;
+		padding: $margin-base;
+	}
 
 	.is-front & {
 		float: none;
