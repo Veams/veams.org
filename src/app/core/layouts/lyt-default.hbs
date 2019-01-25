@@ -42,15 +42,17 @@
 		</div>
 	</header>
 	<div class="page-content-wrapper">
-		<section class="r-stage">
-			<div class="stage__content">
-				{{#block "stage"}}
-					{{#with @root.stage.variations.default}}
-						{{> stage}}
-					{{/with}}
-				{{/block}}
-			</div>
-		</section>
+		{{#is bodyclass "is-front"}}
+			<section class="r-stage">
+				<div class="stage__content">
+					{{#block "stage"}}
+						{{#with @root.stage.variations.default}}
+							{{> stage}}
+						{{/with}}
+					{{/block}}
+				</div>
+			</section>
+		{{/is}}
 		{{#block "sidebar"}}
 			<aside class="r-sidebar" data-js-item="sidebar">
 				<div class="sidebar__list">
@@ -63,6 +65,11 @@
 			{{#block "main"}}{{/block}}
 		</main>
 	</div>
+	<footer class="r-footer">
+		{{#block "footer"}}
+			{{> footer }}
+		{{/block}}
+	</footer>
 </div>
 <!-- Scripts
 ================================================== -->

@@ -1,0 +1,27 @@
+/* ===================================================
+component: footer
+=================================================== */
+
+/* ---------------------------------------------------
+Global Styles
+--------------------------------------------------- */
+[data-css="c-footer"] {
+	font-weight: $font-thin;
+	font-family: $font-family;
+	display: flex;
+	text-align: center;
+	padding: $padding-base * 2;
+	color: $color-grey-dark;
+	background-color: $color-primary-lighter;
+
+	.footer__content-link {
+		font-weight: 400;
+		color: $color-grey-dark;
+	}
+}
+
+/* ---------------------------------------------------
+Context: Default
+--------------------------------------------------- */
+.c-footer--default {
+}

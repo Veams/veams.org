@@ -87,6 +87,7 @@ Sidebar
 	color: $color-grey-dark;
 	background-image: $bg-pattern;
 	background-color: $color-grey-light;
+	box-shadow: $color-grey-dark -10px -28px 50px;
 
 	@include media("<=tablet-p") {
 		width: $lyt-sidebar-width - 80px;
@@ -95,6 +96,7 @@ Sidebar
 	@include media("<mobile-l") {
 		width: 70%;
 		position: absolute;
+		box-shadow: $color-grey-dark -6px -28px 110px;
 	}
 
 		a {
@@ -150,7 +152,7 @@ Main
 	.is-front & {
 		float: none;
 		width: 100%;
-		padding: $margin-base * 6 0;
+		padding: $margin-base * 6 0 0;
 	}
 
 	&.is-contained {

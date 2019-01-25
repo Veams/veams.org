@@ -54,13 +54,17 @@ Global Styles
 		font-family: $font-family;
 		background-color: $color-primary-light;
 		padding: $margin-base * 2 $margin-base * 3;
-		color: inherit;
+		color: $color-grey-dark;
 		text-decoration: none;
 		text-transform: uppercase;
 		font-weight: $font-light;
 		font-size: 1.8rem;
 		display: inline-block;
-		box-shadow: #000 0 5px 10px;
+		box-shadow: #000 0 5px 20px;
+
+		&:hover {
+			box-shadow: none;
+		}
 	}
 }
 
