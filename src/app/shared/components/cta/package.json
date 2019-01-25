@@ -1,0 +1,22 @@
+{
+	"name": "@veams/component-cta",
+	"version": "1.0.2",
+	"description": "The CTA component is a powerful one. It can be used as a simple link or button component.",
+	"dependencies": {
+		"@veams/query": "^2.2.24",
+		"@veams/component": "^1.2.3"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git://github.com/Veams/component-cta.git"
+	},
+	"keywords": [
+		"veams"
+	],
+	"author": "Sebastian Fitzner",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/Veams/component-cta/issues"
+	},
+	"homepage": "https://github.com/Veams/component-cta#readme"
+}

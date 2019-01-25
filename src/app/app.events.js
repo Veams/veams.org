@@ -23,6 +23,13 @@ EVENTS.slider = {
 	slideStart: 'slide:start'
 };
 
+/**
+ * Events for CTA
+ */
+EVENTS.cta = {
+	click: 'cta:click',
+	toggle: 'sitemap:toggle'
+};
 // @INSERTPOINT :: @ref: js-events
 
 export default EVENTS;

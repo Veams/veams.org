@@ -1,0 +1,75 @@
+{
+	"variations": {
+		"simple": {
+			"docs": {
+				"variationName": "Simple CTA link",
+				"sectionCenter": true
+			},
+			"settings": {
+				"ctaButton": false,
+				"ctaTarget": "#",
+				"ctaContextClass": "link",
+				"ctaClass": "is-link"
+			},
+			"content": {
+				"ctaTitle": "Link Title",
+				"settings": {
+					"ctaIcon": true
+				},
+				"content": {
+					"ctaContent": "Link"
+				}
+			}
+		},
+		"withJs": {
+			"docs": {
+				"variationName": "CTA (global event)",
+				"sectionCenter": true
+			},
+			"settings": {
+				"ctaButton": true,
+				"ctaTarget": "#",
+				"ctaContextClass": "default",
+				"ctaClass": "class",
+				"ctaJsItem": false,
+				"ctaJsModule": true,
+				"jsOptions": {
+					"globalEvent": "cta:alert",
+					"data": "My custom text passed by CTA"
+				}
+			},
+			"content": {
+				"settings": {
+					"ctaIcon": true
+				},
+				"content": {
+					"ctaContent": "Button"
+				}
+			}
+		},
+		"iconWithJs": {
+			"docs": {
+				"variationName": "ICON with CTA (global event)",
+				"sectionCenter": true
+			},
+			"settings": {
+				"ctaButton": true,
+				"ctaTarget": false,
+				"ctaContextClass": "nav",
+				"ctaJsItem": "toggle",
+				"ctaJsModule": true,
+				"jsOptions": {
+					"globalEvent": "sitemap:toggle"
+				}
+			},
+			"content": {
+				"settings": {
+					"ctaIcon": true
+				},
+				"content": {
+					"ctaContent": false
+				}
+			}
+		}
+	}
+}

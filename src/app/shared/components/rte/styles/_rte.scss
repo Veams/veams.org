@@ -62,7 +62,7 @@ Global Styles
 
 	strong,
 	b {
-		font-weight: 700;
+		font-weight: $font-medium;
 	}
 
 	em {
@@ -171,7 +171,8 @@ Global Styles
 	}
 
 	code {
-		transitiona: all 500ms ease;
+		font-size: 16px;
+		transition: all 500ms ease;
 		font-family: Courier, Monospace, "Courier New", sans-serif;
 		color: $color-primary-light;
 	}
