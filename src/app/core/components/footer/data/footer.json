@@ -13,8 +13,8 @@
 			"content": {
 				"gitLinkTarget": "https://github.com/Sebastian-Fitzner/veams.org",
 				"gitLinkText": "Github",
-				"linkTarget": "https://github.com/Sebastian-Fitzner",
-				"linkText": "Sebastian Fitzner"
+				"gitterLinkTarget": "https://gitter.im/Sebastian-Fitzner/Veams",
+				"gitterLinkText": "Gitter"
 			}
 		}
 	}

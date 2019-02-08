@@ -64,10 +64,8 @@ Content Wrapper
 }
 
 .page-content-wrapper {
-	margin-top: $lyt-sidebar-offset;
-
 	@include media("<mobile-l") {
-		margin-top: 55px;
+		margin-top: 50px;
 	}
 }
 
@@ -82,12 +80,12 @@ Sidebar
 	box-sizing: border-box;
 	z-index: map-get($lyt-index-map, sidebar);
 	overflow-x: auto;
-	padding: $padding-base * 4 $padding-base * 2 0;
+	padding: $padding-base * 10 $padding-base * 2 0;
 	transition: left 0.3s;
 	color: $color-grey-dark;
 	background-image: $bg-pattern;
 	background-color: $color-grey-light;
-	box-shadow: $color-grey-dark -10px -28px 50px;
+	box-shadow: none;
 
 	@include media("<=tablet-p") {
 		width: $lyt-sidebar-width - 80px;
@@ -96,6 +94,7 @@ Sidebar
 	@include media("<mobile-l") {
 		width: 70%;
 		position: absolute;
+		padding: $padding-base * 6 $padding-base * 2 0;
 		box-shadow: $color-grey-dark -6px -28px 110px;
 	}
 
@@ -136,7 +135,7 @@ Main
 	width: calc(100% - #{$lyt-sidebar-width});
 	height: 100vh;
 	overflow-x: hidden;
-	padding: $padding-base * 4 $padding-base * 4 0;
+	padding: $padding-base * 10 0 0;
 	box-sizing: border-box;
 
 	@include media("<=tablet-p") {
@@ -146,18 +145,33 @@ Main
 	@include media("<mobile-l") {
 		width: 100%;
 		float: left;
-		padding: inherit $padding-base 0;
+		padding: $padding-base * 6 0 0;
 	}
 
 	.is-front & {
 		float: none;
 		width: 100%;
-		padding: $margin-base * 6 0 0;
+		padding: $padding-base * 6 0 0;
 	}
 
 	&.is-contained {
 		clear: left;
 		width: 100%;
-		padding: $padding-base * 4 $padding-base * 2 0;
+		padding: $padding-base * 10 0 0;
+
+		@include media("<mobile-l") {
+			padding: $padding-base * 6 0 0;
+		}
+	}
+}
+
+/* ---------------------------------------------------
+Stage
+--------------------------------------------------- */
+.r-stage {
+	padding-top: $padding-base * 6;
+
+	@include media("<mobile-l") {
+		padding-top: 0;
 	}
 }

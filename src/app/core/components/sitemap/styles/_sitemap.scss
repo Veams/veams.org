@@ -85,10 +85,13 @@ Global Styles
 
 	.sitemap__list-item {
 		margin: 0 0 $margin-base 0;
-		line-height: 115%;
+		line-height: 1.2;
 	}
 
 	.sitemap__list-item-link {
+		font-family: $font-family;
+		font-size: 1.8rem;
+		font-weight: $font-light;
 	}
 }
 

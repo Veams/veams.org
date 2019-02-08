@@ -63,13 +63,24 @@
 
 		<main class="r-main" data-js-item="main">
 			{{#block "main"}}{{/block}}
+
+			{{#isnt bodyclass "is-front"}}
+                <div class="r-footer">
+                    {{#block "footer"}}
+                        {{> footer }}
+                    {{/block}}
+                </div>
+			{{/isnt}}
 		</main>
+
 	</div>
-	<footer class="r-footer">
-		{{#block "footer"}}
-			{{> footer }}
-		{{/block}}
-	</footer>
+	{{#is bodyclass "is-front"}}
+		<footer class="r-footer">
+			{{#block "footer"}}
+				{{> footer }}
+			{{/block}}
+		</footer>
+	{{/is}}
 </div>
 <!-- Scripts
 ================================================== -->

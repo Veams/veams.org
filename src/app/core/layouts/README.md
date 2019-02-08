@@ -2,7 +2,7 @@
 
 Because images speak louder than words, here is an image to illustrate Regions:
 
-![alt text](http://www.veams.org/img/temp/regions.jpg "Regions")
+![alt text](http://www.veams.org/img/temp/regions.png "Regions")
 
 This image makes it clear, that: 
 

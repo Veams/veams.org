@@ -10,7 +10,7 @@ Global Styles
 	font-family: $font-family;
 	display: flex;
 	text-align: center;
-	padding: $padding-base * 2;
+	padding: $padding-base * 4 $padding-base * 2;
 	color: $color-grey-dark;
 	background-color: $color-primary-lighter;
 

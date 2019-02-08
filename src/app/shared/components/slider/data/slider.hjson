@@ -98,7 +98,8 @@
 				"sliderOverflow": true,
 				"sliderJsOptions": {
 					"infinite": false
-				}
+				},
+				"hideControlButtons": true
 			},
 			"content": {
 				"sliderButtons": {

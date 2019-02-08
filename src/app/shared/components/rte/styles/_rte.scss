@@ -21,7 +21,7 @@ Global Styles
 
 	h2 {
 		font-size: 2.2rem;
-		font-weight: $font-bold;
+		font-weight: $font-normal;
 		line-height: 1.5;
 		margin: 2rem 0;
 		color: lighten($color-grey-dark, 35);
@@ -237,21 +237,23 @@ Global Styles
 	----------------------- */
 	blockquote {
 		position: relative;
-		font-size: 2.5rem;
+		font-size: 2rem;
 		font-weight: $font-light;
 		line-height: 1.5;
 		margin: $margin-base * 4 0 2.75rem 0;
-		padding: 10px 10px 10px 80px;
-		color: $color-white;
-		background-color: lighten($color-primary-light, 10);
+		padding: $padding-base $padding-base $padding-base $padding-base * 5;
+		color: $color-grey-dark;
+		background-color: lighten(#f6f298, 10);
 
 		&::before {
+			@include sprites-key();
+
 			position: absolute;
 			display: block;
-			top: 8px;
-			left: 20px;
+			top: 0;
+			left: 0;
 			content: "";
-			@include sprites-icon-lightbulb();
+			transform: scale(0.7);
 		}
 	}
 

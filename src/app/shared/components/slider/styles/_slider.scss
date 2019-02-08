@@ -89,6 +89,7 @@ Global Styles
 		@include centering(v);
 
 		width: 100%;
+		height: 100%;
 		z-index: 100;
 	}
 
@@ -96,10 +97,10 @@ Global Styles
 		@include reset-btn();
 		@include centering(v);
 
-		background-color: $slider-control-bg-color;
 		position: absolute;
-		padding: 1rem;
+		padding: 0 $padding-base * 3;
 		transition: background-color $slider-duration/4 $slider-ease-method;
+		height: 50%;
 
 		@include media("<tablet-p") {
 			display: none;
@@ -107,15 +108,98 @@ Global Styles
 
 		&:hover {
 			cursor: pointer;
-			background-color: darken($slider-control-bg-color, $slider-darken);
 		}
 
 		&.is-previous {
 			left: 0;
+
+			&:hover {
+				&::before {
+					transform: translate(-1.6rem, -0.7rem) rotate(-135deg);
+				}
+
+				&::after {
+					transform: translate(-1.6rem, 0.1rem);
+				}
+			}
+
+			&::before,
+			&::after {
+				content: "";
+				display: block;
+				position: absolute;
+				transition: all 0.5s ease-in-out;
+			}
+
+			&::before {
+				top: 50%;
+				right: 2rem;
+				width: 1.7rem;
+				height: 1.7rem;
+				transform-origin: 50% 50%;
+				transform: translate(0, -0.7rem) rotate(-135deg);
+				box-shadow: inset -0.2rem 0.2rem 0 0 $color-primary-light;
+				border-radius: 0 0.15em 0 0;
+			}
+
+			&::after {
+				top: 50%;
+				right: 0.9rem;
+				width: 2.8rem;
+				height: 0.2rem;
+				transform: translate(0, 0.1rem);
+				background-color: $color-primary-light;
+			}
 		}
 
 		&.is-next {
 			right: 0;
+
+			&:hover {
+				&::before {
+					transform: translate(1.6rem, -0.7rem) rotate(45deg);
+				}
+
+				&::after {
+					transform: translate(1.6rem, 0.1rem);
+				}
+			}
+
+			&::before,
+			&::after {
+				content: "";
+				display: block;
+				position: absolute;
+				transition: all 0.5s ease-in-out;
+			}
+
+			&::before {
+				top: 50%;
+				right: 2rem;
+				width: 1.7rem;
+				height: 1.7rem;
+				transform-origin: 50% 50%;
+				transform: translate(0, -0.7rem) rotate(45deg);
+				box-shadow: inset -0.2rem 0.2rem 0 0 $color-primary-light;
+				border-radius: 0 0.15em 0 0;
+			}
+
+			&::after {
+				top: 50%;
+				right: 1.9rem;
+				width: 2.8rem;
+				height: 0.2rem;
+				transform: translate(0, 0.1rem);
+				background-color: $color-primary-light;
+			}
+		}
+
+		&.is-hidden {
+			display: none;
+		}
+
+		&.is-hidden-label {
+			@include hidden-text();
 		}
 	}
 
@@ -136,8 +220,7 @@ Global Styles
 	.slider__pagination-list-item {
 		@extend %hidden-text;
 
-		background-color: $slider-pagination-color;
-		border-radius: $slider-pagination-border-radius;
+		background-color: lighten($slider-pagination-color, 20);
 		display: inline-block;
 		height: $slider-pagination-size;
 		margin: 0 $slider-pagination-size/3;

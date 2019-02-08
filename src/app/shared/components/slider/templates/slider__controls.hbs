@@ -1,6 +1,6 @@
-<button class="slider__control is-previous" data-js-item="slider-prev">
-	{{prev}}
+<button class="slider__control is-previous{{#if settings.hideControlButtons}} is-hidden-label{{/if}}" data-js-item="slider-prev">
+	{{content.prev}}
 </button>
-<button class="slider__control is-next" data-js-item="slider-next">
-	{{next}}
+<button class="slider__control is-next{{#if settings.hideControlButtons}} is-hidden-label{{/if}}" data-js-item="slider-next">
+	{{content.next}}
 </button>

@@ -20,7 +20,7 @@ Global Styles
 		font-size: 6.3rem;
 		letter-spacing: 2px;
 		margin: 0 0 $margin-base * 4;
-		text-shadow: #000 0 7px 10px;
+		text-shadow: $color-black 0 7px 10px;
 
 		span {
 			color: $color-white;
@@ -60,7 +60,7 @@ Global Styles
 		font-weight: $font-light;
 		font-size: 1.8rem;
 		display: inline-block;
-		box-shadow: #000 0 5px 20px;
+		box-shadow: $color-black 0 5px 20px;
 
 		&:hover {
 			box-shadow: none;
