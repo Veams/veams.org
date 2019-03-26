@@ -6,16 +6,16 @@ component: section
 Global Styles
 --------------------------------------------------- */
 [data-css="c-section"] {
-	padding: $margin-base 0 $margin-base * 6;
-	border-bottom: 1px dotted $color-grey-dark;
+	padding: 0 0 $padding-base * 6;
 
 	.section__headline {
 		text-align: center;
 		font-size: 3.4rem;
-		margin-top: 0;
-		margin-bottom: $margin-base * 3;
 		font-family: $font-family;
 		font-weight: $font-thin;
+		line-height: 1.2;
+		margin-top: 0;
+		margin-bottom: $margin-base * 3;
 	}
 
 	.section__content {
@@ -26,6 +26,15 @@ Global Styles
 	----------------------- */
 	.is-left {
 		text-align: left !important;
+		color: $color-primary-light;
+	}
+
+	&.is-docs {
+		padding: 0 $padding-base * 4 $padding-base * 10;
+
+		@include media("<mobile-l") {
+			padding: 0 $padding-base * 2 $padding-base * 8;
+		}
 	}
 }
 

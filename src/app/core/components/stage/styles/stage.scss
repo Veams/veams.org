@@ -20,7 +20,7 @@ Global Styles
 		font-size: 6.3rem;
 		letter-spacing: 2px;
 		margin: 0 0 $margin-base * 4;
-		text-shadow: #000 0 7px 10px;
+		text-shadow: $color-black 0 7px 10px;
 
 		span {
 			color: $color-white;
@@ -54,13 +54,17 @@ Global Styles
 		font-family: $font-family;
 		background-color: $color-primary-light;
 		padding: $margin-base * 2 $margin-base * 3;
-		color: inherit;
+		color: $color-grey-dark;
 		text-decoration: none;
 		text-transform: uppercase;
 		font-weight: $font-light;
 		font-size: 1.8rem;
 		display: inline-block;
-		box-shadow: #000 0 5px 10px;
+		box-shadow: $color-black 0 5px 20px;
+
+		&:hover {
+			box-shadow: none;
+		}
 	}
 }
 

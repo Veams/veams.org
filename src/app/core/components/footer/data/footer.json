@@ -1,0 +1,21 @@
+
+{
+	"variations": {
+		"default": {
+			"docs": {
+				"variationName": "Default"
+			},
+			"settings": {
+				"footerContextClass": "default",
+				"footerClasses": false,
+				"footerContentClasses": true
+			},
+			"content": {
+				"gitLinkTarget": "https://github.com/Sebastian-Fitzner/veams.org",
+				"gitLinkText": "Github",
+				"gitterLinkTarget": "https://gitter.im/Sebastian-Fitzner/Veams",
+				"gitterLinkText": "Gitter"
+			}
+		}
+	}
+}

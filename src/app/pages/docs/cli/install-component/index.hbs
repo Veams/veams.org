@@ -10,12 +10,14 @@ contextData: "cli-install-component"
 ---
 
 {{#extend "lyt-default"}}
+	{{#content "stage"}}{{/content}}
 	{{#content "main"}}
 
 	{{! WrapWith START: Section One }}
 		{{#wrapWith "section"
 		            headline="Install a component"
 		            headlineClasses="is-left"
+					sectionClasses="is-docs"
 		            githubLink="https://github.com/Veams/cli/issues/new"
 		}}
 			{{#deepMerge @root.video.variations.default with=this.sections.install.video}}

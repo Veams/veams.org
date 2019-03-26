@@ -1,0 +1,96 @@
+/* ===================================================
+CTA COMPONENT
+=================================================== */
+
+/* ---------------------------------------------------
+Global Styles
+--------------------------------------------------- */
+[data-css="c-cta"] {
+	.cta__icon {}
+
+	.cta__content {}
+}
+
+/* ---------------------------------------------------
+Context: Default
+--------------------------------------------------- */
+.c-cta--default {
+}
+
+/* ---------------------------------------------------
+Context: NAV
+--------------------------------------------------- */
+.c-cta--nav {
+	position: relative;
+	width: 3rem;
+	height: 2.5rem;
+	border-radius: 100%;
+	cursor: pointer;
+	border: none;
+	//left: 28rem;
+	top: -0.2rem;
+	z-index: 9;
+	padding: 0 $padding-base;
+	margin-right: $margin-base * 1.5;
+	background-color: transparent;
+
+	.cta__icon {
+		position: absolute;
+		//top: 45%;
+		//left: 20%;
+		display: block;
+		width: 0;
+		height: 0;
+		border-radius: 100%;
+		transition: background-color 0.3s;
+		background-color: $color-white;
+
+		&::before,
+		&::after {
+			position: absolute;
+			left: 0;
+			width: .3rem;
+			height: 3rem;
+			border-radius: 0;
+			background: $color-white;
+			content: '';
+			transition: all .3s;
+		}
+
+		&::before {
+			transform: translateY(-1.5rem) translateX(0.5rem) rotate(45deg) scaleX(0.5);
+		}
+
+		&::after {
+			transform: translateY(-1.5rem) translateX(0.5rem) rotate(-45deg) scaleX(0.5);
+
+		}
+	}
+
+	&.is-active {
+		background-color: transparent;
+
+		.cta__icon {
+			width: .3rem;
+			height: .3rem;
+			left: 1.4rem;
+
+			&::after,
+			&::before {
+				width: .3rem;
+				height: .3rem;
+				border-radius: 100%;
+			}
+
+			&::after {
+				transform: translateY(0.8rem);
+			}
+
+			&::before {
+				transform: translateY(-0.8rem);
+			}
+		}
+	}
+}
+
+

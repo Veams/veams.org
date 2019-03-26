@@ -1,0 +1,13 @@
+---
+publish: false
+---
+{{#isnt settings.ctaIcon false}}
+	<span class="cta__icon"></span>
+{{/isnt}}
+
+{{#if content.ctaContent}}
+	<span class="cta__content"{{#if settings.ctaContentJsItem}} data-js-item="cta-content"{{/if}}>
+		{{content.ctaContent}}
+	</span>
+{{/if}}
+

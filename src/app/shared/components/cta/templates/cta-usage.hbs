@@ -1,0 +1,16 @@
+{{! WrapWith START: CTA }}
+{{#wrapWith "cta" settings=this.settings content=this.content}}
+	{{> cta__content this.content}}
+{{/wrapWith}}
+{{! WrapWith END: CTA }}
+
+{{#if this.settings.ctaJsModule}}
+	<script>
+		{{! This is a demo to show you how you can work with the global pub/sub system and the CTA. }}
+		document.addEventListener('DOMContentLoaded', function (e) {
+			Veams.Vent.subscribe('cta:alert', ({options}) => {
+				alert(options.data);
+			});
+		});
+	</script>
+{{/if}}

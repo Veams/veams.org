@@ -23,54 +23,79 @@ Header
 	width: 100%;
 	display: flex;
 	align-items: center;
-	padding: $margin-base;
+	padding: $padding-base $padding-base * 2;
 	background-color: darken($color-grey-dark, 8);
 	z-index: map-get($lyt-index-map, header);
 	box-shadow: #000 -1px 1px 10px;
 }
 
 .r-header-left {
+	display: flex;
+	align-items: center;
+
+	.header-left__toggler {
+		display: flex;
+	}
+
+	.header-left__logo {
+		.left__logo__link {
+			width: 75%;
+			display: block;
+
+			@include media("<mobile-l") {
+				width: 100%;
+			}
+		}
+	}
 }
 
 .r-header-right {
 	width: 100%;
-	margin-right: $margin-base * 4;
+	margin-right: $margin-base * 2;
 }
 
 /* ---------------------------------------------------
 Content Wrapper
 --------------------------------------------------- */
-.page-content-wrapper {
-	margin-top: $lyt-sidebar-offset;
+.page-wrapper {
 	position: relative;
+	display: block;
+	height: 100%;
+}
 
-	@include media("<800px") {
-		margin-top: 54px;
+.page-content-wrapper {
+	@include media("<mobile-l") {
+		margin-top: 50px;
 	}
-
 }
 
 /* ---------------------------------------------------
 Sidebar
 --------------------------------------------------- */
 .r-sidebar {
+	position: relative;
 	width: $lyt-sidebar-width;
+	height: 100vh;
 	float: left;
-	background-color: $color-grey-light;
-	height: 100%;
 	box-sizing: border-box;
-	color: $color-grey-dark;
 	z-index: map-get($lyt-index-map, sidebar);
 	overflow-x: auto;
+	padding: $padding-base * 10 $padding-base * 2 0;
+	transition: left 0.3s;
+	color: $color-grey-dark;
 	background-image: $bg-pattern;
-	padding: $lyt-container-margin-top $margin-base * 2;
+	background-color: $color-grey-light;
+	box-shadow: none;
 
 	@include media("<=tablet-p") {
 		width: $lyt-sidebar-width - 80px;
 	}
 
 	@include media("<mobile-l") {
-		width: 100%;
+		width: 70%;
+		position: absolute;
+		padding: $padding-base * 6 $padding-base * 2 0;
+		box-shadow: $color-grey-dark -6px -28px 110px;
 	}
 
 		a {
@@ -88,18 +113,30 @@ Sidebar
 
 	.sidebar__list {
 	}
+
+	&.is-hidden {
+		clear: right;
+		left: -320px;
+		width: 0;
+		position: absolute;
+	}
+
+	&.is-active {
+		left: 0;
+		transition: left 0.3s;
+	}
 }
 
 /* ---------------------------------------------------
 Main
 --------------------------------------------------- */
 .r-main {
-	float: right;
+	float: left;
 	width: calc(100% - #{$lyt-sidebar-width});
+	height: 100vh;
 	overflow-x: hidden;
-	padding: $lyt-container-margin-top;
+	padding: $padding-base * 10 0 0;
 	box-sizing: border-box;
-
 
 	@include media("<=tablet-p") {
 		width: calc(100% - #{$lyt-sidebar-width - 80px});
@@ -108,13 +145,33 @@ Main
 	@include media("<mobile-l") {
 		width: 100%;
 		float: left;
-		padding: $margin-base;
+		padding: $padding-base * 6 0 0;
 	}
 
 	.is-front & {
 		float: none;
 		width: 100%;
-		padding: $margin-base * 6 0;
+		padding: $padding-base * 6 0 0;
 	}
 
+	&.is-contained {
+		clear: left;
+		width: 100%;
+		padding: $padding-base * 10 0 0;
+
+		@include media("<mobile-l") {
+			padding: $padding-base * 6 0 0;
+		}
+	}
+}
+
+/* ---------------------------------------------------
+Stage
+--------------------------------------------------- */
+.r-stage {
+	padding-top: $padding-base * 6;
+
+	@include media("<mobile-l") {
+		padding-top: 0;
+	}
 }

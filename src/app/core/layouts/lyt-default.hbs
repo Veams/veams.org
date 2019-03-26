@@ -19,9 +19,21 @@
 <div class="page-wrapper">
 	<header class="r-header">
 		<div class="r-header-left">
-			<a href="/index.html">
-				<img src="{{@root.assets}}icons/svg/veams-std-invert.svg" width="148px">
-			</a>
+			{{#isnt bodyclass "is-front"}}
+				<div class="header-left__toggler">
+					{{#deepMerge @root.cta.variations.iconWithJs with=this}}
+						{{#wrapWith "cta" settings=this.settings content=this.content}}
+							{{> cta__content this.content}}
+						{{/wrapWith}}
+					{{/deepMerge}}
+				</div>
+			{{/isnt}}
+
+			<div class="header-left__logo">
+				<a href="/index.html" class="left__logo__link">
+					<img src="{{@root.assets}}icons/svg/veams-std-invert.svg">
+				</a>
+			</div>
 		</div>
 		<div class="r-header-right">
 			{{#with navigation.variations.default}}
@@ -30,26 +42,45 @@
 		</div>
 	</header>
 	<div class="page-content-wrapper">
-		<section class="r-stage">
-			<div class="stage__content">
-				{{#block "stage"}}
-					{{#with @root.stage.variations.default}}
-						{{> stage}}
-					{{/with}}
-				{{/block}}
-			</div>
-		</section>
+		{{#is bodyclass "is-front"}}
+			<section class="r-stage">
+				<div class="stage__content">
+					{{#block "stage"}}
+						{{#with @root.stage.variations.default}}
+							{{> stage}}
+						{{/with}}
+					{{/block}}
+				</div>
+			</section>
+		{{/is}}
 		{{#block "sidebar"}}
-			<aside class="r-sidebar">
+			<aside class="r-sidebar" data-js-item="sidebar">
 				<div class="sidebar__list">
 					{{> sitemap }}
 				</div>
 			</aside>
 		{{/block}}
-		<main class="r-main">
+
+		<main class="r-main" data-js-item="main">
 			{{#block "main"}}{{/block}}
+
+			{{#isnt bodyclass "is-front"}}
+                <div class="r-footer">
+                    {{#block "footer"}}
+                        {{> footer }}
+                    {{/block}}
+                </div>
+			{{/isnt}}
 		</main>
+
 	</div>
+	{{#is bodyclass "is-front"}}
+		<footer class="r-footer">
+			{{#block "footer"}}
+				{{> footer }}
+			{{/block}}
+		</footer>
+	{{/is}}
 </div>
 <!-- Scripts
 ================================================== -->

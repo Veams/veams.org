@@ -1,0 +1,14 @@
+---
+publish: false
+---
+
+<{{#if options.settings.ctaButton}}button{{else}}a{{/if}}
+	class="c-cta{{#if options.settings.ctaContextClass}}--{{options.settings.ctaContextClass}}{{else}}--default{{/if}}{{#if options.settings.ctaClass}} {{options.settings.ctaClass}}{{/if}}"
+	data-css="c-cta" {{#if options.content.ctaTitle}}
+	title="{{options.content.ctaTitle}}"{{/if}} {{#if options.settings.ctaTarget}}
+	href="{{options.settings.ctaTarget}}"{{/if}} {{#if options.settings.ctaDownload}}
+	target="_blank"{{/if}} {{#if options.settings.ctaJsItem}}
+	data-js-item="{{options.settings.ctaJsItem}}"{{/if}} {{#if options.settings.ctaJsModule}}
+	data-js-module="cta" data-js-options='{{stringify options.settings.jsOptions}}'{{/if}}>
+	{{{yield}}}
+</{{#if options.settings.ctaButton}}button{{else}}a{{/if}}>

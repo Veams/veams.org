@@ -3,11 +3,11 @@
      data-js-module="slider"{{#if options.settings.sliderJsOptions}}
      data-js-options='{{stringify options.settings.sliderJsOptions}}'{{/if}}>
 
-	{{#with options.content.sliderButtons}}
+	{{#if options.content.sliderButtons}}
 		<div class="slider__controls-wrapper" data-js-item="slider-actions">
-			{{> slider__controls }}
+			{{> slider__controls content=options.content.sliderButtons settings=options.settings}}
 		</div>
-	{{/with}}
+	{{/if}}
 
 	<div class="slider__content{{#unless options.settings.sliderInnerFullWidth}} is-container{{/unless}}">
 		{{{yield}}}

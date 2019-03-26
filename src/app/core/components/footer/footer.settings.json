@@ -1,0 +1,10 @@
+
+{
+    "type": "component",
+    "contextData": "footer",
+    "layout": "lyt-docs",
+    "publish": true,
+	"scssFiles": [
+		"footer.scss"
+	]
+}

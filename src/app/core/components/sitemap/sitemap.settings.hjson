@@ -1,5 +1,8 @@
 {
 	"type": "component",
 	"layout": "lyt-docs",
-	"publish": false
+	"publish": false,
+	"jsFiles": [
+		"sitemap.js"
+	]
 }

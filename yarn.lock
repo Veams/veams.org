@@ -135,6 +135,14 @@
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/@veams/bp-mock-api/-/bp-mock-api-1.0.3.tgz#82454a83ce8f291e9b29ccb8414bb171b84488ce"
 
+"@veams/component-cta@^1.0.2":
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@veams/component-cta/-/component-cta-1.0.2.tgz#dcd31ab4f0c06c988e0149d9ae65ede076760209"
+  integrity sha1-3NMatPDAbJiOAUnZrmXt4HZ2Agk=
+  dependencies:
+    "@veams/component" "^1.2.3"
+    "@veams/query" "^2.2.24"
+
 "@veams/component-rte@^1.0.1":
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/@veams/component-rte/-/component-rte-1.0.1.tgz#d9c02211cff83420aa44adf415971cdfa604fa7f"
@@ -157,7 +165,7 @@
   dependencies:
     "@veams/base" "^1.0.0"
 
-"@veams/component@^1.2.5":
+"@veams/component@^1.2.3", "@veams/component@^1.2.5":
   version "1.2.5"
   resolved "https://registry.yarnpkg.com/@veams/component/-/component-1.2.5.tgz#439c95f43fefdcb2841067844840e6ac2db0b670"
   dependencies:
@@ -227,6 +235,11 @@
 "@veams/query@^2.2.1":
   version "2.2.23"
   resolved "https://registry.yarnpkg.com/@veams/query/-/query-2.2.23.tgz#28154e09a35bdeb2d1d3cab1f421a279d4828e25"
+
+"@veams/query@^2.2.24":
+  version "2.5.1"
+  resolved "https://registry.yarnpkg.com/@veams/query/-/query-2.5.1.tgz#88b144b93ae1b0e64ebbb7412af086123397d55f"
+  integrity sha512-spPb5A3ZVtmsFTwDz3sX0qAnFNPnggI0LDa2Rk7jhPqxy+CpXZ1rb0+cQ//45qIOZfAw1Pf1jT7y09bWemFBEA==
 
 "@veams/query@^2.4.2":
   version "2.4.2"

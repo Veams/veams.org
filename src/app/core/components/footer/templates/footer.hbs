@@ -1,0 +1,10 @@
+<div class="c-footer{{#if settings.footerContextClass}}--{{settings.footerContextClass}}{{else}}--default{{/if}}{{#if
+	settings.footerClasses}} {{settings.footerClasses}}{{/if}}"
+	 data-css="c-footer">
+	<div class="footer__content {{#if
+		settings.footerContentClasses}}{{else}}is-container{{settings.footerContentClasses}}{{/if}}">
+			If you've spotted a typo or a mistake, or wish to add something on, you could write about this on
+				<a href="{{this.footer.variations.default.content.gitLinkTarget}}" class="footer__content-link">{{this.footer.variations.default.content.gitLinkText}}</a> |
+				<a href="{{this.footer.variations.default.content.gitterLinkTarget}}" class="footer__content-link">{{this.footer.variations.default.content.gitterLinkText}}</a> | © Made in Berlin with love
+	</div>
+</div>
